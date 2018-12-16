@@ -2,11 +2,7 @@
 main:
   - title: "About"
     url: /about/
-  - title: "Talks"
-    url: /talks/
+  - title: "Publications"
+    url: /publications/
   - title: "Contact"
     url: /contact/
-  # - title: "Sample Collections"
-  #   url: /collection-archive/
-  # - title: "Sitemap"
-  #   url: /sitemap/

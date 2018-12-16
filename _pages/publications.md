@@ -1,10 +1,10 @@
 ---
-title: "Talks"
-permalink: /talks/
+title: "Publications"
+permalink: /publications/
 author_profile: true
 ---
 
-Below are a list of talks and poster presentations I have delivered.
+Below are a list of publications and presentations I have delivered.
 
 ## Talks
 
