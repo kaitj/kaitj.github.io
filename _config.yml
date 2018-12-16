@@ -105,7 +105,7 @@ analytics:
 # Site Author
 author:
   name             : "Jason Kai"
-  avatar           : # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
+  avatar           : "/images/profile.jpg" # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
   bio              : "PhD Candidate, Self Proclaimed Foodie, Amateur Photographer"
   location         : "London, ON, Canada"
   email            :
@@ -291,3 +291,11 @@ defaults:
       comments: # true
       share: true
       related: true
+
+  # _pages
+  - scope:
+      path: ""
+      type: pages
+    values:
+      layout: single
+      author_profile: true
