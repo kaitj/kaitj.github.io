@@ -1,6 +1,5 @@
 ---
 title: "Contact"
-sitemap: false
 permalink: /contact/
 author_profile: true
 ---
