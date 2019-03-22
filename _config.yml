@@ -19,7 +19,7 @@ locale                   : "en-US"
 title                    : "Jason Kai"
 title_separator          : "-"
 name                     : "Jason Kai"
-description              : "Portoflio"
+description              : "Portfolio"
 url                      : https://kaitj.github.io # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : # the subpath of your site, e.g. "/blog"
 repository               : kaitj/kaitj.github.io # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
@@ -106,7 +106,7 @@ analytics:
 author:
   name             : "Jason Kai"
   avatar           : "/images/profile.jpg" # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
-  bio              : "PhD Candidate, Self Proclaimed Foodie"
+  bio              : "PhD Candidate, Open Science Supporter"
   location         : "London, ON, Canada"
   email            :
   links:
