@@ -4,7 +4,11 @@ permalink: /publications/
 author_profile: true
 ---
 
-Below are a list of publications and presentations I have delivered.
+## Journals
+
+| Date | Presentation |
+|------|--------------|
+| Jun 2019 | Lau J.C., Parrent, A.G., Demarco, J., Gupta, G., **Kai, J.**, Stanley, O.W., Kuehn, T., Park, P.J., Ferko, K., Khan, A.R., Peters, T.M. <br/> A framework for evaluating correspondence between brain images using anatomical fiducials. _Human Brain Mapping_. [doi:10.1002/hbm.24693](https://doi.org/10.1002/hbm.24693) |
 
 ## Talks
 
