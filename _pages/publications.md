@@ -4,7 +4,7 @@ permalink: /publications/
 author_profile: true
 ---
 
-## Journals
+## Papers
 
 | Date | Presentation |
 |------|--------------|
@@ -24,7 +24,7 @@ author_profile: true
 
 | Date | Presentation |
 |------|--------------|
-| May 2019 | **Kai, J.**, Khan, A.R. <br/> Development of a diffusion magnetic resonance imaging template for investigating short-ranged U-shaped structural connectivity in the human adult brain. In _13th Annual Canadian Neurosciene Meeting._ Toronto, ON, Canada.
+| May 2019 | **Kai, J.**, Khan, A.R. <br/> Development of a diffusion magnetic resonance imaging template for investigating short-ranged U-shaped structural connectivity in the human adult brain. In _13th Annual Canadian Neuroscience Meeting._ Toronto, ON, Canada.
 | May 2018 | **Kai, J.**, Kasa, L.W., Peters, T.M., Khan, A.R.<br/> Investigating quantitative and st ructural differences in short association, U-shaped fibres in temporal lobe epilepsy. In _London Health Research Day._ London, ON. Canada. |
 | Mar 2018 | **Kai, J.**, Kasa, L.W., Peters, T.M., Khan, A.R.<br/> Investigating quantitative and st ructural differences in short association, U-shaped fibres in temporal lobe epilepsy. In _Proceedings of the 16th annual meeting of Imaging Network Ontario. pp 113._ London, ON. Canada. |
 | Mar 2017 | **Kai, J.**, Kasa, L.W., Khan, A.R.<br/> Investigation into the relationship of myelin and axonal white matter microstructure using longitudinal relaxation mapping and restricted diffusion. In _London Health Resarch Day._ London, ON. Canada |
