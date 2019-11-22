@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initia-scale=1">
+    <meta name="description" content="Personal webpage">
+    <meta name="author" content="Jason Kai">
+
+    <title>Jason Kai | About </title>
+
+    <!-- favicon -->
+    <link rel="shortcut icon" href="assets/img/favicon.ico">
+
+    <!-- Bootstrap Core CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-beta.3/css/bootstrap.css" rel="stylesheet">
+
+    <!-- Custom/Other CSS -->
+    <link href="css/portfolio-custom.css" rel="stylesheet">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+</head>
+
+
+<!-- Header () -->
+<header id="portfolio" class="portfolio">
+    <div id="app">
+        <br>
+        <div class="text-vertical-center text-center">
+            <h1>{{profile.name}}</h1>
+        </div>
+
+        <div class="frame-round row">
+            <img src="assets/img/profile.jpg" alt="Profile Picture" title="Profile Picture">
+        </div>
+        <br>
+
+        <div class="text-vertical-center text-center profile-caption">
+            {{profile.position}}, {{profile.company}}
+            <div>
+                <p><em>{{profile.description}}</em></p>
+            </div>
+        </div>
+
+        <div>
+            <ul class="fa-ul social-nav profile-caption text-vertical-center text-center">
+                <span class="fa-ul">
+                    <li class="fa-li"><i class="fa fa-envelope"></i><a v-bind:href="profile.email_link"> {{profile.email}} </a></li>
+                    <li class="fa-li"><i class="fa fa-twitter"></i><a v-bind:href="profile.twitter_link" target="_blank"> {{profile.twitter}} </a></li>
+                    <li class="fa-li"><i class="fa fa-github"></i><a v-bind:href="profile.github_link" target="_blank"> {{profile.github}} </a></li>
+                </span>
+            </ul>
+        </div>
+        <br> <br>
+
+        <div class="text-center text-vertical-center">
+            <a class="twitter-timeline" href="https://twitter.com/jasonkai?ref_src=twsrc%5Etfw"
+            data-height="300" data-width="300" data-aria-polite="assertive"> Tweets by @{{profile.twitter}}</a>
+            <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+        </div>
+
+
+        <div class="copyright text-center text-vertical-center">
+            <p>&copy; <script type="text/javascript">document.write(new Date().getFullYear());</script> {{profile.name}} </p>
+        </div>
+    </div>
+
+    <!-- jQuery -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.13/vue.min.js"></script>
+    <script src="https://momentjs.com/downloads/moment.min.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-beta.3/js/bootstrap.js"></script>
+
+    <!-- Custom JavaScript -->
+    <script>
+        var app = new Vue({
+            el: '#app',
+            data: {
+                profile: {
+                }
+            }
+        })
+
+        // Reads profile.json
+        var url = ""
+        if (window.location.hostname=="localhost"){
+            url = "assets/profile.json"
+        }
+        $.getJSON(url, function(data){
+            console.log("data is", data);
+            app.profile = data;
+        })
+    </script>
+</header>
+
+
+<!-- Body (Content) -->
+<body>
+    <!-- Navigation -->
+    <div>
+        <a id="menu-toggle" href="#" class="btn btn-dark btn-lg toggle"><i class="fa fa-bars"></i></a>
+        <nav id="sidebar-wrapper">
+            <ul class="sidebar-nav">
+                <a id="menu-close" href="#" class="btn btn-dark btn-lg pull-right toggle"><i class="fa fa-times"></i></a>
+                <li><a href="index.html" onclick=$("#menu-close").click(); >About</a></li>
+                <li><a href="publications.html" onclick=$("#menu-close").click();>Publications</a></li>
+                <li><a href="contact.html" onclick=$("#menu-close").click();>Contact</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <section class="content">
+        <div class="box">
+            <h1>Welcome!</h1>
+
+            <p>I develop tools and techniques to study the structural connections of the brain using diffusion magnetic resonance imaging (MRI)
+               and how it changes due to neurological and psychiatric disorders. My research focus is primarily on investigating the short-ranged,
+               U-shaped connections (superficial white matter), which lie just below the cortical surface, using multi-parametric MRI. </p>
+
+            <p>I am also a supporter of open science practices and education.</p>
+        </div>
+        <br>
+
+        <div class="box">
+            <h2>Education</h2>
+            <p>
+                <div class="row">
+                    <div class="col-sm-2 text-center text-vertical-center">
+                        <img src="assets/img/Western_vertical.png" alt="Western Logo" width=80%>
+                    </div>
+                    <div class="col-sm-10">
+                        <strong>PhD</strong> <br>
+                        2016 - Current <br>
+                        Medical Biophysics <br>
+                        Western University, London, ON, Canada
+                    </div>
+                </div>
+            </p>
+
+            <p>
+                <div class="row">
+                    <div class="col-sm-2 text-center text-vertical-center">
+                        <img src="assets/img/McMaster.png" alt="McMaster Crest" width=80%>
+                    </div>
+                    <div class="col-sm-10">
+                        <strong>Bachelor of Engineering</strong> <br>
+                        2011 - 2016 <br>
+                        Electrical and Biomedical Engineering <br>
+                        McMaster University, Hamilton, ON, Canada <br>
+                        <em>Summa cum laude</em>
+                    </div>
+                </div>
+            </p>
+        </div>
+        <br>
+
+        <div class="box">
+            <h2>Skills, Tools, & Technology</h2>
+            <ul>
+                <li>Python, Bash</li>
+                <li>Containerization (Docker, Singularity)</li>
+                <li>Development</li>
+            </ul>
+        </div>
+
+        <br>
+        <div class="box">
+            <p>Please get in contact for a copy of my full CV.</p>
+        </div>
+
+    </section>
+
+    <!-- jQuery -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.13/vue.min.js"></script>
+    <script src="https://momentjs.com/downloads/moment.min.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-beta.3/js/bootstrap.js"></script>
+
+    <!-- Custom JavaScript -->
+    <script>
+        // Closes sidebar menu
+        $("#menu-close").click(function(e) {
+            e.preventDefault();
+            $("#sidebar-wrapper").toggleClass("active");
+        });
+
+        // Opens the sidebar menu
+        $("#menu-toggle").click(function(e) {
+            e.preventDefault();
+            $("#sidebar-wrapper").toggleClass("active");
+        });
+    </script>
+</body>
+
+</html>
