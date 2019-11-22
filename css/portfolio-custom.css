@@ -74,6 +74,7 @@ body {
     position: relative;
     margin-left: 375px;
     height: 100%;
+    overflow-y: auto;
     background-color: #afafaf;
 }
 
