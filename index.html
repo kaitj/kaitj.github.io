@@ -19,31 +19,26 @@
     <!-- Custom/Other CSS -->
     <link href="css/portfolio-custom.css" rel="stylesheet">
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Heebo|Roboto|Abril+Fatface&display=swap" rel="stylesheet">
 </head>
 
 
 <!-- Header () -->
 <header id="portfolio" class="portfolio">
     <div id="app">
-        <br>
-        <div class="text-vertical-center text-center">
-            <h1>{{profile.name}}</h1>
-        </div>
+        <div class="text-vertical-center text-center portfolio-caption">{{profile.name}}</div>
 
         <div class="frame-round row">
             <img src="assets/img/profile.jpg" alt="Profile Picture" title="Profile Picture">
         </div>
-        <br>
 
         <div class="text-vertical-center text-center profile-caption">
             {{profile.position}}, {{profile.company}}
-            <div>
-                <p><em>{{profile.description}}</em></p>
-            </div>
+            <div><em>{{profile.description}}</em></div>
         </div>
 
         <div>
-            <ul class="fa-ul social-nav profile-caption text-vertical-center text-center">
+            <ul class="profile-caption fa-ul social-nav text-vertical-center text-center">
                 <span class="fa-ul">
                     <li class="fa-li"><i class="fa fa-envelope"></i><a v-bind:href="profile.email_link"> {{profile.email}} </a></li>
                     <li class="fa-li"><i class="fa fa-twitter"></i><a v-bind:href="profile.twitter_link" target="_blank"> {{profile.twitter}} </a></li>
@@ -51,18 +46,13 @@
                 </span>
             </ul>
         </div>
-        <br> <br>
 
-        <div class="text-center text-vertical-center">
+        <div class="twitter-feed text-center text-vertical-center">
             <a class="twitter-timeline" href="https://twitter.com/jasonkai?ref_src=twsrc%5Etfw"
-            data-height="300" data-width="300" data-aria-polite="assertive"> Tweets by @{{profile.twitter}}</a>
+            data-height="500" data-width="300" data-aria-polite="assertive"> Tweets by @{{profile.twitter}}</a>
             <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
         </div>
 
-
-        <div class="copyright text-center text-vertical-center">
-            <p>&copy; <script type="text/javascript">document.write(new Date().getFullYear());</script> {{profile.name}} </p>
-        </div>
     </div>
 
     <!-- jQuery -->
@@ -104,9 +94,9 @@
         <nav id="sidebar-wrapper">
             <ul class="sidebar-nav">
                 <a id="menu-close" href="#" class="btn btn-dark btn-lg pull-right toggle"><i class="fa fa-times"></i></a>
-                <li><a href="index.html" onclick=$("#menu-close").click(); >About</a></li>
-                <li><a href="publications.html" onclick=$("#menu-close").click();>Publications</a></li>
-                <li><a href="contact.html" onclick=$("#menu-close").click();>Contact</a></li>
+                <li><a href="index.html" style="text-transform: uppercase;" onclick=$("#menu-close").click(); >About</a></li>
+                <li><a href="publications.html" style="text-transform: uppercase;" onclick=$("#menu-close").click();>Publications</a></li>
+                <li><a href="contact.html" style="text-transform: uppercase;" onclick=$("#menu-close").click();>Contact</a></li>
             </ul>
         </nav>
     </div>
@@ -121,14 +111,13 @@
 
             <p>I am also a supporter of open science practices and education.</p>
         </div>
-        <br>
 
         <div class="box">
             <h2>Education</h2>
             <p>
                 <div class="row">
                     <div class="col-sm-2 text-center text-vertical-center">
-                        <img src="assets/img/Western_vertical.png" alt="Western Logo" width=80%>
+                        <img src="assets/img/Western_vertical.png" alt="Western Logo">
                     </div>
                     <div class="col-sm-10">
                         <strong>PhD</strong> <br>
@@ -154,7 +143,6 @@
                 </div>
             </p>
         </div>
-        <br>
 
         <div class="box">
             <h2>Skills, Tools, & Technology</h2>
@@ -165,7 +153,6 @@
             </ul>
         </div>
 
-        <br>
         <div class="box">
             <p>Please get in contact for a copy of my full CV.</p>
         </div>
@@ -195,5 +182,42 @@
         });
     </script>
 </body>
+
+
+<!-- Footer -->
+<footer class="copyright">
+    <div id="app2" class="copyright text-center text-vertical-center">
+        <p>&copy; <script type="text/javascript">document.write(new Date().getFullYear());</script> {{profile.name}} </p>
+    </div>
+
+    <!-- jQuery -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.13/vue.min.js"></script>
+    <script src="https://momentjs.com/downloads/moment.min.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-beta.3/js/bootstrap.js"></script>
+
+    <!-- Custom JavaScript -->
+    <script>
+        var app2 = new Vue({
+            el: '#app2',
+            data: {
+                profile: {
+                }
+            }
+        })
+
+        // Reads profile.json
+        var url = "https://raw.githubusercontent.com/kaitj/kaitj.github.io/master/assets/profile.json"
+        if (window.location.hostname=="localhost"){
+            url = "assets/profile.json"
+        }
+        $.getJSON(url, function(data){
+            console.log("data is", data);
+            app2.profile = data;
+        })
+    </script>
+</footer>
 
 </html>
