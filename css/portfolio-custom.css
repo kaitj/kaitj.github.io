@@ -69,13 +69,19 @@ body {
 
     .social-nav li {
         display: inline;
-        font-family: "Roboto", serif;
+        font-family: serif;
         margin: 0 1px;
+        text-decoration: none;
     }
 
     .social-nav li a {
         color: #00ffff;
         margin-right: 3px;
+        text-decoration: none;
+    }
+
+    .social-nav li a:hover {
+        font-weight: bold;
     }
 
     .twitter-feed {
@@ -182,12 +188,14 @@ body {
         width: 140%;
     }
 
-    .col-sm-2 {
+    .col-sm-3 {
         width: 20%;
+        margin-top: .5em;
     }
 
-    .col-sm-10 {
+    .col-sm-6 {
         width: 80%;
+        margin-top: .5em;
     }
 
 
@@ -284,13 +292,19 @@ body {
 
     .social-nav li {
         display: inline;
-        font-family: "Roboto", serif
+        font-family: serif;
         margin: 0 1px;
+        text-decoration: none;
     }
 
     .social-nav li a {
         color: #00ffff;
         margin-right: 3px;
+        text-decoration: none;
+    }
+
+    .social-nav li a:hover {
+        font-weight: bold;
     }
 
     .twitter-feed {
@@ -320,6 +334,10 @@ body {
 
     .box img {
         width: 70%;
+    }
+
+    .col-sm-3 img {
+        width: 80%;
     }
 
 
