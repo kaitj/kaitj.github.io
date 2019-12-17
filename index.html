@@ -5,10 +5,10 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Personal webpage">
+    <meta name="description" content="Personal webpage - home page">
     <meta name="author" content="Jason Kai">
 
-    <title>About | Jason Kai </title>
+    <title>Jason Kai</title>
 
     <!-- favicon -->
     <link rel="shortcut icon" href="assets/img/favicon.ico">
@@ -24,182 +24,21 @@
 
 
 <!-- Header () -->
-<header id="portfolio" class="portfolio">
-    <div id="app">
-        <div class="text-vertical-center text-center portfolio-caption">{{profile.name}}</div>
-
-        <div class="frame-round row">
-            <img src="assets/img/profile.jpg" alt="Profile Picture" title="Profile Picture">
+<header>
+    <div id="banner">
+        <img src="assets/img/GrosMorne_Nfld_2019.jpg" alt="Gros Morne, Newfoundland" class="intro-img">
+        <div class="intro-name">
+            <h1 class="text-center">Jason Kai</h1>
+            <hr class="intro">
+            <h2 class="text-center">PhD Candidate</h2>
+            <h2 class="text-center">Studying the brain | Coding | Travelling the world</h2>
         </div>
-
-        <div class="text-vertical-center text-center profile-caption">
-            {{profile.position}}, {{profile.company}}
-            <div><em>{{profile.description}}</em></div>
-        </div>
-
-        <div>
-            <ul class="profile-caption fa-ul social-nav text-vertical-center text-center">
-                <span class="fa-ul">
-                    <li class="fa-li"><i class="fa fa-envelope"></i><a v-bind:href="profile.email_link"> {{profile.email}} </a></li>
-                    <li class="fa-li"><i class="fa fa-twitter"></i><a v-bind:href="profile.twitter_link" target="_blank"> {{profile.twitter}} </a></li>
-                    <li class="fa-li"><i class="fa fa-github"></i><a v-bind:href="profile.github_link" target="_blank"> {{profile.github}} </a></li>
-                </span>
-            </ul>
-        </div>
-
-        <div class="twitter-feed text-center text-vertical-center">
-            <a class="twitter-timeline" href="https://twitter.com/jasonkai?ref_src=twsrc%5Etfw"
-            data-height="500" data-width="300" data-aria-polite="assertive"> Tweets by @{{profile.twitter}}</a>
-            <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-        </div>
-
     </div>
-
-    <!-- jQuery -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.13/vue.min.js"></script>
-    <script src="https://momentjs.com/downloads/moment.min.js"></script>
-
-    <!-- Bootstrap Core JavaScript -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-beta.3/js/bootstrap.js"></script>
-
-    <!-- Custom JavaScript -->
-    <script>
-        var app = new Vue({
-            el: '#app',
-            data: {
-                profile: {
-                }
-            }
-        })
-
-        // Reads profile.json
-        var url = "https://raw.githubusercontent.com/kaitj/kaitj.github.io/master/assets/profile.json"
-        if (window.location.hostname=="localhost"){
-            url = "assets/profile.json"
-        }
-        $.getJSON(url, function(data){
-            console.log("data is", data);
-            app.profile = data;
-        })
-    </script>
 </header>
 
 
 <!-- Body (Content) -->
 <body>
-    <!-- Navigation -->
-    <div>
-        <a id="menu-toggle" href="#" class="btn btn-dark btn-lg toggle"><i class="fa fa-bars"></i></a>
-        <nav id="sidebar-wrapper">
-            <ul class="sidebar-nav">
-                <a id="menu-close" href="#" class="btn btn-dark btn-lg pull-right toggle"><i class="fa fa-times"></i></a>
-                <li><a href="index.html" style="text-transform: uppercase;" onclick=$("#menu-close").click(); >About</a></li>
-                <li><a href="publications.html" style="text-transform: uppercase;" onclick=$("#menu-close").click();>Publications</a></li>
-                <li><a href="contact.html" style="text-transform: uppercase;" onclick=$("#menu-close").click();>Contact</a></li>
-            </ul>
-        </nav>
-    </div>
-
-    <section class="content">
-        <div class="box">
-            <h1>Welcome!</h1>
-
-            <p>
-                Thanks for visiting my page!
-            </p>
-
-            <p>
-                I develop and apply tools to study the wiring (structural connections) of the brain using data acquired from diffusion magnetic resonance imaging (MRI).
-                Neurological and psychiatric disorders may be related with changes to these connections. Primarily, my research is focused on the investigation of short-ranged,
-                U-shaped connections (superficial white matter), which lie just below the cortical surface. These short-ranged connections comprise a majority of the connections
-                found in the brain and are some of the last to mature. As a result, the U-shaped connections may be susceptible to abnormal development. I am also a supporter of open
-                science practices and education.
-           </p>
-
-            <p>
-                When I am not in the lab, I am probably playing my guitar or watching one of the major North American sports. I also enjoy travelling when I get a chance and hope
-                to have an opportunity to visit more places! Since starting graduate school, I've also discovered a fascination with cooking and trying out new recipes. This is probably
-                a result of all the hours watching cooking shows when I was younger. More recently, I have found a renewed interest in learning more about different coding languages and development
-                in my spare time. With this renewed interest, I set out to redesign this website that you are currently on! While it is by no means a complex design and I am constantly adding to it,
-                I would like to think I succeeded in designing a minimalist-esque webpage!
-            </p>
-        </div>
-
-        <div class="box" style="margin-top: 2em;">
-            <h2>Education</h2>
-            <p>
-                <div class="row">
-                    <div class="col-sm-6">
-                        <div class="row">
-                            <div class="col-sm-3">
-                                <img src="assets/img/Western_vertical.png" alt="Western Logo">
-                            </div>
-                            <div class="col-sm-6">
-                                <strong>PhD</strong> <em>(Supervisor: Dr. Ali R. Khan)</em> <br>
-                                2016 - Current <br>
-                                Medical Biophysics <br>
-                                Western University <br>
-                                London, ON, Canada
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-sm-6">
-                        <div class="row">
-                            <div class="col-sm-3">
-                                <img src="assets/img/McMaster.png" alt="McMaster Crest">
-                            </div>
-                            <div class="col-sm-6">
-                                <strong>Bachelor of Engineering</strong> <br>
-                                2011 - 2016 <br>
-                                Electrical and Biomedical Engineering <br>
-                                McMaster University <br>
-                                Hamilton, ON, Canada <br>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </p>
-        </div>
-
-        <div class="box" style="margin-top: 2em;">
-            <h2>Skills</h2>
-            <ul>
-                <li>Python, Bash</li>
-                <li>Containerization (Docker, Singularity)</li>
-                <li>Development</li>
-            </ul>
-        </div>
-
-        <div class="box" style="margin-top: 2em;">
-            <p>Please get in contact for a copy of my full CV.</p>
-        </div>
-
-    </section>
-
-    <!-- jQuery -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.13/vue.min.js"></script>
-    <script src="https://momentjs.com/downloads/moment.min.js"></script>
-
-    <!-- Bootstrap Core JavaScript -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-beta.3/js/bootstrap.js"></script>
-
-    <!-- Custom JavaScript -->
-    <script>
-        // Closes sidebar menu
-        $("#menu-close").click(function(e) {
-            e.preventDefault();
-            $("#sidebar-wrapper").toggleClass("active");
-        });
-
-        // Opens the sidebar menu
-        $("#menu-toggle").click(function(e) {
-            e.preventDefault();
-            $("#sidebar-wrapper").toggleClass("active");
-        });
-    </script>
 </body>
 
 
