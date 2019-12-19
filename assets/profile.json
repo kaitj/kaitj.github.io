@@ -1,12 +1,22 @@
 {
     "name": "Jason Kai",
-    "position": "PhD Candidate",
-    "company": "Western University",
-    "description": "Studying the brain | Coding | Travelling the world",
-    "email": "tkai@uwo.ca",
-    "email_link": "mailto://tkai@uwo.ca",
-    "twitter": "jasonkai",
-    "twitter_link": "https://twitter.com/jasonkai",
-    "github": "kaitj",
-    "github_link": "https://github.com/kaitj"
+    "header": [
+        {
+            "banner": "assets/img/GrosMorne_Nfld_2019.jpg",
+            "banner_desc": "Grose Morne, Newfoundland",
+            "position": "PhD Candidate",
+            "company": "Western University",
+            "description": "Studying | Coding | Travelling"
+        }
+    ],
+    "social": [
+        {
+            "email": "tkai@uwo.ca",
+            "email_link": "mailto://tkai@uwo.ca",
+            "twitter": "jasonkai",
+            "twitter_link": "https://twitter.com/jasonkai",
+            "github": "kaitj",
+            "github_link": "https://github.com/kaitj"
+        }
+    ]
 }
