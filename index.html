@@ -17,21 +17,26 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-beta.3/css/bootstrap.css" rel="stylesheet">
 
     <!-- Custom/Other CSS -->
-    <link href="css/portfolio-custom.css" rel="stylesheet">
+    <link href="css/portfolio-xs.css" media="screen and (max-width: 600px)" rel="stylesheet" type="text/css">
+    <link href="css/portfolio-sm.css" media="screen and (min-width: 600px) and (max-width: 768px)" rel="stylesheet" type="text/css">
+    <link href="css/portfolio-md.css" media="screen and (min-width: 768px) and (max-width: 992px)" rel="stylesheet" type="text/css">
+    <link href="css/portfolio-lg.css" media="screen and (min-width: 992px) and (max-width: 1200px)" rel="stylesheet" type="text/css">
+    <link href="css/portfolio-xl.css" media="screen and (min-width: 1200px)" rel="stylesheet" type="text/css">
+    <link href="css/portfolio.css" rel="stylesheet" type="text/css">
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-    <link href="https://fonts.googleapis.com/css?family=Heebo|Roboto|Abril+Fatface&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Rubik|Roboto&display=swap" rel="stylesheet">
 </head>
 
 
 <!-- Header () -->
-<header>
-    <div id="banner">
-        <img src="assets/img/GrosMorne_Nfld_2019.jpg" alt="Gros Morne, Newfoundland" class="intro-img">
+<header id="app">
+    <div id="banner" v-for="info in profile.header">
+        <img v-bind:src="info.banner" alt="info.banner_desc" class="intro-img">
         <div class="intro-name">
-            <h1 class="text-center">Jason Kai</h1>
+            <h1 class="text-center">{{profile.name}}</h1>
             <hr class="intro">
-            <h2 class="text-center">PhD Candidate</h2>
-            <h2 class="text-center">Studying the brain | Coding | Travelling the world</h2>
+            <h2 class="text-center">{{info.position}}, {{info.company}}</h2>
+            <h2 class="text-center">{{info.description}}</h2>
         </div>
     </div>
 </header>
@@ -44,7 +49,7 @@
 
 <!-- Footer -->
 <footer class="copyright">
-    <div id="app2" class="copyright text-center text-vertical-center">
+    <div id="app" class="copyright text-center text-vertical-center">
         <p>&copy; <script type="text/javascript">document.write(new Date().getFullYear());</script> {{profile.name}} </p>
     </div>
 
@@ -58,8 +63,8 @@
 
     <!-- Custom JavaScript -->
     <script>
-        var app2 = new Vue({
-            el: '#app2',
+        var app = new Vue({
+            el: '#app',
             data: {
                 profile: {
                 }
@@ -73,7 +78,7 @@
         }
         $.getJSON(url, function(data){
             console.log("data is", data);
-            app2.profile = data;
+            app.profile = data;
         })
     </script>
 </footer>
