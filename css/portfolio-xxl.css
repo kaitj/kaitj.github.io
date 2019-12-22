@@ -6,7 +6,7 @@ body {
 }
 
 /* Extra Large */
-@media only screen and (min-width: 1200px) and (max-width: 1550px) {
+@media only screen and (min-width: 1550px) {
     /* Banner */
     #banner {
         position: fixed;
@@ -49,7 +49,7 @@ body {
     #navbar nav {
         float: right;
         margin-right: .5vw;
-        transform: translateY(10%);
+        transform: translateY(20%);
     }
 
     #navbar nav ul li {

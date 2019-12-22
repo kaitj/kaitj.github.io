@@ -21,28 +21,46 @@
     <link href="css/portfolio-sm.css" media="screen and (min-width: 600px) and (max-width: 768px)" rel="stylesheet" type="text/css">
     <link href="css/portfolio-md.css" media="screen and (min-width: 768px) and (max-width: 992px)" rel="stylesheet" type="text/css">
     <link href="css/portfolio-lg.css" media="screen and (min-width: 992px) and (max-width: 1200px)" rel="stylesheet" type="text/css">
-    <link href="css/portfolio-xl.css" media="screen and (min-width: 1200px)" rel="stylesheet" type="text/css">
+    <link href="css/portfolio-xl.css" media="screen and (min-width: 1200px) and (max-width: 1550px)" rel="stylesheet" type="text/css">
+    <link href="css/portfolio-xxl.css" media="screen and (min-width: 1550px)" rel="stylesheet" type="text/css">
     <link href="css/portfolio.css" rel="stylesheet" type="text/css">
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Rubik|Roboto&display=swap" rel="stylesheet">
 </head>
 
 
-<!-- Header () -->
-<header id="app">
-    <div id="banner" v-for="info in profile.header">
-        <img v-bind:src="info.banner" alt="info.banner_desc" class="intro-img">
-        <div class="intro-name">
-            <h1 class="text-center">{{profile.name}}</h1>
-            <hr class="intro">
-            <h2 class="text-center">{{info.description}}</h2>
+<!-- Content -->
+<body class="body">
+    <div id="app">
+
+        <!-- Header-->
+        <header>
+            <div id="banner" v-for="banner in info.banner">
+                <img v-bind:src="banner.photo" alt="banner.photo_desc" class="intro-img">
+            </div>
+        </header>
+
+        <!-- Navigation -->
+        <div id="navbar" class="row">
+            <!-- Name -->
+            <div class="name col-xl">
+                    <h1><strong>{{ info.name }}</strong></h1>
+            </div>
+
+            <!-- Blank space -->
+            <div class="col-xl">
+            </div>
+
+            <!-- Navigation -->
+            <div class="col-xl">
+                <nav class="nav"><ul>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Education</a></li>
+                </ul></nav>
+            </div>
         </div>
+
     </div>
-</header>
-
-
-<!-- Body (Content) -->
-<body>
 </body>
 
 
@@ -51,35 +69,56 @@
     <div id="app" class="copyright text-center text-vertical-center">
         <p>&copy; <script type="text/javascript">document.write(new Date().getFullYear());</script> {{profile.name}} </p>
     </div>
-
-    <!-- jQuery -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.13/vue.min.js"></script>
-    <script src="https://momentjs.com/downloads/moment.min.js"></script>
-
-    <!-- Bootstrap Core JavaScript -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-beta.3/js/bootstrap.js"></script>
-
-    <!-- Custom JavaScript -->
-    <script>
-        var app = new Vue({
-            el: '#app',
-            data: {
-                profile: {
-                }
-            }
-        })
-
-        // Reads profile.json
-        var url = "https://raw.githubusercontent.com/kaitj/kaitj.github.io/master/assets/profile.json"
-        if (window.location.hostname=="localhost"){
-            url = "assets/profile.json"
-        }
-        $.getJSON(url, function(data){
-            console.log("data is", data);
-            app.profile = data;
-        })
-    </script>
 </footer>
+
+
+<!-- jQuery -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.13/vue.min.js"></script>
+<script src="https://momentjs.com/downloads/moment.min.js"></script>
+
+<!-- Bootstrap Core JavaScript -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/js/bootstrap.js"></script>
+
+<!-- Custom JavaScript -->
+<script>
+    // Set up JSON dictionary
+    var app = new Vue({
+        el: '#app',
+        data: {
+            info: {
+            }
+        }
+    })
+
+    // Reads profile.json
+    var url = "https://raw.githubusercontent.com/kaitj/kaitj.github.io/master/assets/profile.json"
+    if (window.location.hostname=="localhost"){
+        url = "assets/profile.json"
+    }
+    $.getJSON(url, function(data){
+        console.log("data is", data);
+        app.info = data;
+    })
+
+    // Sticky nav bar
+    // When the user scrolls the page, execute myFunction
+    window.onscroll = function() {myFunction()};
+
+    // Get the navbar
+    var navbar = document.getElementById("navbar");
+
+    // Get the offset position of the navbar
+    var sticky = navbar.offsetTop;
+
+    // Add the sticky class to the navbar when you reach its scroll position. Remove "sticky" when you leave the scroll position
+    function myFunction() {
+        if (window.pageYOffset >= sticky) {
+            navbar.classList.add("sticky")
+        } else {
+            navbar.classList.remove("sticky");
+        }
+    }
+</script>
 
 </html>
