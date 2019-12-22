@@ -1,12 +1,12 @@
 {
     "name": "Jason Kai",
-    "header": [
+    "position": "PhD Candidate",
+    "company": "Western University",
+    "description": "Studying | Coding | Travelling",
+    "banner": [
         {
-            "banner": "assets/img/GrosMorne_Nfld_2019.jpg",
-            "banner_desc": "Grose Morne, Newfoundland",
-            "position": "PhD Candidate",
-            "company": "Western University",
-            "description": "Studying | Coding | Travelling"
+            "photo": "assets/img/GrosMorne_Nfld_2019.jpg",
+            "photo_desc": "Grose Morne, Newfoundland"
         }
     ],
     "social": [
