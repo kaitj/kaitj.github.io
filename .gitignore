@@ -1,2 +1,3 @@
 _site
 .deprecated
+.jekyll-cache/
