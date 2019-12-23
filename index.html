@@ -49,9 +49,9 @@
             <div id="nav-wrapper">
                 <a id="menu-toggle" href="#" class="btn btn-dark btn-sm toggle"><i class="fa fa-bars fa-sm"></i></a>
                 <ul class="nav">
-                    <a id="menu-close" href="#" class="btn btn-dark btn-xs pull-right toggle"><i class="fa fa-bar"></i></a>
                     <li><a href="#" onclick=$("#menu-close").click();>Home</a></li>
                     <li><a href="#" onclick=$("#menu-close").click();>Projects</a></li>
+                        <a id="menu-close" href="#" class="btn btn-dark btn-xs pull-right toggle"><i class="fa fa-bar"></i></a>
                 </ul>
         </div>
 
@@ -104,7 +104,7 @@
     window.onscroll = function() {myFunction()};
 
     // Get the navbar
-    var navbar = document.getElementById("navbar");
+    var navbar = document.getElementById("nav-bar");
 
     // Get the offset position of the navbar
     var sticky = navbar.offsetTop;
