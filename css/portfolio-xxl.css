@@ -23,51 +23,66 @@ body {
     }
 
 
-    /* Nav */
-    #navbar {
-        position: absolute;
-        top: 35%;
+    /* Nav Bar */
+    #nav-bar {
+        z-index: 1;
+        position: fixed;
         width: 100%;
-        height: 2.5vw;
-        margin: 0;
-        overflow: hidden;
+        top: 34%;
+        height: 2.25vw;
         background-color: #000;
     }
 
-    #navbar h1 {
-        font-size: 1.1vw;
-        text-transform: uppercase;
+    #name {
+        z-index: 2;
+        position: absolute;
+        top: 25%;
+        margin-left: 1.5vw;
+    }
+
+    #name h1 {
         font-family: "Rubik";
+        font-size: 1.2vw;
         color: #fff;
     }
 
-    #navbar .name {
-        margin-left: .5vw;
-        transform: translateY(20%);
-    }
-
-    #navbar nav {
-        float: right;
-        margin-right: .5vw;
-        transform: translateY(20%);
-    }
-
-    #navbar nav ul li {
-        display: inline;
+    #nav-wrapper {
+        z-index: 2;
+        position: absolute;
         width: 100%;
-        font-family: "Rubik";
-        margin-left: .5vw;
-        margin-right: .5vw;
+        height: 100%;
     }
 
-    #navbar nav a {
+    #nav-wrapper .nav {
+        position: absolute;
+        right: 0;
+        margin-top: .5vw;
+        margin-right: 2vw;
+    }
+
+    #nav-wrapper .nav ul li {
+        display: inline;
+    }
+
+    #nav-wrapper .nav a {
         font-size: 1vw;
+        font-family: "Rubik";
         text-transform: uppercase;
+        margin-left: .75vw;
+        margin-right: .75vw;
         color: #fff;
     }
 
-    #navbar nav a:hover {
+    #nav-wrapper .nav a:hover {
         text-decoration: none;
+    }
+
+    #menu-toggle {
+        display: none;
+    }
+
+    #menu-close {
+        display: none;
     }
 
 }
