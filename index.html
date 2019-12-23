@@ -41,23 +41,20 @@
         </header>
 
         <!-- Navigation -->
-        <div id="navbar" class="row">
-            <!-- Name -->
-            <div class="name col-xl">
-                    <h1><strong>{{ info.name }}</strong></h1>
+        <div id="nav-bar">
+            <div id="name">
+                <h1>{{ info.name }}</h1>
             </div>
 
-            <!-- Blank space -->
-            <div class="col-xl">
-            </div>
+            <div id="nav-wrapper">
+                <a id="menu-toggle" href="#" class="btn btn-dark btn-sm toggle"><i class="fa fa-bars fa-sm"></i></a>
+                <ul class="nav">
+                    <a id="menu-close" href="#" class="btn btn-dark btn-xs pull-right toggle"><i class="fa fa-bar"></i></a>
+                    <li><a href="#" onclick=$("#menu-close").click();>Home</a></li>
+                    <li><a href="#" onclick=$("#menu-close").click();>Projects</a></li>
+                </ul>
+        </div>
 
-            <!-- Navigation -->
-            <div class="col-xl">
-                <nav class="nav"><ul>
-                    <li><a href="#">About</a></li>
-                    <li><a href="#">Education</a></li>
-                </ul></nav>
-            </div>
         </div>
 
     </div>
@@ -67,7 +64,7 @@
 <!-- Footer -->
 <footer class="copyright">
     <div id="app" class="copyright text-center text-vertical-center">
-        <p>&copy; <script type="text/javascript">document.write(new Date().getFullYear());</script> {{profile.name}} </p>
+        <p>&copy; <script type="text/javascript">document.write(new Date().getFullYear());</script> {{ info.name }} </p>
     </div>
 </footer>
 
@@ -101,6 +98,7 @@
         app.info = data;
     })
 
+
     // Sticky nav bar
     // When the user scrolls the page, execute myFunction
     window.onscroll = function() {myFunction()};
@@ -119,6 +117,19 @@
             navbar.classList.remove("sticky");
         }
     }
+
+    // Pull out nav bar
+    // Closes sidebar menu
+    $("#menu-close").click(function(e) {
+        e.preventDefault();
+        $("#nav-wrapper").toggleClass("active");
+    });
+
+    // Opens the sidebar menu
+    $("#menu-toggle").click(function(e) {
+        e.preventDefault();
+        $("#nav-wrapper").toggleClass("active");
+    });
 </script>
 
 </html>
