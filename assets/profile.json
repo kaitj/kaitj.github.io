@@ -11,12 +11,19 @@
     ],
     "social": [
         {
-            "email": "tkai@uwo.ca",
-            "email_link": "mailto://tkai@uwo.ca",
-            "twitter": "jasonkai",
-            "twitter_link": "https://twitter.com/jasonkai",
-            "github": "kaitj",
-            "github_link": "https://github.com/kaitj"
+            "item": "tkai@uwo.ca",
+            "item_link": "mailto://tkai@uwo.ca",
+            "item_icon": "fa-envelope"
+        },
+        {
+            "item": "kaitj",
+            "item_link": "https://github.com/kaitj",
+            "item_icon": "fa-github"
+        },
+        {
+            "item": "jasonkai",
+            "item_link": "https://twitter.com/jasonkai",
+            "item_icon": "fa-twitter"
         }
     ]
 }
