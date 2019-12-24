@@ -79,6 +79,22 @@ body {
         margin-bottom: 2vw;
     }
 
+    .container h2 {
+        font-family: "Rubik";
+        font-size: 3vw;
+        text-transform: uppercase;
+    }
+
+    #profile-photo {
+        margin-top: 2vw;
+        height: 40vw;
+        overflow: hidden;
+    }
+
+    #profile-photo img {
+        margin-top: -11vw;
+    }
+
 
     /* Footer */
     #footer {
