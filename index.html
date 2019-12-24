@@ -25,7 +25,7 @@
     <link href="css/portfolio-xxl.css" media="screen and (min-width: 1550px)" rel="stylesheet" type="text/css">
     <link href="css/portfolio.css" rel="stylesheet" type="text/css">
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-    <link href="https://fonts.googleapis.com/css?family=Rubik|Roboto&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Rubik|Roboto|Shadows+Into+Light&display=swap" rel="stylesheet">
 </head>
 
 
@@ -45,6 +45,8 @@
                     <ul class="nav">
                         <li><a href="#" onclick=$("#menu-close").click();>Home</a></li>
                         <li><a href="#" onclick=$("#menu-close").click();>Projects</a></li>
+                        <li><a href="#" onclick=$("#menu-close").click();>Publications</a></li>
+                        <li><a href="#" onclick=$("#menu-close").click();>Contact</a></li>
                         <a id="menu-close" href="#" class="btn btn-dark btn-xs pull-right toggle"><i class="fa fa-bar"></i></a>
                     </ul>
                 </div>
@@ -60,7 +62,22 @@
             </div>
 
             <div id="profile-photo" class="text-center">
-                <img v-bind:src="profile.photo" alt="profile.photo_desc" style="width: 80%"/>
+                <img v-bind:src="profile.photo" alt="profile.photo_desc"/>
+            </div>
+
+            <div id="profile-desc" class="text-center">
+                <p>He develops and applies tools to study the structural connections of the brain. His primary research focus is on the short-ranged, "U"-shaped connections that join nearby brain regions. Jason is also a supporter of open science and all things open source.</p>
+            </div>
+            <!-- Travel -->
+            <div class="row">
+                <div id="polaroid">
+                    <img v-bind:src="profile.polaroid" alt="profile.polaroid"/>
+                    <p>Gros Morne, Newfoundland <br> July 2019</p>
+                </div>
+                <div id="polaroid-desc">
+                    <h3><strong>Travelling</strong></h3>
+                    <p>Jason enjoys travelling to and discovering new places, taking in the scenic views.</p>
+                </div>
             </div>
 
         </div>

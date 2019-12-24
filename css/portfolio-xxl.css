@@ -9,7 +9,7 @@ body {
 @media only screen and (min-width: 1550px) {
     /* Nav Bar */
     #nav-bar {
-        z-index: 1;
+        z-index: 100;
         position: fixed;
         width: 100%;
         top: 0;
@@ -86,13 +86,71 @@ body {
     }
 
     #profile-photo {
-        margin-top: 2vw;
+        margin-top: 1vw;
         height: 20vw;
         overflow: hidden;
     }
 
     #profile-photo img {
-        margin-top: -6vw;
+        margin-top: -8vw;
+        width: 100%
+    }
+
+    #profile-desc p {
+        font-family: "Roboto";
+        font-size: 1vw;
+        text-align: center;
+        padding-left: 1vw;
+        padding-right: 1vw;
+        margin-top: 1vw;
+    }
+
+    #polaroid {
+        background: #f2f2f2;
+        padding: 2vw 1vw 1vw 1vw;
+        box-shadow: .1vw .4vw .4vw rgba(0,0,0,.3);
+        margin-left: 1vw;
+    }
+
+    #polaroid img {
+        display: block;
+        width: 36vw;
+    }
+
+    #polaroid p {
+        font-family: "Shadows Into Light";
+        font-size: 1.5vw;
+        text-align: center;
+        margin-top: 1vw;
+        margin-bottom: 0
+    }
+
+    #polaroid-desc {
+        z-index: 1;
+        position: absolute;
+        background-color: #cccc00;
+        width: 23vw;
+        height: 8vw;
+        margin-top: 8vw;
+        margin-left: 36.5vw;
+    }
+
+    #polaroid-desc h3 {
+        font-family: "Rubik";
+        font-size: 2vw;
+        text-transform: uppercase;
+        margin-top: 1vw;
+        margin-left: 1vw;
+        color: #fff;
+    }
+
+    #polaroid-desc p {
+        font-family: "Roboto";
+        font-size: 1vw;
+        margin-left: 1vw;
+        margin-right: 1vw;
+        text-align: justify;
+        color: #fff;
     }
 
 
