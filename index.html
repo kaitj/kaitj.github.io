@@ -32,42 +32,48 @@
 <!-- Content -->
 <body class="body">
     <div id="app">
-
-        <!-- Header-->
+        
+        <!-- Navigation -->
         <header>
-            <div id="banner" v-for="banner in info.banner">
-                <img v-bind:src="banner.photo" alt="banner.photo_desc" class="intro-img">
+            <div id="nav-bar">
+                <div id="name">
+                    <h1>{{ info.name }}</h1>
+                </div>
+
+                <div id="nav-wrapper">
+                    <a id="menu-toggle" href="#" class="btn btn-dark btn-sm toggle"><i class="fa fa-bars fa-sm"></i></a>
+                    <ul class="nav">
+                        <li><a href="#" onclick=$("#menu-close").click();>Home</a></li>
+                        <li><a href="#" onclick=$("#menu-close").click();>Projects</a></li>
+                        <a id="menu-close" href="#" class="btn btn-dark btn-xs pull-right toggle"><i class="fa fa-bar"></i></a>
+                    </ul>
+                </div>
             </div>
         </header>
 
+        <!-- Body -->
+        <div class="container">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Venenatis cras sed felis eget velit aliquet sagittis. Faucibus in ornare quam viverra orci sagittis eu. Amet justo donec enim diam vulputate ut pharetra sit. Nibh mauris cursus mattis molestie a. Velit euismod in pellentesque massa placerat duis ultricies lacus. Erat velit scelerisque in dictum non consectetur a. Aenean sed adipiscing diam donec adipiscing tristique. Imperdiet nulla malesuada pellentesque elit eget gravida cum sociis. Odio morbi quis commodo odio aenean sed adipiscing diam donec. Pellentesque nec nam aliquam sem. Porttitor massa id neque aliquam vestibulum morbi blandit. Amet consectetur adipiscing elit ut. Nisl rhoncus mattis rhoncus urna neque.
 
-        <!-- Navigation -->
-        <div id="nav-bar">
-            <div id="name">
-                <h1>{{ info.name }}</h1>
-            </div>
+In ante metus dictum at tempor commodo ullamcorper a lacus. Velit aliquet sagittis id consectetur purus ut faucibus. Quis commodo odio aenean sed adipiscing diam. Proin libero nunc consequat interdum varius sit amet. Nibh tortor id aliquet lectus proin nibh nisl condimentum id. Orci porta non pulvinar neque laoreet suspendisse interdum. Curabitur gravida arcu ac tortor. Ac tincidunt vitae semper quis. A erat nam at lectus urna duis. Auctor urna nunc id cursus metus aliquam eleifend mi.
 
-            <div id="nav-wrapper">
-                <a id="menu-toggle" href="#" class="btn btn-dark btn-sm toggle"><i class="fa fa-bars fa-sm"></i></a>
-                <ul class="nav">
-                    <li><a href="#" onclick=$("#menu-close").click();>Home</a></li>
-                    <li><a href="#" onclick=$("#menu-close").click();>Projects</a></li>
-                    <a id="menu-close" href="#" class="btn btn-dark btn-xs pull-right toggle"><i class="fa fa-bar"></i></a>
-                </ul>
-        </div>
+Velit laoreet id donec ultrices tincidunt arcu non sodales. Diam volutpat commodo sed egestas egestas fringilla phasellus faucibus. Consequat semper viverra nam libero justo laoreet sit. Ac felis donec et odio pellentesque diam volutpat commodo sed. Elit scelerisque mauris pellentesque pulvinar pellentesque habitant. Feugiat vivamus at augue eget arcu dictum varius duis. Sagittis aliquam malesuada bibendum arcu vitae elementum curabitur vitae. Nullam non nisi est sit amet. Elementum eu facilisis sed odio morbi quis commodo odio aenean. Mattis aliquam faucibus purus in. Urna cursus eget nunc scelerisque viverra mauris in. Suspendisse sed nisi lacus sed viverra tellus in hac.
 
+Neque vitae tempus quam pellentesque nec nam aliquam. Arcu cursus vitae congue mauris. Tincidunt nunc pulvinar sapien et ligula ullamcorper malesuada. Natoque penatibus et magnis dis parturient montes nascetur. Morbi non arcu risus quis varius quam quisque id diam. Nulla facilisi morbi tempus iaculis urna. Id leo in vitae turpis massa sed elementum. Eget lorem dolor sed viverra ipsum. Duis ut diam quam nulla porttitor massa id neque aliquam. Vitae semper quis lectus nulla. At tellus at urna condimentum. Diam maecenas ultricies mi eget mauris pharetra. Sed libero enim sed faucibus. Eros in cursus turpis massa tincidunt dui ut ornare lectus.
+
+Odio ut enim blandit volutpat maecenas volutpat blandit aliquam. Id neque aliquam vestibulum morbi blandit cursus risus at ultrices. Tincidunt nunc pulvinar sapien et ligula ullamcorper. Condimentum id venenatis a condimentum vitae sapien pellentesque habitant. Eu turpis egestas pretium aenean pharetra magna ac. Et tortor consequat id porta nibh venenatis cras sed. Fermentum iaculis eu non diam phasellus. A erat nam at lectus urna. Habitant morbi tristique senectus et. Risus at ultrices mi tempus imperdiet nulla malesuada pellentesque. Natoque penatibus et magnis dis parturient montes nascetur ridiculus mus. Quis lectus nulla at volutpat diam ut venenatis tellus in. Amet tellus cras adipiscing enim eu turpis egestas pretium. Sit amet consectetur adipiscing elit pellentesque habitant morbi tristique senectus. Bibendum est ultricies integer quis auctor elit. Aliquet nec ullamcorper sit amet risus nullam eget felis eget. Scelerisque varius morbi enim nunc faucibus a pellentesque sit amet.
         </div>
 
 
         <!-- Footer -->
-        <div class="copyright text-center">
+        <footer id="footer" class="copyright text-center">
             <ul id="social-nav" class="fa-ul text-center">
                 <span class="fa-ul" v-for="social in info.social">
                     <li class="fa-li"><a v-bind:href="social.item_link" target="_blank"><i v-bind:class="'fa ' + social.item_icon"></i></a></li>
                 </span>
             </ul>
             <p>&copy; <script type="text/javascript">document.write(new Date().getFullYear());</script> Designed by {{ info.name }} </p>
-        </div>
+        </footer>
 
     </div>
 </body>
@@ -102,25 +108,6 @@
         app.info = data;
     })
 
-
-    // Sticky nav bar
-    // When the user scrolls the page, execute myFunction
-    window.onscroll = function() {myFunction()};
-
-    // Get the navbar
-    var navbar = document.getElementById("nav-bar");
-
-    // Get the offset position of the navbar
-    var sticky = navbar.offsetTop;
-
-    // Add the sticky class to the navbar when you reach its scroll position. Remove "sticky" when you leave the scroll position
-    function myFunction() {
-        if (window.pageYOffset >= sticky) {
-            navbar.classList.add("sticky")
-        } else {
-            navbar.classList.remove("sticky");
-        }
-    }
 
     // Pull out nav bar
     // Closes sidebar menu

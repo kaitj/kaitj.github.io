@@ -7,29 +7,15 @@ body {
 
 /* Extra Small */
 @media only screen and (min-width: 600px) and (max-width: 768px) {
-    #banner {
-        position: fixed;
-        top: 0;
-        width: 100%;
-        height: 50%;
-    }
-
-    .intro-img {
-        width: 100%;
-        height: 25%;
-        object-fit: cover;
-        transform: rotate(180deg);
-    }
-
-
     /* Nav Bar */
     #nav-bar {
         z-index: 1;
         position: fixed;
         width: 100%;
-        top: 11%;
+        top: 0;
         height: 4vw;
         background-color: #000;
+        border-bottom: #00008c solid .5vw;
     }
 
     #name {
@@ -42,6 +28,7 @@ body {
     #name h1 {
         font-family: "Rubik";
         font-size: 2vw;
+        text-transform: uppercase;
         color: #fff;
     }
 
@@ -52,7 +39,8 @@ body {
         width: 0%;
         height: 100%;
         overflow-y: hidden;
-        background-color: rgb(0,0,0,0.8);
+        margin-top: 4vw;
+        background-color: rgb(0,0,140,0.9);
         -webkit-transition: all 0.4s ease 0s;
         -moz-transition: all 0.4s ease 0s;
         -ms-transition: all 0.4s ease 0s;
@@ -74,7 +62,6 @@ body {
         position: relative;
         width: 0;
         padding: 0;
-        margin-top: 4vw;
         list-style: none;
         background-color: rgba(0,0,0,0);
     }
@@ -84,11 +71,11 @@ body {
     }
 
     .nav li {
-        margin-bottom: -.5vw;
+        margin-bottom: 1vw;;
     }
 
     .nav a {
-        font-size: 1.5vw;
+        font-size: 2vw;
         font-family: "Rubik";
         text-transform: uppercase;
         margin-left: 2.5vw;
@@ -106,9 +93,10 @@ body {
     #menu-toggle {
         z-index: 1;
         position: fixed;
-        top: 9.5%;
+        top: 0;
         right: 0;
-        font-size: 2.7vw;
+        font-size: 1.8vw;
+        margin-right: .5vw;
         background-color: rgba(0,0,0,0);
         border-color: rgba(0,0,0,0);
     }
@@ -119,13 +107,21 @@ body {
         border-color: rgba(0,0,0,0);
     }
 
+    /* Body */
+    .container {
+        position: relative;
+        margin-top: 6vw;
+        margin-bottom: 3vw;
+    }
 
-     /* Footer */
-    .copyright {
-        position: absolute;
+
+    /* Footer */
+    #footer {
+        position: relative;
         bottom: 0;
         width: 100%;
-        background-color: #000;
+        height: 10.2vw;
+        background-color: #00008c;
         text-align: center;
     }
 

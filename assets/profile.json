@@ -3,9 +3,9 @@
     "position": "PhD Candidate",
     "company": "Western University",
     "description": "Studying | Coding | Travelling",
-    "banner": [
+    "about": [
         {
-            "photo": "assets/img/GrosMorne_Nfld_2019.jpg",
+            "photo": "assets/img/profile.jpg",
             "photo_desc": "Grose Morne, Newfoundland"
         }
     ],
