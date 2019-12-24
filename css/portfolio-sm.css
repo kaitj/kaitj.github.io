@@ -28,7 +28,7 @@ body {
         position: fixed;
         width: 100%;
         top: 11%;
-        height: 2.25vw;
+        height: 4vw;
         background-color: #000;
     }
 
@@ -41,7 +41,7 @@ body {
 
     #name h1 {
         font-family: "Rubik";
-        font-size: 1.2vw;
+        font-size: 2vw;
         color: #fff;
     }
 
@@ -74,7 +74,7 @@ body {
         position: relative;
         width: 0;
         padding: 0;
-        margin-top: .5vw;
+        margin-top: 4vw;
         list-style: none;
         background-color: rgba(0,0,0,0);
     }
@@ -84,7 +84,7 @@ body {
     }
 
     .nav li {
-        margin-bottom: -2vw;
+        margin-bottom: -.5vw;
     }
 
     .nav a {
@@ -108,7 +108,7 @@ body {
         position: fixed;
         top: 9.5%;
         right: 0;
-        font-size: 1vw;
+        font-size: 2.7vw;
         background-color: rgba(0,0,0,0);
         border-color: rgba(0,0,0,0);
     }
