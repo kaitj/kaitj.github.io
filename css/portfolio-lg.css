@@ -84,4 +84,44 @@ body {
         display: none;
     }
 
+
+     /* Footer */
+    .copyright {
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        background-color: #000;
+        text-align: center;
+    }
+
+    .copyright p {
+        font-family: "Roboto";
+        font-size: 1.25vw;
+        color: #fff;
+        margin-top: -1vw;
+    }
+
+    #social-nav {
+        list-style: none;
+        position: relative;
+        display: flex;
+        justify-content: center;
+        margin-top: .1vw;
+    }
+
+    #social-nav li {
+        display: inline;
+        margin-left: -.4vw;
+        margin-right: -.4vw;
+    }
+
+    #social-nav li a {
+        color: #fff;
+        font-size: 1.4vw;
+    }
+
+    #social-nav li a:hover{
+        text-decoration: none;
+    }
+
 }

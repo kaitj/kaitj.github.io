@@ -85,4 +85,42 @@ body {
         display: none;
     }
 
+
+    /* Footer */
+    .copyright {
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        background-color: #000;
+        text-align: center;
+    }
+
+    .copyright p {
+        font-family: "Roboto";
+        font-size: .85vw;
+        color: #fff;
+        margin-top: -.5vw;
+    }
+
+    #social-nav {
+        list-style: none;
+        position: relative;
+        display: flex;
+        justify-content: center;
+        margin-top: .2vw;
+    }
+
+    #social-nav li {
+        display: inline;
+    }
+
+    #social-nav li a {
+        color: #fff;
+        font-size: 1.2vw;
+    }
+
+    #social-nav li a:hover{
+        text-decoration: none;
+    }
+
 }

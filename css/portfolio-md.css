@@ -118,4 +118,44 @@ body {
         background-color: rgba(0,0,0,0);
         border-color: rgba(0,0,0,0);
     }
+
+
+     /* Footer */
+    .copyright {
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        background-color: #000;
+        text-align: center;
+    }
+
+    .copyright p {
+        font-family: "Roboto";
+        font-size: 1.5vw;
+        color: #fff;
+        margin-top: -1.5vw;
+    }
+
+    #social-nav {
+        list-style: none;
+        position: relative;
+        display: flex;
+        justify-content: center;
+    }
+
+    #social-nav li {
+        display: inline;
+        margin-left: -.8vw;
+        margin-right: -.8vw;
+    }
+
+    #social-nav li a {
+        color: #fff;
+        font-size: 1.8vw;
+    }
+
+    #social-nav li a:hover{
+        text-decoration: none;
+    }
+
 }
