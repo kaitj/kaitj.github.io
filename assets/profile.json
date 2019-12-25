@@ -2,17 +2,21 @@
     "name": "Jason Kai",
     "position": "Ph.D. Candidate",
     "company": "University of Western Ontario",
-    "description": "Studying | Coding | Travelling",
     "about": [
         {
             "photo": "assets/img/GrosMorne_2019.jpg",
             "photo_desc": "Grose Morne, Newfoundland",
+            "brief_profile": "Jason develops and applies tools to study the structural connections of the brain. His primary research focus is on the short-ranged, \"U\"-shaped connections that join nearby brain regions. He is also a supporter of open science and all things open source.",
             "polaroid": "assets/img/Lucerne_2018.jpg",
             "polaroid_desc": "Lucerne, Switzerland",
+            "polaroid_date": "June 2018",
+            "polaroid_caption": "In his spare time, Jason enjoys discovering new places and taking in the scenic views",
             "code": "assets/img/code.png",
             "code_desc": "Some python code",
+            "code_caption": "Jason makes use of different programming languages & software containers for project development and continuous deployment",
             "research": "assets/img/research.png",
-            "research_desc": "Jason at the MRI scanner"
+            "research_desc": "Jason at the MRI scanner",
+            "research_caption": "Magnetic resonance imaging is one of the tools utilized in Jason's research, acquiring data to study the brain's structural connectivity"
         }
     ],
     "social": [

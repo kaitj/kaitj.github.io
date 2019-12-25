@@ -67,14 +67,14 @@
 
             <!-- Brief Profile -->
             <div id="profile-desc" class="text-center">
-                <p>Jason develops and applies tools to study the structural connections of the brain. His primary research focus is on the short-ranged, "U"-shaped connections that join nearby brain regions. He is also a supporter of open science and all things open source.</p>
+                <p>{{ profile.brief_profile }}</p>
             </div>
 
             <!-- Research -->
             <div class="row">
                 <div id="research-desc">
                     <h3><strong>Research</strong></h3>
-                    <p>Magnetic resonance imaging is one of the tools utilized in Jason's research, acquiring data to study the brain's structural connectivity</p>
+                    <p> {{ profile.research_caption }}</p>
                 </div>
                 <div id="research">
                     <img v-bind:src="profile.research" alt="profile.research_desc"/>
@@ -86,7 +86,7 @@
             <div class="row">
                 <div id="code-desc">
                     <h3><strong>Coding</strong></h3>
-                    <p>Jason makes use of different programming languages & software containers for project development and continuous deployment</p>
+                    <p>{{ profile.code_caption }}</p>
                 </div>
                 <div id="code">
                     <img v-bind:src="profile.code" alt="profile.code_desc"/>
@@ -98,11 +98,12 @@
             <div class="row">
                 <div id="polaroid">
                     <img v-bind:src="profile.polaroid" alt="profile.polaroid_desc"/>
-                    <p>Lucerne, Switzerland <br> June 2018</p>
+                    <p>{{ profile.polaroid_desc }}<br>
+                       {{ profile.polaroid_date }}</p>
                 </div>
                 <div id="polaroid-desc">
                     <h3><strong>Travel</strong></h3>
-                    <p>In his spare time, Jason enjoys discovering new places and taking in the scenic views</p>
+                    <p>{{ profile.polaroid_caption }}</p>
                 </div>
             </div>
 
