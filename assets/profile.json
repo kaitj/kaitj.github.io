@@ -6,7 +6,7 @@
         {
             "photo": "assets/img/GrosMorne_2019.jpg",
             "photo_desc": "Grose Morne, Newfoundland",
-            "brief_profile": "Jason develops and applies tools to study the structural connections of the brain. His primary research focus is on the short-ranged, \"U\"-shaped connections that join nearby brain regions. He is also a supporter of open science and all things open source.",
+            "brief_profile": "With his background in electrical & biomedical engineering, Jason develops and applies tools to study the structural connections of the brain. His primary research focus is on the short-ranged, \"U\"-shaped connections that join nearby brain regions. He is also a supporter of open science and all things open source.",
             "polaroid": "assets/img/Lucerne_2018.jpg",
             "polaroid_desc": "Lucerne, Switzerland",
             "polaroid_date": "June 2018",
@@ -20,20 +20,72 @@
         }
     ],
     "social": [
+        { "item": "tkai@uwo.ca", "item_link": "mailto://tkai@uwo.ca", "item_icon": "fa-envelope" },
+        { "item": "kaitj", "item_link": "https://github.com/kaitj", "item_icon": "fa-github" },
+        { "item": "jasonkai", "item_link": "https://twitter.com/jasonkai", "item_icon": "fa-twitter" }
+    ],
+    "papers": [
         {
-            "item": "tkai@uwo.ca",
-            "item_link": "mailto://tkai@uwo.ca",
-            "item_icon": "fa-envelope"
+            "title": "Diffusion Dispersion Imaging: Mapping OGSE Frequency Dependence in the Human Brain",
+            "date": "2019-11-01",
+            "date_show": "Nov 2019",
+            "authors": "Arbabi, A., Kai, J., Khan A.R., Baron, C.A.",
+            "journal": "Magnetic Resonance in Medicine",
+            "doi": "10.1002/mrm.28083",
+            "doi_link": "https://doi.org/10.1002/mrm.28083"
         },
         {
-            "item": "kaitj",
-            "item_link": "https://github.com/kaitj",
-            "item_icon": "fa-github"
+            "title": "A framework for evaluating correspondence between brain images using anatomical fiducials",
+            "date": "2019-06-01",
+            "date_show": "Jun 2019",
+            "authors": "Lau J.C., Parrent, A.G., Demarco, J., Gupta, G., Kai, J., Stanley, O.W., Kuehn, T., Park, P.J., Ferko, K., Khan, A.R., Peters, T.M.",
+            "journal": "Human Brain Mapping",
+            "doi": "10.1002/hbm.24693",
+            "doi_link": "https://doi.org/10.1002/hbm.24693"
+        }
+    ],
+    "talks": [
+        {
+            "title": "Assessing the reliability and reproducibility of NeuroBundle Extraction and Evaluation Resource, an automated tool for clustering diffusion tractography",
+            "date": "2019-03-26",
+            "date_show": "Mar 2019",
+            "authors": "Kai, J., Khan A.R.",
+            "location": "London, ON, Canada",
+            "proceeding": "Proceedings of the 17th annual meeting of Imaging Network Ontario. pp 105."
         },
         {
-            "item": "jasonkai",
-            "item_link": "https://twitter.com/jasonkai",
-            "item_icon": "fa-twitter"
+            "title": "Investigating U-shape fibers from data-driven clustering of white matter tractography",
+            "date": "2018-06-15",
+            "date_show": "Jun 2018",
+            "authors": "Kai, J., Kasa, L.W., Peters, T.M., Khan, A.R.",
+            "location": "Paris, France",
+            "proceeding": "Proceedings of the 26th annual meeting of International Society for Magnetic Resonance in Medicine. pp 43."
+        },
+        {
+            "title": "Investigating the relationship of myelin and axonal white matter microstructure using longitudinal relaxation mapping and restricted diffusion",
+            "date": "2017-03-18",
+            "date_show": "Mar 2017",
+            "authors": "Kai, J., Kasa, L.W., Peters, T.M., Khan, A.R.",
+            "location": "London, ON, Canada",
+            "proceeding": "Proceedings of the 15th annual meeting of Imaging Network Ontario. pp 93."
+        }
+    ],
+    "posters": [
+        {
+            "title": "Development of a diffusion magnetic resonance imaging template for investigating short-ranged U-shaped structural connectivity in the human adult brain",
+            "date": "2019-05-24",
+            "date_show": "May 2019",
+            "authors": "Kai, J., Khan A.R.",
+            "location": "Toronto, ON, Canada",
+            "proceeding": "13th Annual Canadian Neuroscience Meeting"
+        },
+        {
+            "title": "Investigating quantitative and structural differences in short association, U-shaped fibres in temporal lobe epilepsy",
+            "date": "2018-03-28",
+            "date_show": "Mar 2018",
+            "authors": "Kai, J., Kasa L.W., Peters, T.M., Khan A.R.",
+            "location": "Toronto, ON, Canada",
+            "proceeding": "Proceedings of the 16th annual meeting of Imaging Network Ontario. pp 113."
         }
     ]
 }

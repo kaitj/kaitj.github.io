@@ -234,6 +234,68 @@ body {
         color: #fff;
     }
 
+    /* Publication */
+    #publications h2 {
+        font-family: "Rubik";
+        font-size: 1.5vw;
+    }
+
+    #publications p {
+        font-family: "Roboto";
+        font-size: 1.1vw;
+        margin-right: 1.75vw;
+    }
+
+    #publications em {
+        font-family: "Roboto";
+        font-size: .8vw;
+    }
+
+    #publications {
+        margin-bottom: -.5vw;
+    }
+
+    #tabs {
+        overflow: hidden;
+    }
+
+    #tabs button {
+        position: relative;
+        background: #eee;
+        padding: .5vw 3.5vw;
+        float: left;
+        font-family: "Rubik";
+        font-size: 1vw;
+        text-transform: uppercase;
+        text-decoration: none;
+        color: #000;
+        border-radius: 1vw 1vw 0 0;
+        transition: 0.3s;
+    }
+
+    #tabs button.active {
+        background-color: #00008c;
+        background-image: none;
+        color: #fff;
+    }
+
+    table, th, td {
+        border: #00008c solid .2vw;
+        font-family: "Roboto";
+        padding: .5vw;
+    }
+
+    th {
+        font-size: 1vw;
+    }
+
+    td {
+        text-align: justify;
+        font-size: .85vw;
+        padding-right: 2vw;
+        padding-bottom: 1vw;
+    }
+
     /* Contact */
     #contact h2 {
         font-family: "Rubik";

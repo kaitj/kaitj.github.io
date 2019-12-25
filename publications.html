@@ -5,10 +5,10 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Personal webpage">
+    <meta name="description" content="Personal webpage - publications">
     <meta name="author" content="Jason Kai">
 
-    <title>Publications | Jason Kai</title>
+    <title>Publications| Jason Kai</title>
 
     <!-- favicon -->
     <link rel="shortcut icon" href="assets/img/favicon.ico">
@@ -17,221 +17,193 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-beta.3/css/bootstrap.css" rel="stylesheet">
 
     <!-- Custom/Other CSS -->
-    <link href="css/portfolio-custom.css" rel="stylesheet">
+    <link href="css/portfolio-xs.css" media="screen and (max-width: 600px)" rel="stylesheet" type="text/css">
+    <link href="css/portfolio-sm.css" media="screen and (min-width: 600px) and (max-width: 768px)" rel="stylesheet" type="text/css">
+    <link href="css/portfolio-md.css" media="screen and (min-width: 768px) and (max-width: 992px)" rel="stylesheet" type="text/css">
+    <link href="css/portfolio-lg.css" media="screen and (min-width: 992px) and (max-width: 1200px)" rel="stylesheet" type="text/css">
+    <link href="css/portfolio-xl.css" media="screen and (min-width: 1200px) and (max-width: 1550px)" rel="stylesheet" type="text/css">
+    <link href="css/portfolio-xxl.css" media="screen and (min-width: 1550px)" rel="stylesheet" type="text/css">
+    <link href="css/portfolio.css" rel="stylesheet" type="text/css">
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-        <link href="https://fonts.googleapis.com/css?family=Heebo|Roboto|Abril+Fatface&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Rubik|Roboto|Shadows+Into+Light&display=swap" rel="stylesheet">
 </head>
 
 
-<!-- Header () -->
-<header id="portfolio" class="portfolio">
+<!-- Content -->
+<body class="body">
     <div id="app">
-        <div class="text-vertical-center text-center portfolio-caption">{{profile.name}}</div>
 
-        <div class="frame-round row">
-            <img src="assets/img/profile.jpg" alt="Profile Picture" title="Profile Picture">
+        <!-- Navigation -->
+        <header>
+            <div id="nav-bar">
+                <div id="name">
+                    <h1>{{ info.name }}</h1>
+                </div>
+
+                <div id="nav-wrapper">
+                    <a id="menu-toggle" href="#" class="btn btn-dark btn-sm toggle"><i class="fa fa-bars fa-sm"></i></a>
+                    <ul class="nav">
+                        <li><a href="#" onclick=$("#menu-close").click();>Home</a></li>
+                        <li><a href="#" onclick=$("#menu-close").click();>Projects</a></li>
+                        <li><a href="#" onclick=$("#menu-close").click();>Publications</a></li>
+                        <li><a href="#" onclick=$("#menu-close").click();>Contact</a></li>
+                        <a id="menu-close" href="#" class="btn btn-dark btn-xs pull-right toggle"><i class="fa fa-bar"></i></a>
+                    </ul>
+                </div>
+            </div>
+        </header>
+
+        <!-- Body -->
+        <div class="container" v-for="profile in info.about">
+
+            <div id="publications">
+                <h2><strong>Publications</strong></h2>
+                <p>Below are some publications and presentations. Click through the tabs to take a look!</p>
+                <em>Last updated: January 1, 2020</em>
+            </div>
+            <br>
+
+            <!-- Tab links -->
+            <div id="tabs">
+                <button class="tablinks" onclick="openPublication(event, 'papers')" id="defaultOpen">Papers</button>
+                <button class="tablinks" onclick="openPublication(event, 'talks')">Talks</button>
+                <button class="tablinks" onclick="openPublication(event, 'posters')">Posters</button>
+            </div>
+
+            <!-- Tab content -->
+            <div id="papers" class="tabcontent">
+                <table style="width: 100%;">
+                    <tr>
+                        <th style="width: 10%;">Date</th>
+                        <th style="width: 80%;">Publication</th>
+                    </tr>
+                    <tr v-for="paper in info.papers">
+                        <td valign="top">{{ paper.date_show }}</td>
+                        <td valign="top">{{ paper.authors }}<br>
+                            {{ paper.title }}.
+                            <em>{{ paper.journal }}</em>.
+                            <a v-bind:href="paper.doi_link" target="_blank"> doi:{{paper.doi}}</a>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+
+            <div id="talks" class="tabcontent">
+                <table style="width: 100%;">
+                    <tr>
+                        <th style="width: 10%;">Date</th>
+                        <th style="width: 80%;">Publication</th>
+                    </tr>
+                    <tr v-for="talk in info.talks">
+                        <td valign="top">{{ talk.date_show }}</td>
+                        <td valign="top">{{ talk.authors }}<br>
+                            {{ talk.title }}.
+                            <em>{{ talk.proceeding }}</em>.
+                            {{ talk.location }}.
+                        </td>
+                    </tr>
+                </table>
+            </div>
+
+            <div id="posters" class="tabcontent">
+                <table style="width: 100%;">
+                    <tr>
+                        <th style="width: 10%;">Date</th>
+                        <th style="width: 80%;">Publication</th>
+                    </tr>
+                    <tr v-for="poster in info.posters">
+                        <td valign="top">{{ poster.date_show }}</td>
+                        <td valign="top">{{ poster.authors }}<br>
+                            {{ poster.title }}.
+                            <em>{{ poster.proceeding }}</em>.
+                            {{ poster.location }}.
+                        </td>
+                    </tr>
+                </table>
+            </div>
+
         </div>
 
-        <div class="text-vertical-center text-center profile-caption">
-            {{profile.position}}, {{profile.company}}
-            <div><em>{{profile.description}}</em></div>
-        </div>
-
-        <div>
-            <ul class="profile-caption fa-ul social-nav text-vertical-center text-center">
-                <span class="fa-ul">
-                    <li class="fa-li"><i class="fa fa-envelope"></i><a v-bind:href="profile.email_link"> {{profile.email}} </a></li>
-                    <li class="fa-li"><i class="fa fa-twitter"></i><a v-bind:href="profile.twitter_link" target="_blank"> {{profile.twitter}} </a></li>
-                    <li class="fa-li"><i class="fa fa-github"></i><a v-bind:href="profile.github_link" target="_blank"> {{profile.github}} </a></li>
+        <!-- Footer -->
+        <footer id="footer" class="copyright text-center">
+            <ul id="social-nav" class="fa-ul text-center">
+                <span class="fa-ul" v-for="social in info.social">
+                    <li class="fa-li"><a v-bind:href="social.item_link" target="_blank"><i v-bind:class="'fa ' + social.item_icon"></i></a></li>
                 </span>
             </ul>
-        </div>
-
-        <div class="twitter-feed text-center text-vertical-center">
-            <a class="twitter-timeline" href="https://twitter.com/jasonkai?ref_src=twsrc%5Etfw"
-            data-height="500" data-width="300" data-aria-polite="assertive"> Tweets by @{{profile.twitter}}</a>
-            <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-        </div>
+            <p>&copy; <script type="text/javascript">document.write(new Date().getFullYear());</script> Designed by {{ info.name }} </p>
+        </footer>
 
     </div>
 
-    <!-- jQuery -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.13/vue.min.js"></script>
-    <script src="https://momentjs.com/downloads/moment.min.js"></script>
-
-    <!-- Bootstrap Core JavaScript -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-beta.3/js/bootstrap.js"></script>
-
-    <!-- Custom JavaScript -->
+    <!-- Custom page-specific scripts -->
     <script>
-        var app = new Vue({
-            el: '#app',
-            data: {
-                profile: {
-                }
-            }
-        })
+    // Publication tabs
+    function openPublication(evt, publication) {
+        var i, tabcontent, tablinks;
+        tabcontent = document.getElementsByClassName("tabcontent");
 
-        // Reads profile.json
-        var url = "https://raw.githubusercontent.com/kaitj/kaitj.github.io/master/assets/profile.json"
-        if (window.location.hostname=="localhost"){
-            url = "assets/profile.json"
+        for (i = 0; i < tabcontent.length; i++) {
+            tabcontent[i].style.display = "none";
         }
-        $.getJSON(url, function(data){
-            console.log("data is", data);
-            app.profile = data;
-        })
-    </script>
-</header>
 
-
-<!-- Body (Content) -->
-<body>
-    <!-- Navigation -->
-    <div>
-        <a id="menu-toggle" href="#" class="btn btn-dark btn-lg toggle"><i class="fa fa-bars"></i></a>
-        <nav id="sidebar-wrapper">
-            <ul class="sidebar-nav">
-                <a id="menu-close" href="#" class="btn btn-dark btn-lg pull-right toggle"><i class="fa fa-times"></i></a>
-                <li><a href="index.html" style="text-transform: uppercase;" onclick=$("#menu-close").click(); >About</a></li>
-                <li><a href="publications.html" style="text-transform: uppercase;" onclick=$("#menu-close").click();>Publications</a></li>
-                <li><a href="contact.html" style="text-transform: uppercase;" onclick=$("#menu-close").click();>Contact</a></li>
-            </ul>
-        </nav>
-    </div>
-
-    <section id="coms" class="content">
-        <div class="box">
-            <h1>Publications</h1>
-            <p> This page contains some of my publications. Please get in touch for a full list.</p>
-
-            <!-- Papers -->
-            <h3>Papers</h3>
-            <div v-for="paper in info.papers">
-                <div class="row" style="font-size: 15px;">
-                    <div class="col-sm-2">{{paper.date}}</div>
-                    <div class="col-sm-10">
-                        {{paper.authors}} <br>
-                        {{paper.title}}.
-                        <em>{{paper.journal}}</em>.
-                        <a v-bind:href="paper.doi_link" target="_blank"> doi:{{paper.doi}} </a></li>
-                    </div>
-                </div>
-                <br>
-            </div>
-
-            <!-- Talks -->
-            <h3>Talks</h3>
-            <div v-for="talk in info.talks">
-                <div class="row" style="font-size: 15px;">
-                    <div class="col-sm-2">{{talk.date}}</div>
-                    <div class="col-sm-10">
-                        {{talk.authors}} <br>
-                        {{talk.title}}.
-                        <em>In {{talk.proceeding}}</em>
-                        {{talk.location}}.
-                    </div>
-                </div>
-                <br>
-            </div>
-
-            <!-- Posters -->
-            <h3>Posters</h3>
-            <div v-for="poster in info.posters">
-                <div class="row" style="font-size: 15px;">
-                    <div class="col-sm-2">{{poster.date}}</div>
-                    <div class="col-sm-10">
-                        {{poster.authors}} <br>
-                        {{poster.title}}.
-                        <em>In {{poster.proceeding}}</em>
-                        {{poster.location}}
-                    </div>
-                </div>
-                <br>
-            </div>
-
-        </div>
-    </section>
-
-    <!-- jQuery -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.13/vue.min.js"></script>
-    <script src="https://momentjs.com/downloads/moment.min.js"></script>
-
-    <!-- Bootstrap Core JavaScript -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-beta.3/js/bootstrap.js"></script>
-
-    <!-- Custom JavaScript -->
-    <script>
-        var coms = new Vue({
-            el: '#coms',
-            data: {
-                info: {
-                }
-            }
-        })
-
-        // Reads publications.json
-        var pub_url = "https://raw.githubusercontent.com/kaitj/kaitj.github.io/master/assets/publications.json"
-        if (window.location.hostname=="localhost"){
-            pub_url = "assets/publications.json"
+        tablinks = document.getElementsByClassName("tablinks");
+        for (i = 0; i < tablinks.length; i++) {
+            tablinks[i].className = tablinks[i].className.replace(" active", "");
         }
-        $.getJSON(pub_url, function(pub_data){
-            console.log("data is", pub_data);
-            coms.info = pub_data;
-        })
 
+        document.getElementById(publication).style.display = "block";
+        evt.currentTarget.className += " active";
+    }
 
-        // Closes sidebar menu
-        $("#menu-close").click(function(e) {
-            e.preventDefault();
-            $("#sidebar-wrapper").toggleClass("active");
-        });
-
-        // Opens the sidebar menu
-        $("#menu-toggle").click(function(e) {
-            e.preventDefault();
-            $("#sidebar-wrapper").toggleClass("active");
-        });
+    document.getElementById("defaultOpen").click();
     </script>
 </body>
 
 
-<!-- Footer -->
-<footer class="copyright">
-    <div id="app2" class="copyright text-center text-vertical-center">
-        <p>&copy; <script type="text/javascript">document.write(new Date().getFullYear());</script> {{profile.name}} </p>
-    </div>
+<!-- jQuery -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.13/vue.min.js"></script>
+<script src="https://momentjs.com/downloads/moment.min.js"></script>
 
-    <!-- jQuery -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.13/vue.min.js"></script>
-    <script src="https://momentjs.com/downloads/moment.min.js"></script>
+<!-- Bootstrap Core JavaScript -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/js/bootstrap.js"></script>
 
-    <!-- Bootstrap Core JavaScript -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-beta.3/js/bootstrap.js"></script>
-
-    <!-- Custom JavaScript -->
-    <script>
-        var app2 = new Vue({
-            el: '#app2',
-            data: {
-                profile: {
-                }
+<!-- Custom JavaScript -->
+<script>
+    // Set up JSON dictionary
+    var app = new Vue({
+        el: '#app',
+        data: {
+            info: {
             }
-        })
-
-        // Reads profile.json
-        var url = "https://raw.githubusercontent.com/kaitj/kaitj.github.io/master/assets/profile.json"
-        if (window.location.hostname=="localhost"){
-            url = "assets/profile.json"
         }
-        $.getJSON(url, function(data){
-            console.log("data is", data);
-            app2.profile = data;
-        })
-    </script>
-</footer>
+    })
 
+    // Reads profile.json
+    var url = "https://raw.githubusercontent.com/kaitj/kaitj.github.io/master/assets/profile.json"
+    if (window.location.hostname=="localhost"){
+        url = "assets/profile.json"
+    }
+    $.getJSON(url, function(data){
+        console.log("data is", data);
+        app.info = data;
+        app.info.papers.sort(function(a,b){return b.date > a.date? 1 : -1})
+        app.info.talks.sort(function(a,b){return b.date > a.date? 1 : -1})
+    })
+
+
+    // Pull out nav bar
+    // Closes sidebar menu
+    $("#menu-close").click(function(e) {
+        e.preventDefault();
+        $("#nav-wrapper").toggleClass("active");
+    });
+
+    // Opens the sidebar menu
+    $("#menu-toggle").click(function(e) {
+        e.preventDefault();
+        $("#nav-wrapper").toggleClass("active");
+    });
+</script>
 </html>
