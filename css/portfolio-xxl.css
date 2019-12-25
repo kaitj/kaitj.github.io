@@ -234,6 +234,22 @@ body {
         color: #fff;
     }
 
+    /* Contact */
+    #contact h2 {
+        font-family: "Rubik";
+        font-size: 1.5vw;
+    }
+
+    #contact p {
+        font-family: "Roboto";
+        font-size: 1.1vw;
+        text-align: justify;
+        margin-right: 1.75vw;
+    }
+
+    #contact a {
+        color: #00008c;
+    }
 
     /* Footer */
     #footer {

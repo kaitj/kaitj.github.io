@@ -280,6 +280,24 @@ body {
         color: #fff;
     }
 
+    /* Contact */
+    #contact h2 {
+        font-family: "Rubik";
+        font-size: 4vw;
+    }
+
+    #contact p {
+        font-family: "Roboto";
+        font-size: 3vw;
+        text-align: justify;
+        margin-right: 2vw;
+        margin-bottom: -1.5vw;
+    }
+
+    #contact a {
+        color: #00008c
+    }
+
 
     /* Footer */
     #footer {

@@ -270,6 +270,24 @@ body {
         color: #fff;
     }
 
+    /* Contact */
+    #contact h2 {
+        font-family: "Rubik";
+        font-size: 3.25vw;
+    }
+
+    #contact p {
+        font-family: "Roboto";
+        font-size: 2.5vw;
+        text-align: justify;
+        margin-right: 2vw;
+        margin-bottom: -1vw;
+    }
+
+    #contact a {
+        color: #00008c
+    }
+
 
     /* Footer */
     #footer {
