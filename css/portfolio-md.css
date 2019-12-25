@@ -305,8 +305,8 @@ body {
         text-transform: uppercase;
         text-decoration: none;
         color: #000;
-        border-radius: 1vw 1vw 0 0;
-        transition: 0.3s;
+        border-radius: 1.5vw 1.5vw 0 0;
+        transition: .3s;
     }
 
     #tabs button.active {
