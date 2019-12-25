@@ -107,14 +107,13 @@ body {
 
     #research {
         overflow-y: hidden;
-        height: 26vw;
+        height: 20vw;
         margin-top: 1vw;
     }
 
     #research img {
         display: block;
         width: 34vw;
-        margin-top: -3vw;
         margin-left: 1vw;
     }
 
@@ -149,7 +148,6 @@ body {
     #code {
         overflow-y: hidden;
         height: 26vw;
-        margin-top: -3vw;
     }
 
     #code img {
@@ -165,7 +163,7 @@ body {
         background-color: #7a003c;
         width: 26vw;
         height: 10vw;
-        margin-top: 0vw;
+        margin-top: 3vw;
         margin-left: 1vw;
     }
 
@@ -197,7 +195,7 @@ body {
 
     #polaroid img {
         display: block;
-        width: 36vw;
+        width: 34vw;
     }
 
     #polaroid p {
@@ -215,7 +213,7 @@ body {
         width: 23vw;
         height: 8vw;
         margin-top: -1vw;
-        margin-left: 36.5vw;
+        margin-left: 35.5vw;
     }
 
     #polaroid-desc h3 {
