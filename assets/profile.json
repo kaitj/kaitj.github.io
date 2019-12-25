@@ -5,10 +5,10 @@
     "description": "Studying | Coding | Travelling",
     "about": [
         {
-            "photo": "assets/img/profile.jpg",
+            "photo": "assets/img/GrosMorne_2019.jpg",
             "photo_desc": "Grose Morne, Newfoundland",
-            "polaroid": "assets/img/GrosMorne_Nfld_2019.jpg",
-            "polaroid_desc": "Gros Morne, Newfoundland",
+            "polaroid": "assets/img/Lucerne_2018.jpg",
+            "polaroid_desc": "Lucerne, Switzerland",
             "code": "assets/img/code.png",
             "code_desc": "Some python code",
             "research": "assets/img/research.png",
