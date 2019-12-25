@@ -105,9 +105,51 @@ body {
         margin-top: 1vw;
     }
 
+    #research {
+        overflow-y: hidden;
+        height: 26vw;
+        margin-top: 1vw;
+    }
+
+    #research img {
+        display: block;
+        width: 34vw;
+        margin-top: -3vw;
+        margin-left: 1vw;
+    }
+
+    #research-desc {
+        z-index: 1;
+        position: absolute;
+        background-color: #4b0082;
+        width: 28vw;
+        height: 10vw;
+        margin-top: 6vw;
+        margin-left: 31vw;
+    }
+
+    #research-desc h3 {
+        font-family: "Rubik";
+        font-size: 2vw;
+        text-transform: uppercase;
+        margin-top: 1vw;
+        margin-left: 1vw;
+        color: #fff;
+    }
+
+    #research-desc p {
+        font-family: "Roboto";
+        font-size: 1vw;
+        margin-left: 1vw;
+        margin-right: 1vw;
+        text-align: justify;
+        color: #fff;
+    }
+
     #code {
         overflow-y: hidden;
         height: 26vw;
+        margin-top: -3vw;
     }
 
     #code img {
@@ -123,7 +165,7 @@ body {
         background-color: #7a003c;
         width: 26vw;
         height: 10vw;
-        margin-top: 3vw;
+        margin-top: 0vw;
         margin-left: 1vw;
     }
 

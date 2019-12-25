@@ -10,7 +10,9 @@
             "polaroid": "assets/img/GrosMorne_Nfld_2019.jpg",
             "polaroid_desc": "Gros Morne, Newfoundland",
             "code": "assets/img/code.png",
-            "code_desc": "Some html code"
+            "code_desc": "Some python code",
+            "research": "assets/img/research.png",
+            "research_desc": "Jason at the MRI scanner"
         }
     ],
     "social": [
