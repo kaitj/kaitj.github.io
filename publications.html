@@ -54,11 +54,20 @@
         </header>
 
         <!-- Body -->
-        <div class="container" v-for="profile in info.about">
+        <div class="container">
 
             <div id="publications">
                 <h2><strong>Publications</strong></h2>
                 <p>Below are some publications and presentations. Click through the tabs to take a look!</p>
+
+                <div id="pub-img">
+                    <ul>
+                        <li v-for="pub_photo in info.publications">
+                            <img v-bind:src="pub_photo.photo" alt="pub_photo.photo_alt"/>
+                        </li>
+                    </ul>
+                </div>
+
                 <em>Last updated: January 1, 2020</em>
             </div>
             <br>

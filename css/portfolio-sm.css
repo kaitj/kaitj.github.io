@@ -281,6 +281,24 @@ body {
     }
 
     /* Publication */
+    #pub-img {
+        width: 100%;
+    }
+
+    #pub-img ul {
+        list-style: none;
+    }
+
+    #pub-img li {
+        display: inline;
+    }
+
+    #pub-img img {
+        width: 31%;
+        padding-right: 1vw;
+        padding-left: 1vw;
+    }
+
     #publications h2 {
         font-family: "Rubik";
         font-size: 4vw;

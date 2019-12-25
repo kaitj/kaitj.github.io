@@ -24,6 +24,11 @@
         { "item": "kaitj", "item_link": "https://github.com/kaitj", "item_icon": "fa-github" },
         { "item": "jasonkai", "item_link": "https://twitter.com/jasonkai", "item_icon": "fa-twitter" }
     ],
+    "publications": [
+        { "photo": "assets/img/publications/ismrm2018.jpeg", "photo_alt": "ISMRM 2018" },
+        { "photo": "assets/img/publications/CAN2019.jpeg", "photo_alt": "CAN 2019" },
+        { "photo": "assets/img/publications/brainhack2019.jpeg", "photo_alt": "Brainhack Western 2019" }
+    ],
     "papers": [
         {
             "title": "Diffusion Dispersion Imaging: Mapping OGSE Frequency Dependence in the Human Brain",
