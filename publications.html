@@ -43,10 +43,10 @@
                 <div id="nav-wrapper">
                     <a id="menu-toggle" href="#" class="btn btn-dark btn-sm toggle"><i class="fa fa-bars fa-sm"></i></a>
                     <ul class="nav">
-                        <li><a href="#" onclick=$("#menu-close").click();>Home</a></li>
-                        <li><a href="#" onclick=$("#menu-close").click();>Projects</a></li>
-                        <li><a href="#" onclick=$("#menu-close").click();>Publications</a></li>
-                        <li><a href="#" onclick=$("#menu-close").click();>Contact</a></li>
+                        <li><a href="/" onclick=$("#menu-close").click();>Home</a></li>
+                        <li><a href="projects" onclick=$("#menu-close").click();>Projects</a></li>
+                        <li><a href="publications" onclick=$("#menu-close").click();>Publications</a></li>
+                        <li><a href="contact" onclick=$("#menu-close").click();>Contact</a></li>
                         <a id="menu-close" href="#" class="btn btn-dark btn-xs pull-right toggle"><i class="fa fa-bar"></i></a>
                     </ul>
                 </div>
@@ -83,8 +83,8 @@
             <div id="papers" class="tabcontent">
                 <table style="width: 100%;">
                     <tr>
-                        <th style="width: 10%;">Date</th>
-                        <th style="width: 80%;">Publication</th>
+                        <th style="width: 15%;">Date</th>
+                        <th style="width: 85%;">Publication</th>
                     </tr>
                     <tr v-for="paper in info.papers">
                         <td valign="top">{{ paper.date_show }}</td>
@@ -100,8 +100,8 @@
             <div id="talks" class="tabcontent">
                 <table style="width: 100%;">
                     <tr>
-                        <th style="width: 10%;">Date</th>
-                        <th style="width: 80%;">Publication</th>
+                        <th style="width: 15%;">Date</th>
+                        <th style="width: 85%;">Publication</th>
                     </tr>
                     <tr v-for="talk in info.talks">
                         <td valign="top">{{ talk.date_show }}</td>
@@ -117,8 +117,8 @@
             <div id="posters" class="tabcontent">
                 <table style="width: 100%;">
                     <tr>
-                        <th style="width: 10%;">Date</th>
-                        <th style="width: 80%;">Publication</th>
+                        <th style="width: 15%;">Date</th>
+                        <th style="width: 85%;">Publication</th>
                     </tr>
                     <tr v-for="poster in info.posters">
                         <td valign="top">{{ poster.date_show }}</td>
