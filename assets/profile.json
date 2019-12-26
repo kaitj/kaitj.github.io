@@ -29,6 +29,26 @@
         { "photo": "assets/img/publications/CAN2019.jpeg", "photo_alt": "CAN 2019" },
         { "photo": "assets/img/publications/brainhack2019.jpeg", "photo_alt": "Brainhack Western 2019" }
     ],
+    "projects": [
+        {
+            "research": [
+                { "title": "Assessing white matter pathway reproducibility from human whole-brain tractography clustering", "desc": "Applying clustering techniques to the Human Connectome Project and MyConnectome Project to assess reliability from tractography clustering", "url": "https://osf.io/c9rqh" }
+            ],
+            "dev": [
+                { "title": "Mrtrix3 Pipelines", "desc": "Pipelines for preprocessing diffusion MRI data for generating whole-brain tractography", "url": "https://github.com/khanlab/mrtpipelines" },
+                { "title": "NeuroBundle Extraction and Evaluation Resource", "desc": "Pipelines for clustering and propagating cluster labels to tractography", "url": "https://github.com/khanlab/neurobeer" },
+                { "title": "Anatomical Fiducials Validator", "desc": "Web-based validator for anatomical fiducials for registration / teaching", "url" :"https://github.com/afids/fidvalidator" },
+                { "title": "jasonkai.ca", "desc": "Personal webpage that is constantly being updated and developed", "url": "index" },
+                { "title": "Dataprobe3D", "desc": "A dataprobe cursor for the 3D view in 3DSlicer" }
+            ],
+            "contrib": [
+                { "title": "Neuroimaging in Python", "desc": "Educational material geared towards teachng new users to utilize Python for neuroimaging research with a focus on functional MRI", "url": "https://github.com/conp-pcno-training/SDC-BIDS-fMRI"},
+                { "title": "Intro to DTI", "desc": "Educational material teaching new users the basics to processing for diffusion MRI using Python", "url": "https://github.com/conp-pcno-training/SDC-BIDS-DTI"},
+                { "title": "Gradient Unwarping (gradunwarp)", "desc": "Correction of gradient induced distortions for MRI scanners, modified to work the 7T MRI at Robarts Research Institute", "url": "https://github.com/kaitj/gradunwarp"},
+                { "title": "Neuroglia Helpers", "desc": "Wrappers and scripts for working on Graham, a high-performance cluster hosted by Compute Canada", "url": "https://github.com/khanlab/neuroglia-helpers"}
+            ]
+        }
+    ],
     "papers": [
         {
             "title": "Diffusion Dispersion Imaging: Mapping OGSE Frequency Dependence in the Human Brain",
