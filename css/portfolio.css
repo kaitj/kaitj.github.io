@@ -1166,9 +1166,9 @@ body {
         z-index: 1;
         position: absolute;
         background-color: #4b0082 ;
-        width: 41vw;
-        height: 14vw;
-        margin-top: 8vw;
+        width: 36vw;
+        height: 15vw;
+        margin-top: 7vw;
         margin-left: 50vw;
     }
 
@@ -1197,7 +1197,8 @@ body {
 
     #code img {
         display: block;
-        width: 52vw;
+        overflow: hidden;
+        width: 48vw;
         margin-top: -3vw;
         margin-left: 39vw;
     }
@@ -1257,7 +1258,7 @@ body {
         width: 36vw;
         height: 12vw;
         margin-top: 10vw;
-        margin-left: 55vw;
+        margin-left: 50vw;
     }
 
     #polaroid-desc h3 {
