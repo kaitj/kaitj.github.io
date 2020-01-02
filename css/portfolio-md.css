@@ -184,13 +184,12 @@ body {
     }
 
     #code {
-        overflow-y: hidden;
+        overflow: hidden;
         height: 26vw;
     }
 
     #code img {
         display: block;
-        overflow: hidden;
         width: 48vw;
         margin-top: -3vw;
         margin-left: 39vw;
