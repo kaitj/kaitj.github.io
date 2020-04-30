@@ -13,7 +13,7 @@
             "polaroid_caption": "In my spare time, I enjoy travelling to new places and taking in the scenic views",
             "code": "assets/img/home/code.png",
             "code_desc": "Some python code",
-            "code_caption": "I utilize a number of programming languages & software containers when tackling projects and continuous deployment",
+            "code_caption": "I utilize a number of programming languages, software containers, & CI/CD when tackling projects",
             "research": "assets/img/home/research.png",
             "research_desc": "Jason at the MRI scanner",
             "research_caption": "Magnetic resonance imaging, used to acquire images of the brain, is one of the primary tools I use as part of my research in studying it's structural connectivity"
@@ -95,6 +95,22 @@
         }
     ],
     "posters": [
+        {
+            "title": "Towards identifying reliable short-ranged, \"U\"-shaped structural connectivity",
+            "date": "2020-06-23",
+            "date_show": "Jun 2020",
+            "authors": "Kai, J., Khan A.R.",
+            "location": "Montreal, QC, Canada",
+            "proceeding": "Proceedings of the 2020 Organization for Human Brain Mapping Meeting"
+        },
+        {
+            "title": "A web application for quality control of anatomical fiducials (AFIDs) and Teaching Neuroanatomy",
+            "date": "2020-06-23",
+            "date_show": "Jun 2020",
+            "authors": "Park, P.J., Kai, J., Kuehn, T., Stanley, O., Gilmore, G., Loree-Spacke, J., Gupta, G., Ferko, K., Mustaha, F., Peters, T.M., Khan, A.R., Lau, J.C.",
+            "location": "Montreal, QC, Canada",
+            "proceeding": "Proceedings of the 2020 Organization for Human Brain Mapping Meeting"
+        },
         {
             "title": "Development of a diffusion magnetic resonance imaging template for investigating short-ranged U-shaped structural connectivity in the human adult brain",
             "date": "2019-05-24",
