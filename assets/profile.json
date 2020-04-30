@@ -38,7 +38,6 @@
                 { "title": "Mrtrix3 Pipelines", "desc": "Pipelines for preprocessing diffusion MRI data for generating whole-brain tractography", "url": "https://github.com/khanlab/mrtpipelines" },
                 { "title": "NeuroBundle Extraction and Evaluation Resource", "desc": "Pipelines for clustering and propagating cluster labels to tractography", "url": "https://github.com/khanlab/neurobeer" },
                 { "title": "Anatomical Fiducials Validator", "desc": "Web-based validator for anatomical fiducials for registration / teaching", "url" :"https://github.com/afids/fidvalidator" },
-                { "title": "jasonkai.ca", "desc": "Personal webpage that is constantly being updated and developed", "url": "index" },
                 { "title": "Dataprobe3D", "desc": "A dataprobe cursor for the 3D view in 3DSlicer" }
             ],
             "contrib": [
