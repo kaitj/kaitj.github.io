@@ -157,6 +157,9 @@ body {
         z-index: 1;
         position: absolute;
         background-color: #4b0082;
+        border-radius: 10px;
+        border: 1px solid #000;
+        box-shadow: 2px 2px #000;
         width: 56vw;
         height: 23vw;
         margin-top: 2vw;
@@ -165,7 +168,7 @@ body {
 
     #research-desc h3 {
         font-family: "Rubik";
-        font-size: 4vw;
+        font-size: 3vw;
         text-transform: uppercase;
         margin-top: 1vw;
         margin-left: 2vw;
@@ -198,6 +201,9 @@ body {
         z-index: 1;
         position: absolute;
         background-color: #7a003c;
+        border-radius: 10px;
+        border: 1px solid #000;
+        box-shadow: -2px 2px #000;
         width: 54vw;
         height: 20vw;
         margin-top: 0vw;
@@ -206,7 +212,7 @@ body {
 
     #code-desc h3 {
         font-family: "Rubik";
-        font-size: 4vw;
+        font-size: 3vw;
         text-transform: uppercase;
         margin-top: 1vw;
         margin-left: 2vw;
@@ -246,7 +252,10 @@ body {
     #polaroid-desc {
         z-index: 1;
         position: absolute;
-        background-color: #cccc00;
+        background-color: #a57c00;
+        border-radius: 10px;
+        border: 1px solid #000;
+        box-shadow: 2px 2px #000;
         width: 38vw;
         height: 20vw;
         margin-top: 6vw;
@@ -255,7 +264,7 @@ body {
 
     #polaroid-desc h3 {
         font-family: "Rubik";
-        font-size: 4vw;
+        font-size: 3vw;
         text-transform: uppercase;
         margin-top: 1vw;
         margin-left: 2vw;
@@ -667,6 +676,9 @@ body {
         z-index: 1;
         position: absolute;
         background-color: #4b0082;
+        border-radius: 14px;
+        border: 2px solid #000;
+        box-shadow: 3px 3px #000;
         width: 44vw;
         height: 15vw;
         margin-top: 6vw;
@@ -675,7 +687,7 @@ body {
 
     #research-desc h3 {
         font-family: "Rubik";
-        font-size: 3vw;
+        font-size: 2vw;
         text-transform: uppercase;
         margin-top: 1vw;
         margin-left: 2vw;
@@ -684,7 +696,7 @@ body {
 
     #research-desc p {
         font-family: "Roboto";
-        font-size: 1.75vw;
+        font-size: 1.65vw;
         margin-left: 2vw;
         margin-right: 2vw;
         text-align: justify;
@@ -707,6 +719,9 @@ body {
         z-index: 1;
         position: absolute;
         background-color: #7a003c;
+        border-radius: 14px;
+        border: 2px solid #000;
+        box-shadow: -3px 3px #000;
         width: 38vw;
         height: 15vw;
         margin-top: 6vw;
@@ -715,7 +730,7 @@ body {
 
     #code-desc h3 {
         font-family: "Rubik";
-        font-size: 3vw;
+        font-size: 2vw;
         text-transform: uppercase;
         margin-top: 1vw;
         margin-left: 2vw;
@@ -724,7 +739,7 @@ body {
 
     #code-desc p {
         font-family: "Roboto";
-        font-size: 1.75vw;
+        font-size: 1.65vw;
         margin-left: 2vw;
         margin-right: 2vw;
         text-align: justify;
@@ -755,7 +770,10 @@ body {
     #polaroid-desc {
         z-index: 1;
         position: absolute;
-        background-color: #cccc00;
+        background-color: #a57c00;
+        border-radius: 14px;
+        border: 2px solid #000;
+        box-shadow: 3px 3px #000;
         width: 32.5vw;
         height: 15vw;
         margin-top: 8vw;
@@ -764,7 +782,7 @@ body {
 
     #polaroid-desc h3 {
         font-family: "Rubik";
-        font-size: 3vw;
+        font-size: 2vw;
         text-transform: uppercase;
         margin-top: 1vw;
         margin-left: 2vw;
@@ -773,7 +791,7 @@ body {
 
     #polaroid-desc p {
         font-family: "Roboto";
-        font-size: 1.75vw;
+        font-size: 1.65vw;
         margin-left: 2vw;
         margin-right: 2vw;
         text-align: justify;
@@ -1165,7 +1183,10 @@ body {
     #research-desc {
         z-index: 1;
         position: absolute;
-        background-color: #4b0082 ;
+        background-color: #4b0082;
+        border-radius: 14px;
+        border: 2px solid #000;
+        box-shadow: 4px 4px #000;
         width: 36vw;
         height: 15vw;
         margin-top: 7vw;
@@ -1206,6 +1227,9 @@ body {
         z-index: 1;
         position: absolute;
         background-color: #7a003c;
+        border-radius: 14px;
+        border: 2px solid #000;
+        box-shadow: -4px 4px #000;
         width: 38vw;
         height: 14vw;
         margin-top: 8vw;
@@ -1253,7 +1277,10 @@ body {
     #polaroid-desc {
         z-index: 1;
         position: absolute;
-        background-color: #cccc00;
+        background-color: #a57c00;
+        border-radius: 14px;
+        border: 2px solid #000;
+        box-shadow: 4px 4px #000;
         width: 36vw;
         height: 12vw;
         margin-top: 10vw;
@@ -1632,6 +1659,9 @@ body {
         z-index: 1;
         position: absolute;
         background-color: #4b0082;
+        border-radius: 18px;
+        border: 2px solid #000;
+        box-shadow: 4px 4px #000;
         width: 44vw;
         height: 13vw;
         margin-top: 8vw;
@@ -1672,6 +1702,9 @@ body {
         z-index: 1;
         position: absolute;
         background-color: #7a003c;
+        border-radius: 18px;
+        border: 2px solid #000;
+        box-shadow: -4px 4px #000;
         width: 38vw;
         height: 13vw;
         margin-top: 8vw;
@@ -1720,7 +1753,10 @@ body {
     #polaroid-desc {
         z-index: 1;
         position: absolute;
-        background-color: #cccc00;
+        background-color: #a57c00;
+        border-radius: 18px;
+        border: 2px solid #000;
+        box-shadow: 4px 4px #000;
         width: 35vw;
         height: 10.5vw;
         margin-top: 9vw;
@@ -2061,6 +2097,11 @@ body {
         text-transform: uppercase;
     }
 
+    .row {
+        margin: 0 auto;
+        width: 85%;
+    }
+
     #profile-photo {
         margin-top: 2vw;
         height: 28vw;
@@ -2098,6 +2139,9 @@ body {
         z-index: 1;
         position: absolute;
         background-color: #4b0082;
+        border-radius: 20px;
+        border: 3px solid #000;
+        box-shadow: 4px 4px #000;
         width: 38vw;
         height: 11vw;
         margin-top: 6vw;
@@ -2138,6 +2182,9 @@ body {
         z-index: 1;
         position: absolute;
         background-color: #7a003c;
+        border-radius: 20px;
+        border: 3px solid #000;
+        box-shadow: -4px 4px #000;
         width: 38vw;
         height: 11vw;
         margin-top: 5vw;
@@ -2186,7 +2233,10 @@ body {
     #polaroid-desc {
         z-index: 1;
         position: absolute;
-        background-color: #cccc00;
+        background-color: #a57c00;
+        border-radius: 20px;
+        border: 3px solid #000;
+        box-shadow: 4px 4px #000;
         width: 34vw;
         height: 9vw;
         margin-top: 3vw;
@@ -2556,6 +2606,9 @@ body {
         z-index: 1;
         position: absolute;
         background-color: #4b0082;
+        border-radius: 25px;
+        border: 2px solid #000;
+        box-shadow: 5px 5px #000;
         width: 28vw;
         height: 10vw;
         margin-top: 6vw;
@@ -2564,7 +2617,7 @@ body {
 
     #research-desc h3 {
         font-family: "Rubik";
-        font-size: 2vw;
+        font-size: 1.5vw;
         text-transform: uppercase;
         margin-top: 1vw;
         margin-left: 1vw;
@@ -2596,6 +2649,9 @@ body {
         z-index: 1;
         position: absolute;
         background-color: #7a003c;
+        border-radius: 25px;
+        border: 2px solid #000;
+        box-shadow: -5px 5px #000;
         width: 26vw;
         height: 10vw;
         margin-top: 3vw;
@@ -2604,7 +2660,7 @@ body {
 
     #code-desc h3 {
         font-family: "Rubik";
-        font-size: 2vw;
+        font-size: 1.5vw;
         text-transform: uppercase;
         margin-top: 1vw;
         margin-left: 1vw;
@@ -2644,7 +2700,10 @@ body {
     #polaroid-desc {
         z-index: 1;
         position: absolute;
-        background-color: #cccc00;
+        background-color: #a57c00;
+        border-radius: 25px;
+        border: 2px solid #000;
+        box-shadow: 5px 5px #000;
         width: 23vw;
         height: 8vw;
         margin-top: -1vw;
@@ -2653,7 +2712,7 @@ body {
 
     #polaroid-desc h3 {
         font-family: "Rubik";
-        font-size: 2vw;
+        font-size: 1.5vw;
         text-transform: uppercase;
         margin-top: 1vw;
         margin-left: 1vw;
