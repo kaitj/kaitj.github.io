@@ -375,7 +375,9 @@ body {
 
     /* Publication */
     #pub-img {
-        width: 100%;
+        width: 95%;
+        margin: 0 auto;
+        margin-left: -2vw;
     }
 
     #pub-img ul {
@@ -388,8 +390,9 @@ body {
 
     #pub-img img {
         width: 30%;
-        padding-right: 1vw;
-        padding-left: 1vw;
+        border: 1px solid #000;
+        margin-right: 1vw;
+        margin-left: 1vw;
     }
 
     #publications h2 {
@@ -894,7 +897,9 @@ body {
 
     /* Publication */
     #pub-img {
-        width: 100%;
+        width: 95%;
+        margin: 0 auto;
+        margin-left: -.5vw;
     }
 
     #pub-img ul {
@@ -907,8 +912,9 @@ body {
 
     #pub-img img {
         width: 31%;
-        padding-right: 1vw;
-        padding-left: 1vw;
+        border: 1px solid #000;
+        margin-right: .5vw;
+        margin-left: .5vw;
     }
 
     #publications h2 {
@@ -1403,7 +1409,9 @@ body {
 
     /* Publication */
     #pub-img {
-        width: 100%;
+        width: 95%;
+        margin: 0 auto;
+        margin-left: -.5vw;
     }
 
     #pub-img ul {
@@ -1416,8 +1424,9 @@ body {
 
     #pub-img img {
         width: 32%;
-        padding-right: 1vw;
-        padding-left: 1vw;
+        border: 2px solid #000;
+        margin-left: .4vw;
+        margin-right: .4vw;
     }
 
     #publications h2 {
@@ -1880,7 +1889,8 @@ body {
 
     /* Publication */
     #pub-img {
-        width: 100%;
+        width: 95%;
+        margin: 0 auto;
     }
 
     #pub-img ul {
@@ -1893,8 +1903,9 @@ body {
 
     #pub-img img {
         width: 32%;
-        padding-right: 1vw;
-        padding-left: 1vw;
+        border: 2px solid #000;
+        margin-right: .5vw;
+        margin-left: .5vw;
     }
 
     #publications h2 {
@@ -2360,7 +2371,8 @@ body {
 
     /* Publication */
     #pub-img {
-        width: 100%;
+        width: 95%;
+        margin: 0 auto;
     }
 
     #pub-img ul {
@@ -2373,8 +2385,9 @@ body {
 
     #pub-img img {
         width: 32%;
-        padding-right: 1vw;
-        padding-left: 1vw;
+        border: 2px solid #000;
+        margin-left: .25vw;
+        margin-right: .25vw;
     }
 
     #publications h2 {
@@ -2833,7 +2846,8 @@ body {
 
     /* Publication */
     #pub-img {
-        width: 100%;
+        width: 95%;
+        margin: 0 auto;
     }
 
     #pub-img ul {
@@ -2846,8 +2860,9 @@ body {
 
     #pub-img img {
         width: 32%;
-        padding-right: 1vw;
-        padding-left: 1vw;
+        border: 2px solid #000;
+        margin-left: .3vw;
+        margin-right: .3vw;
     }
 
     #publications h2 {
