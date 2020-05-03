@@ -85,6 +85,7 @@ body {
 
     .nav a:hover {
         text-decoration: none;
+        color: #87cefa;
     }
 
     .pull-right {
@@ -512,8 +513,9 @@ body {
         font-size: 3.5vw;
     }
 
-    #social-nav li a:hover{
+    #social-nav li a:hover {
         text-decoration: none;
+        color: #87cefa;
     }
 
 }
@@ -598,6 +600,7 @@ body {
 
     .nav a:hover {
         text-decoration: none;
+        color: #87cefa;
     }
 
     .pull-right {
@@ -1036,6 +1039,7 @@ body {
 
     #social-nav li a:hover{
         text-decoration: none;
+        color: #87cefa;
     }
 
 }
@@ -1121,6 +1125,7 @@ body {
 
     .nav a:hover {
         text-decoration: none;
+        color: #87cefa;
     }
 
     .pull-right {
@@ -1554,6 +1559,7 @@ body {
 
     #social-nav li a:hover{
         text-decoration: none;
+        color: #87cefa;
     }
 
 }
@@ -1614,6 +1620,7 @@ body {
 
     #nav-wrapper .nav a:hover {
         text-decoration: none;
+        color: #87cefa;
     }
 
     #menu-toggle {
@@ -2032,6 +2039,7 @@ body {
 
     #social-nav li a:hover{
         text-decoration: none;
+        color: #87cefa;
     }
 
 }
@@ -2092,6 +2100,7 @@ body {
 
     #nav-wrapper .nav a:hover {
         text-decoration: none;
+        color: #87cefa;
     }
 
     #menu-toggle {
@@ -2509,6 +2518,7 @@ body {
 
     #social-nav li a:hover{
         text-decoration: none;
+        color: #87cefa;
     }
 
 }
@@ -2569,6 +2579,7 @@ body {
 
     #nav-wrapper .nav a:hover {
         text-decoration: none;
+        color: #87cefa;
     }
 
     #menu-toggle {
@@ -2978,6 +2989,7 @@ body {
     }
 
     #social-nav li a:hover{
+        color: #87cefa;
         text-decoration: none;
     }
 
