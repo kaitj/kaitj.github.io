@@ -87,39 +87,6 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/js/bootstrap.js"></script>
 
 <!-- Custom JavaScript -->
-<script>
-    // Set up JSON dictionary
-    var app = new Vue({
-        el: '#app',
-        data: {
-            info: {
-            }
-        }
-    })
-
-    // Reads profile.json
-    var url = "https://raw.githubusercontent.com/kaitj/kaitj.github.io/master/assets/profile.json"
-    if (window.location.hostname=="localhost"){
-        url = "assets/profile.json"
-    }
-    $.getJSON(url, function(data){
-        console.log("data is", data);
-        app.info = data;
-    })
-
-
-    // Pull out nav bar
-    // Closes sidebar menu
-    $("#menu-close").click(function(e) {
-        e.preventDefault();
-        $("#nav-wrapper").toggleClass("active");
-    });
-
-    // Opens the sidebar menu
-    $("#menu-toggle").click(function(e) {
-        e.preventDefault();
-        $("#nav-wrapper").toggleClass("active");
-    });
-</script>
+<script src="js/portfolio.js"></script>
 
 </html>
