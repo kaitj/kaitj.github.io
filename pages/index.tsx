@@ -15,8 +15,8 @@ const Home: NextPage = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <NavBar/>
-      
+      <NavBar />
+
       <main className={styles.main}>
 
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Tincidunt arcu non sodales neque sodales. Nisi quis eleifend quam adipiscing vitae proin sagittis. Sagittis purus sit amet volutpat consequat mauris nunc congue. Erat velit scelerisque in dictum. Mattis nunc sed blandit libero volutpat sed cras ornare arcu. Sed odio morbi quis commodo odio aenean sed. Amet mattis vulputate enim nulla aliquet porttitor. Scelerisque in dictum non consectetur a. Molestie at elementum eu facilisis sed odio morbi quis. Quisque non tellus orci ac auctor augue mauris augue. Mattis pellentesque id nibh tortor.</p>
