@@ -1,4 +1,6 @@
 .container {
+  color: var(--font);
+  background-color: var(--bg-dark);
   padding: var(--container-padding);
 }
 

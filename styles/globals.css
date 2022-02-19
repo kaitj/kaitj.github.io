@@ -27,6 +27,13 @@ body {
   font-size: 30px !important;
 }
 
+.navbar-toggler {
+  border-color: rgba(0, 0, 0, 0) !important;
+}
+.navbar-toggler:focus {
+  box-shadow: 0 0 0 0 !important; 
+}
+
 .nav-item {
   padding: 10px 20px;
 }
@@ -41,8 +48,10 @@ body {
 .nav-link:hover {
   color: var(--link-hover);
   text-decoration: underline;
-  text-underline-offset: 6px;
+  text-underline-offset: 8px;
 }
+
+/* General */ 
 
 a {
   color: inherit;
