@@ -1,11 +1,9 @@
-import link from "next/link";
-
 export const NavBar = () => {
     return (
-        <nav className="navbar navbar-expand-lg navbar-dark fixed-top">
+        <nav className="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
             <div className="container-fluid">
                 {/* Brand Logo */}
-                <h1 className="logo">Jason Kai</h1>
+                <h1 className="navbar-brand">Jason Kai</h1>
 
                 {/* Hamburger */}
                 <button
@@ -20,11 +18,11 @@ export const NavBar = () => {
                     <span className="navbar-toggler-icon"></span>
                 </button>
 
-                <div className="collapse navbar-collapse" id='navbarNav'>
+                <div className="collapse navbar-collapse justify-content-end" id='navbarNav'>
                     <ul className="navbar-nav">
-                        <li className="nav-item"><a className="nav-link" href="#">About</a></li>
-                        <li className="nav-item"><a className="nav-link" href="#">Portfolio</a></li>
-                        <li className="nav-item"><a className="nav-link" href="#">Contact</a></li>
+                        <li className="nav-item"><a className="nav-link" href="#">about</a></li>
+                        <li className="nav-item"><a className="nav-link" href="#">portfolio</a></li>
+                        <li className="nav-item"><a className="nav-link" href="#">contact</a></li>
                     </ul>
                 </div>
             </div>
