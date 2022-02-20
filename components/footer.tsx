@@ -1,8 +1,8 @@
 import styles from '../styles/home.module.css'
 
-let year: number = new Date().getFullYear();
-
 export const Footer = () => {
+    let year: number = new Date().getFullYear();
+    
     return (
         <footer className={styles.footer}>
             &copy; {year}
