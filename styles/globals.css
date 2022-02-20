@@ -3,12 +3,18 @@
 
 :root {
   /* Container */
-  --container-padding: 0 2rem;
+  --container-padding: 0 8rem;
+  --container-padding-mobile: 0 4rem;
 
   /* Global colors */
   --bg-dark: rgb(30, 30, 30);
   --font: rgb(225, 225, 225);
   --link-hover: rgba(255, 255, 255);
+
+  /* Font settings */
+  --font-size: 20px;
+  --font-size-mobile: 14px;
+  --font-family: Helvetica Neue;
 }
 
 html,
