@@ -5,6 +5,7 @@ import styles from '../styles/home.module.css'
 // Components
 import { NavBar } from '../components/navbar'
 import { Profile } from '../components/profile'
+import { Footer } from '../components/footer'
 
 const Home: NextPage = () => {
   return (
@@ -22,8 +23,7 @@ const Home: NextPage = () => {
 
       <Profile />
 
-      <footer className={styles.footer}>
-      </footer>
+      <Footer />
     </div>
   )
 }
