@@ -7,7 +7,7 @@
 }
 
 .main {
-  min-height: 100vh;
+  min-height: 96.5vh;
   flex: 1;
   display: flex;
   flex-direction: column;
