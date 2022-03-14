@@ -10,7 +10,7 @@ export const Social = () => {
 
             {/* LinkedIn */}
             <a href="https://www.linkedin.com/in/jason-kai-7a734968/">
-            <FontAwesomeIcon icon={faLinkedin} /></a
+            <FontAwesomeIcon icon={faLinkedin} /></a>
         </div>
     )
 };
