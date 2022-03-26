@@ -1,4 +1,17 @@
-.content {
-    text-align: center;
-    margin-bottom: 1rem;
+.socialIcon {
+    font-size: 4vh;
+    margin: 1vh 1vh 0 1vh;
+    color: var(--font);
+}
+
+.socialIcon:hover {
+    color: var(--link-hover);
+}
+
+.form {
+    margin-top: 1vh;
+}
+
+.fixWidth {
+    width: 100%;
 }
