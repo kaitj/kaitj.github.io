@@ -2,20 +2,22 @@ import { useForm, ValidationError } from '@formspree/react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faTwitter, faLinkedin } from '@fortawesome/free-brands-svg-icons'
 
+import styles from '../styles/contact.module.css'
+
+// Resize icons
 export const Social = () => {
     return (
         <div className="flex">
             {/* Twitter */}
-            <a href="https://twitter.com/jasonkai" target="_blank"><FontAwesomeIcon icon={faTwitter} /></a>
+            <a href="https://twitter.com/jasonkai" target="_blank" ><FontAwesomeIcon icon={faTwitter} className={styles.socialIcon}/></a>
 
             {/* LinkedIn */}
-            <a href="https://www.linkedin.com/in/jason-kai-7a734968/">
-            <FontAwesomeIcon icon={faLinkedin} /></a>
+            <a href="https://www.linkedin.com/in/jason-kai-7a734968/"><FontAwesomeIcon icon={faLinkedin} className={styles.socialIcon} /></a>
         </div>
     )
 };
 
-// Fix form lengths
+// Contact form
 export const ContactForm = () => {
     const [state, handleSubmit] = useForm('mayllglo');
     if (state.succeeded) {
@@ -25,11 +27,11 @@ export const ContactForm = () => {
         <div className="row">
             <form onSubmit={handleSubmit}>
                 {/* Name */}
-                <div className="row">
-                    <div className="col-lg-3">
+                <div className={["row", styles.form].join(' ')}>
+                    <div className="col-3">
                         <label htmlFor='name'>Name:</label>
                     </div>
-                    <div className="col-lg-8">
+                    <div className="col-9">
                         <input
                             type="text"
                             name="name"
@@ -41,11 +43,11 @@ export const ContactForm = () => {
                 </div>
 
                 {/* Email */}
-                <div className="row">
-                    <div className="col-lg-3">
+                <div className={["row", styles.form].join(' ')}>
+                    <div className="col-3">
                         <label htmlFor='email'>Email:</label>
                     </div>
-                    <div className="col-lg-8 col-md-3">
+                    <div className="col-9">
                         <input
                             type="text"
                             name="email"
@@ -57,21 +59,24 @@ export const ContactForm = () => {
                 </div>
 
                 {/* Message */}
-                <div className="row">
-                    <div className="col-lg-3">
+                <div className={["row", styles.form].join(' ')}>
+                    <div className="col-3">
                         <label htmlFor='message'>Your message:</label>
                     </div>
-                    <div className="col-lg-9">
-                        <textarea id='message' name='message' />
+                    <div className="col-9">
+                        <textarea id='message' name='message' className={styles.fixWidth}/>
                         <ValidationError prefix='Email' field='email' errors={state.errors} />
                     </div>
                 </div>
 
                 {/* Submit Button */}
-                <div className="row">
-                    <button type='submit' disabled={state.submitting} className='btn btn-primary'>
-                        Submit
-                    </button>
+                <div className={["row", styles.form].join(' ')}>
+                    <div className="col-3"></div>
+                    <div className="col-9">
+                        <button type='submit' disabled={state.submitting} className={['btn', 'btn-primary', styles.fixWidth].join(' ')}>
+                            Submit
+                        </button>
+                    </div>
                 </div>
             </form>
         </div>
