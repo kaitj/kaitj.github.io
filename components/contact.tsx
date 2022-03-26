@@ -9,10 +9,14 @@ export const Social = () => {
     return (
         <div className="flex">
             {/* Twitter */}
-            <a href="https://twitter.com/jasonkai" target="_blank" ><FontAwesomeIcon icon={faTwitter} className={styles.socialIcon}/></a>
+            <a href="https://twitter.com/jasonkai" target="_blank" >
+                <FontAwesomeIcon icon={faTwitter} className={styles.socialIcon} />
+            </a>
 
             {/* LinkedIn */}
-            <a href="https://www.linkedin.com/in/jason-kai-7a734968/"><FontAwesomeIcon icon={faLinkedin} className={styles.socialIcon} /></a>
+            <a href="https://www.linkedin.com/in/jason-kai-7a734968/">
+                <FontAwesomeIcon icon={faLinkedin} className={styles.socialIcon} />
+            </a>
         </div>
     )
 };
@@ -64,7 +68,7 @@ export const ContactForm = () => {
                         <label htmlFor='message'>Your message:</label>
                     </div>
                     <div className="col-9">
-                        <textarea id='message' name='message' className={styles.fixWidth}/>
+                        <textarea id='message' name='message' className={styles.fixWidth} />
                         <ValidationError prefix='Email' field='email' errors={state.errors} />
                     </div>
                 </div>
