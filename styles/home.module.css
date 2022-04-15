@@ -8,6 +8,7 @@
 }
 
 .main {
+  padding-top: 12vh;
   min-height: 96.5vh;
   flex: 1;
   display: flex;

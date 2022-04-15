@@ -1,0 +1,16 @@
+li.pubItems {
+    margin-top: 1vw;
+    margin-bottom: 1vw;
+}
+
+h3.pubHeadings {
+    font-weight: bold;
+}
+
+a.pubLinks {
+    color: var(--font-secondary);
+}
+
+a.pubLinks:hover{
+    color: var(--link-hover);
+}

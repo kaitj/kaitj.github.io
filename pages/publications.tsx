@@ -6,6 +6,7 @@ import styles from '../styles/home.module.css'
 // Components
 import { NavBar } from '../components/navbar'
 import { Footer } from '../components/footer'
+import { Pubs } from '../components/publications'
 
 const Publications: NextPage = () => {
     return (
@@ -22,7 +23,8 @@ const Publications: NextPage = () => {
             <main className={styles.main}>
                 <div className="col-2"></div>
 
-                <div className="col-8">Under construction</div>
+                <div className="col-8"><Pubs />
+                </div>
 
                 <div className="col-2"></div>
             </main>
