@@ -1,5 +1,5 @@
 /* Fonts */
-@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400&family=Literata:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 
 :root {
   /* Container */
@@ -9,20 +9,20 @@
   /* Global colors */
   --bg-dark: rgb(30, 30, 30);
   --font: rgb(225, 225, 225);
-  --link-hover: rgba(255, 255, 255);
+  --social: rgba(225, 225, 225, 1);
+  --link-hover: rgba(130, 130, 130, 1);
 
   /* Font settings */
   --font-size: 20px;
   --font-size-mobile: 14px;
-  --font-family: Helvetica Neue;
+  --font-family: 'Roboto';
 }
 
 html,
 body {
   padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-family: 'Roboto', sans-serif;
 }
 
 /* Navbar */
@@ -46,7 +46,6 @@ body {
 .nav-link {
   text-transform: uppercase;
   text-align: center;
-  font-family: Lato;
   font-size: 18px !important;
 }
 
