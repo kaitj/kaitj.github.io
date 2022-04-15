@@ -1,3 +1,5 @@
+import Link from 'next/link'
+
 export const NavBar = () => {
     return (
         <nav className="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
@@ -20,9 +22,9 @@ export const NavBar = () => {
 
                 <div className="collapse navbar-collapse justify-content-end" id='navbarNav'>
                     <ul className="navbar-nav">
-                        <li className="nav-item"><a className="nav-link" href="/">home</a></li>
-                        <li className="nav-item"><a className="nav-link" href="/about">about</a></li>
-                        <li className="nav-item"><a className="nav-link" href="/publications">publications</a></li>
+                        <li className="nav-item"><Link href='/'><a className="nav-link">home</a></Link></li>
+                        <li className="nav-item"><Link href='/about'><a className="nav-link">about</a></Link></li>
+                        <li className="nav-item"><Link href='/publications'><a className="nav-link">publications</a></Link></li>
                     </ul>
                 </div>
             </div>

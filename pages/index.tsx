@@ -1,6 +1,7 @@
 import type { NextPage } from 'next'
 import Head from 'next/head'
 import Image from 'next/image'
+import Link from 'next/link'
 import styles from '../styles/home.module.css'
 import socials from '../styles/socials.module.css'
 
@@ -25,7 +26,7 @@ const Home: NextPage = () => {
         <div className="row">
           <div className={styles.profileBorder}>
             <div className={styles.profileImg}>
-              <Image src={profileImg} />
+              <Image src={profileImg} alt="Profile picture" />
             </div>
           </div>
         </div>
@@ -45,11 +46,11 @@ const Home: NextPage = () => {
 
         {/* Homepage navigation */}
         <div className="row">
-          <a className="nav-link" href="/about">about</a>
+          <Link href='/about'><a className="nav-link">about</a></Link>
         </div>
 
         <div className="row">
-          <a className="nav-link" href="/publications">publicatons</a>
+          <Link href="/publications"><a className="nav-link">publicatons</a></Link>
         </div>
       </main>
 
