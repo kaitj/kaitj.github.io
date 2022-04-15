@@ -1,15 +1,12 @@
 {
-  "homepage": "https://kaitj.github.io/kaitj.github.io",
   "name": "kaitj.github.io",
   "version": "0.1.0",
   "private": true,
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "export": "next export",
     "start": "next start",
-    "lint": "next lint",
-    "gh-build": "next build && next export && touch out/.nojekyll"
+    "lint": "next lint"
   },
   "dependencies": {
     "@formspree/react": "^2.2.4",
