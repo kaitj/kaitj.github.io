@@ -8,8 +8,9 @@
     color: var(--link-hover);
 }
 
-.form {
-    margin-top: 1vh;
+.socialRow {
+    margin-top: 1.5vh;
+    margin-bottom: 1.5vh;
 }
 
 .fixWidth {

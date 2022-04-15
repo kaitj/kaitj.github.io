@@ -7,7 +7,7 @@ import styles from '../styles/socials.module.css'
 // Resize icons
 export const Social = () => {
     return (
-        <div className="flex">
+        <div className={['flex', styles.socialRow].join(" ")}>
             {/* Email */}
             <a href="mailto:tkai@uwo.ca" target="_blank" rel='noopener me' title="Email">
                 <FontAwesomeIcon icon={faEnvelope} className={styles.socialIcon} />
