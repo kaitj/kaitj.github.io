@@ -1,32 +1,13 @@
-import Image from 'next/image'
-import styles from '../styles/home.module.css'
-
-// import profile from "../public/profile.png"
-
 export const Profile = () => {
     return (
-        <main className={styles.main}>
-            <div className="row">
-                <div className={["col-lg-6", styles.profileImg].join(' ')}>
-                    <Image src={profile} />
-                </div>
+        <div className="row">
+            <h2>About</h2>
 
-                <div className={['col-lg-6', styles.profile].join(' ')}>
-                    <div className='col-lg-8'>
-                        <p>Hi there and thanks for visiting! I am currently a PhD
-                            Candidate at Western University, studying the short-range connectivity
-                            in the human brain. My work uses MRI to reconstruct the connections
-                            of the brain, examining the reliability of identifying these connections
-                            and how they may be affected in association with disease.</p>
+            <p>I am a PhD Candidate in the <a href="https://khanlab.ca" target="_blank">Khan Computational Imaging Lab</a> at Western University where I develop tools and pipelines to process and analyze the brain's short-change connections. Previously, I completed a Bachelor's of Engineering (Electrical and Biomedical) from McMaster University.</p>
 
-                        <p>To help accomplish my research goals, I use a variety of computational
-                            techniques to develop tools and perform analysis. I mainly program
-                            in Python, but am also familiar with other programming languages and
-                            have contributed to a number of different projects! You can check out
-                            some of the projects I have been involved in over on the portfolio page.</p>
-                    </div>
-                </div>
-            </div>
-        </main>
+            <p>While I primarily use Python, I have experience with a variety of programming languages and software packages! Take a look at my <a href="https://github.com/kaitj" target="_blank">Github</a> for some of the projects I have been involved in! </p>
+
+            <p>I am always happy to chat about any previous or potential projects - just send me a message through <a href="https://twitter.com/jasonkai" target="_blank">Twitter</a> or by <a href="mailto:tkai@uwo.ca" target="_blank" rel='noopener me' title="Email">email</a>.</p>
+        </div>
     );
 };
