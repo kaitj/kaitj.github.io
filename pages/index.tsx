@@ -1,11 +1,14 @@
 import type { NextPage } from 'next'
 import Head from 'next/head'
+import Image from 'next/image'
 import styles from '../styles/home.module.css'
+import socials from '../styles/socials.module.css'
 
 // Components
-import { NavBar } from '../components/navbar'
-import { Profile } from '../components/profile'
-import { Footer } from '../components/footer'
+import { Social } from '../components/socials'
+import { HomeFooter } from '../components/footer'
+
+import profileImg from '../public/profile.jpeg'
 
 const Home: NextPage = () => {
   return (
@@ -15,15 +18,42 @@ const Home: NextPage = () => {
         <meta name="description" content="Portfolio website" />
         <meta name="author" content="Jason Kai" />
 
-        {/* favicon */}
-        <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <NavBar />
+      <main className={styles.main}>
 
-      <Profile />
+        <div className="row">
+          <div className={styles.profileBorder}>
+            <div className={styles.profileImg}>
+              <Image src={profileImg} />
+            </div>
+          </div>
+        </div>
 
-      <Footer />
+        <div className="row">
+          <h1 className={styles.profileName}>Jason Kai</h1>
+        </div>
+
+        <div className="row">
+          <h3 className={styles.profileTitle}>Ph.D. Candidate at Western University</h3>
+        </div>
+
+        {/* Social icons */}
+        <div className={socials.socialRow}>
+          <Social />
+        </div>
+
+        {/* Homepage navigation */}
+        <div className="row">
+          <a className="nav-link" href="/about">about</a>
+        </div>
+
+        <div className="row">
+          <a className="nav-link" href="/publications">publicatons</a>
+        </div>
+      </main>
+
+      <HomeFooter />
     </div>
   )
 }

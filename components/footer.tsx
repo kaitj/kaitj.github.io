@@ -1,6 +1,6 @@
 import styles from '../styles/home.module.css'
 
-export const Footer = () => {
+export const HomeFooter = () => {
     let year: number = new Date().getFullYear();
     
     return (

@@ -1,5 +1,5 @@
 /* Fonts */
-@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Frank+Ruhl+Libre:wght@500&family=Roboto&display=swap');
 
 :root {
   /* Container */
@@ -8,8 +8,8 @@
 
   /* Global colors */
   --bg-dark: rgb(30, 30, 30);
-  --font: rgb(225, 225, 225);
-  --social: rgba(225, 225, 225, 1);
+  --font: rgb(225, 225, 225, 1);
+  --font-secondary: rgba(170, 170, 170, 1);
   --link-hover: rgba(130, 130, 130, 1);
 
   /* Font settings */
@@ -28,7 +28,7 @@ body {
 /* Navbar */
 .navbar-brand {
   padding: 0 16px;
-  font-family: Literata;
+  font-family: 'Frank Ruhl Libre', serif;
   font-size: 30px !important;
 }
 
@@ -43,16 +43,15 @@ body {
   padding: 10px 20px;
 }
 
-.nav-link {
+a.nav-link {
   text-transform: uppercase;
   text-align: center;
-  font-size: 18px !important;
+  color: var(--font-secondary);
+  font-size: 2vh;
 }
 
-.nav-link:hover {
+a.nav-link:hover {
   color: var(--link-hover);
-  text-decoration: underline;
-  text-underline-offset: 8px;
 }
 
 /* General */ 

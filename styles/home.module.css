@@ -4,6 +4,7 @@
   padding: var(--container-padding);
   font-size: var(--font-size);
   font-family: var(--font-family);
+  justify-content: center;
 }
 
 .main {
@@ -15,12 +16,34 @@
   align-items: center;
 }
 
-.profile {
-  margin: auto;
+.profileBorder { 
+  background-color: rgba(0,0,0,0);
+  overflow: hidden;
+  border-radius: 50%;
+  border-style: solid;
+  border-width: .25vw;
+  border-color: var(--font-secondary);
+  height: 25vw;
+  width: 25vw;
+  margin: 0 1vh 0;
 }
 
 .profileImg {
-  text-align: center;
+  width: 50vw;
+  height: 50vw;
+  margin-left: -2vw;
+  margin-top: -6vw;
+}
+
+h1.profileName {
+  font-size: 5vh;
+  font-family: "Frank Ruhl Libre", serif;
+  font-weight: bold;
+}
+
+h3.profileTitle {
+  font-size: 1.5vh;
+  color: var(font-secondary);
 }
 
 .footer {
@@ -40,9 +63,23 @@
     font-size: var(--font-size-mobile);
   }
 
+  .profileBorder { 
+    background-color: rgba(0,0,0,0);
+    overflow: hidden;
+    border-radius: 50%;
+    border-style: solid;
+    border-width: .25vw;
+    border-color: var(--font-secondary);
+    height: 40vw;
+    width: 40vw;
+    margin: 0 1vh 0;
+  }
+  
   .profileImg {
-    margin-top: 5.5rem;
-    margin-bottom: 1rem;
+    width: 75vw;
+    height: 75vw;
+    margin-left: -4vw;
+    margin-top: -6vw;
   }
 
   .footer {
