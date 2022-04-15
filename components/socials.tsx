@@ -9,7 +9,7 @@ export const Social = () => {
     return (
         <div className='flex'>
             {/* Email */}
-            <a href="mailto:tkai@uwo.ca" target="_blank" rel='noopener me' title="Email">
+            <a href="mailto:tkai@uwo.ca" target="_blank" rel='noopener me' title="Email" >
                 <FontAwesomeIcon icon={faEnvelope} className={styles.socialIcon} />
             </a>
 
