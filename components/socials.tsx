@@ -9,22 +9,22 @@ export const Social = () => {
     return (
         <div className='flex'>
             {/* Email */}
-            <a href="mailto:tkai@uwo.ca" target="_blank" rel='noopener me' title="Email" >
+            <a href="mailto:tkai@uwo.ca" target="_blank" rel='noopener noreferrer' title="Email" >
                 <FontAwesomeIcon icon={faEnvelope} className={styles.socialIcon} />
             </a>
 
             {/* Github */}
-            <a href="https://github.com/kaitj" target="_blank" >
+            <a href="https://github.com/kaitj" target="_blank" rel="noreferrer">
                 <FontAwesomeIcon icon={faGithub} className={styles.socialIcon} />
             </a>
 
             {/* Twitter */}
-            <a href="https://twitter.com/jasonkai" target="_blank" >
+            <a href="https://twitter.com/jasonkai" target="_blank" rel="noreferrer">
                 <FontAwesomeIcon icon={faTwitter} className={styles.socialIcon} />
             </a>
 
             {/* LinkedIn */}
-            <a href="https://www.linkedin.com/in/jason-kai-7a734968/" target="_blank">
+            <a href="https://www.linkedin.com/in/jason-kai-7a734968/" target="_blank" rel="noreferrer">
                 <FontAwesomeIcon icon={faLinkedin} className={styles.socialIcon} />
             </a>
         </div>
