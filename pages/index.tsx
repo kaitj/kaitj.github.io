@@ -4,8 +4,8 @@ import Image from 'next/image'
 import styles from '../styles/home.module.css'
 import socials from '../styles/socials.module.css'
 
-// Components
 import { Social } from '../components/socials'
+// Components
 import { HomeFooter } from '../components/footer'
 
 import profileImg from '../public/profile.jpeg'
