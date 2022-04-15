@@ -5,7 +5,7 @@ export const Footer = () => {
     
     return (
         <footer className={styles.footer}>
-            &copy; {year}
+            &copy; {year} Jason Kai
         </footer>
     );
 };
