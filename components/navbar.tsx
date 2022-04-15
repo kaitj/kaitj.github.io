@@ -20,9 +20,9 @@ export const NavBar = () => {
 
                 <div className="collapse navbar-collapse justify-content-end" id='navbarNav'>
                     <ul className="navbar-nav">
-                        <li className="nav-item"><a className="nav-link" href="/">about</a></li>
-                        <li className="nav-item"><a className="nav-link" href="#">portfolio</a></li>
-                        <li className="nav-item"><a className="nav-link" href="/contact">contact</a></li>
+                        <li className="nav-item"><a className="nav-link" href="/">home</a></li>
+                        <li className="nav-item"><a className="nav-link" href="/about">about</a></li>
+                        <li className="nav-item"><a className="nav-link" href="/publications">publications</a></li>
                     </ul>
                 </div>
             </div>
