@@ -7,7 +7,7 @@ import { NavBar } from '../components/navbar'
 import { Profile } from '../components/profile'
 import { Footer } from '../components/footer'
 
-const Home: NextPage = () => {
+const About: NextPage = () => {
   return (
     <div className={styles.container}>
       <Head>
@@ -35,4 +35,4 @@ const Home: NextPage = () => {
   )
 }
 
-export default Home
+export default About
