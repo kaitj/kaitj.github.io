@@ -10,6 +10,8 @@ export const Pubs = () => {
             <div className="row">
                 <h3 className={pubstyles.pubHeadings}>2022</h3>
                 <ul>
+                    <li className={pubstyles.pubItems}>Gui, C., <strong><u>Kai, J.</u></strong>, Khan, A.R., Lau, J.C., Megyesi, J.F. (2022). Detection of local growth patterns in longitudinally imaged low-grade gliomas <em>biorxiv</em>. doi: <a className={pubstyles.pubLinks} href="https://doi.org/10.1101/2022.04.24.488099" target="_blank" rel="noreferrer">10.1101/2022.04.24.488099</a></li>
+
                     <li className={pubstyles.pubItems}><strong><u>Kai, J.</u></strong>, Khan, A.R., Haast, R.A.M., Lau, J.C. (2022). Mapping the subcortical connectome using in vivo diffusion MRI: feasibility and reliability. <em>biorxiv</em>. doi: <a className={pubstyles.pubLinks} href="https://doi.org/10.1101/2022.03.28.485689" target="_blank" rel="noreferrer">10.1101/2022.03.28.485689</a></li>
 
                     <li className={pubstyles.pubItems}><strong><u>Kai, J.</u></strong>, &amp; Khan, A.R. (2022). Assessing the Reliability of Template-Based Clustering for Tractography in Healthy Human Adults. <em>Frontiers in Neuroinformatics</em>, 16, 777853. doi: <a className={pubstyles.pubLinks} href="https://doi.org/10.3389/fninf.2022.777853" target="_blank" rel="noreferrer">10.3389/fninf.2022.777853</a></li>
