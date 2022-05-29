@@ -24,7 +24,7 @@ export const Social = () => {
             </a>
 
             {/* LinkedIn */}
-            <a href="https://www.linkedin.com/in/jason-kai-7a734968/" target="_blank" rel="noreferrer">
+            <a href="https://www.linkedin.com/in/jasonkai/" target="_blank" rel="noreferrer">
                 <FontAwesomeIcon icon={faLinkedin} className={styles.socialIcon} />
             </a>
         </div>
