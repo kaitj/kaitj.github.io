@@ -1,3 +1,7 @@
+ul.pubList {
+    list-style-type: none;
+}
+
 li.pubItems {
     margin-top: 1vw;
     margin-bottom: 1vw;
