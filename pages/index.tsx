@@ -50,6 +50,10 @@ const Home: NextPage = () => {
         </div>
 
         <div className="row">
+          <Link href="/projects"><a className="nav-link">projects</a></Link>
+        </div>
+
+        <div className="row">
           <Link href="/publications"><a className="nav-link">publicatons</a></Link>
         </div>
       </main>

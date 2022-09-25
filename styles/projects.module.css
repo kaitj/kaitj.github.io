@@ -1,0 +1,15 @@
+.card {
+    background-color: var(--bg-dark);
+    color: var(--font);
+    font-size: var(--font-size);
+    font-family: var(--font-family);
+    margin-bottom: 1.5vh;
+}
+
+.link {
+    color: var(--font-secondary);
+}
+
+.link:hover {
+    color: var(--link-hover);
+}
