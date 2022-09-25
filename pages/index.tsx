@@ -36,7 +36,7 @@ const Home: NextPage = () => {
         </div>
 
         <div className="row">
-          <h3 className={styles.profileTitle}>Ph.D. Candidate at Western University</h3>
+          {/* <h3 className={styles.profileTitle}>Ph.D. Candidate at Western University</h3> */}
         </div>
 
         {/* Social icons */}
