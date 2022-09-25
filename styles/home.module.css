@@ -59,6 +59,15 @@ h3.profileTitle {
   align-items: center;
 }
 
+ul.navList {
+  list-style-type: none;
+}
+
+li.navItem {
+  margin-top: .5vw;
+  margin-bottom: .5vw;
+}
+
 @media (max-width: 600px) {
   .container {
     padding: var(--container-padding-mobile);

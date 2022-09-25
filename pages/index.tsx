@@ -46,15 +46,11 @@ const Home: NextPage = () => {
 
         {/* Homepage navigation */}
         <div className="row">
-          <Link href='/about'><a className="nav-link">about</a></Link>
-        </div>
-
-        <div className="row">
-          <Link href="/projects"><a className="nav-link">projects</a></Link>
-        </div>
-
-        <div className="row">
-          <Link href="/publications"><a className="nav-link">publicatons</a></Link>
+          <ul className={styles.navList}>
+            <li className={styles.navItem}><Link href='/about'><a className="nav-link">about</a></Link></li>
+            <li className={styles.navItem}><Link href="/projects"><a className="nav-link">projects</a></Link></li>
+            <li className={styles.navItem}><Link href="/publications"><a className="nav-link">publicatons</a></Link></li>
+          </ul>
         </div>
       </main>
 
