@@ -15,8 +15,8 @@ export const Projs = () => {
                         <br></br>
                         <Card.Text>Web application of validator for anatomical fiducial placements</Card.Text>
                         <br></br>
-                        <Card.Link className={projstyles.link} href="https://afids-validator.herokuapp.com">Website</Card.Link>
-                        <Card.Link className={projstyles.link} href="https://github.com/afids/afids-validator">GitHub</Card.Link>
+                        <Card.Link className={projstyles.link} href="https://validator.afids.io" target="_blank">Website</Card.Link>
+                        <Card.Link className={projstyles.link} href="https://github.com/afids/afids-validator" target="_blank">GitHub</Card.Link>
                     </Card.Body>
                 </Card>
             </div>
@@ -29,8 +29,8 @@ export const Projs = () => {
                         <br></br>
                         <Card.Text>Package to build reproducible neuroimaging workflows</Card.Text>
                         <br></br>
-                        <Card.Link className={projstyles.link} href="https://snakebids.readthedocs.io/en/stable/">Website</Card.Link>
-                        <Card.Link className={projstyles.link} href="https://github.com/akhanf/snakebids">GitHub</Card.Link>
+                        <Card.Link className={projstyles.link} href="https://snakebids.readthedocs.io/en/stable/" target="_blank">Website</Card.Link>
+                        <Card.Link className={projstyles.link} href="https://github.com/akhanf/snakebids" target="_blank">GitHub</Card.Link>
                     </Card.Body>
                 </Card>
             </div>
