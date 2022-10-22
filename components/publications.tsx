@@ -10,7 +10,7 @@ export const Pubs = () => {
             <div className="row">
                 <h3 className={pubstyles.pubHeadings}>2022</h3>
                 <ul className={pubstyles.pubList}>
-                    <li className={pubstyles.pubItems}>Nichols, E.S., Correa S., Van Dyken, P., <strong><u>Kai, J.</u></strong>, Kuehn, T., de Ribaupierre, S., Duerden, E.G., Khan, A.R. (2022). An automated BIDS-App for brain segmentatino of human fetal functional MRI data <em>biorxiv</em>. doi: <a className={pubstyles.pubLinks} href="https://doi.org/10.1101/2022.09.02.506391" target="_blank" rel="noreferrer">10.1101/2022.09.02.506391</a></li>
+                    <li className={pubstyles.pubItems}>Nichols, E.S., Correa S., Van Dyken, P., <strong><u>Kai, J.</u></strong>, Kuehn, T., de Ribaupierre, S., Duerden, E.G., Khan, A.R. (2022). An automated BIDS-App for brain segmentation of human fetal functional MRI data <em>biorxiv</em>. doi: <a className={pubstyles.pubLinks} href="https://doi.org/10.1101/2022.09.02.506391" target="_blank" rel="noreferrer">10.1101/2022.09.02.506391</a></li>
 
                     <li className={pubstyles.pubItems}>Gui, C., <strong><u>Kai, J.</u></strong>, Khan, A.R., Lau, J.C., Megyesi, J.F. (2022). Detection of local growth patterns in longitudinally imaged low-grade gliomas <em>biorxiv</em>. doi: <a className={pubstyles.pubLinks} href="https://doi.org/10.1101/2022.04.24.488099" target="_blank" rel="noreferrer">10.1101/2022.04.24.488099</a></li>
 
