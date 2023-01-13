@@ -28,8 +28,8 @@ body {
 /* Navbar */
 .navbar-brand {
   font-family: 'Frank Ruhl Libre', serif;
-  font-size: 5vh !important;
-  padding-left: 2vw;
+  font-size: 48px !important;
+  padding-left: 24px;
 }
 
 .navbar-toggler {
@@ -47,7 +47,7 @@ a.nav-link {
   text-transform: uppercase;
   text-align: center;
   color: var(--font-secondary);
-  font-size: 2vh;
+  font-size: var(--font-size);
 }
 
 a.nav-link:hover {
@@ -58,13 +58,13 @@ a.nav-link:hover {
 
 h2 {
   text-transform: uppercase;
-  margin-bottom: 2vw !important;
+  margin-bottom: 30px !important;
 }
 
 p a {
   color: var(--font-secondary);
   text-decoration: underline;
-  text-underline-offset: .4vw;
+  text-underline-offset: 4px;
 }
 
 p a:hover {
@@ -73,4 +73,10 @@ p a:hover {
 
 * {
   box-sizing: border-box;
+}
+
+@media (max-width: 600px) {
+  .navbar-brand {
+    font-size: 30px !important;
+  }
 }

@@ -22,28 +22,27 @@
   overflow: hidden;
   border-radius: 50%;
   border-style: solid;
-  border-width: .25vw;
+  border-width: 3px;
   border-color: var(--font-secondary);
-  height: 20vw;
-  width: 20vw;
-  margin-bottom: 1vw;
+  height: 300px;
+  width: 300px;
+  margin-bottom: 8px;
 }
 
 .profileImg {
-  width: 35vw;
-  height: 35vw;
-  margin-left: -2vw;
-  margin-top: -3vw;
+  width: 300px;
+  height: 300px;
+  margin-left: -12px;
 }
 
 h1.profileName {
-  font-size: 5vh;
+  font-size: 48px;
   font-family: "Frank Ruhl Libre", serif;
   font-weight: bold;
 }
 
 h3.profileTitle {
-  font-size: 1.5vh;
+  font-size: 20px;
   color: var(font-secondary);
 }
 
@@ -51,9 +50,9 @@ h3.profileTitle {
   display: flex;
   flex-direction: column;
   flex: 1;
-  padding: 0.5rem 0;
+  padding: 2px 0;
   font-size: 14px;
-  letter-spacing: 0.1rem;
+  letter-spacing: 1px;
   border-top: 1px solid rgba(225, 225, 225, 0.2);
   justify-content: center;
   align-items: center;
@@ -64,8 +63,8 @@ ul.navList {
 }
 
 li.navItem {
-  margin-top: .5vw;
-  margin-bottom: .5vw;
+  margin-top: 4px;
+  margin-bottom: 4px;
 }
 
 @media (max-width: 600px) {
@@ -79,18 +78,17 @@ li.navItem {
     overflow: hidden;
     border-radius: 50%;
     border-style: solid;
-    border-width: .25vw;
+    border-width: 2px;
     border-color: var(--font-secondary);
-    height: 40vw;
-    width: 40vw;
-    margin: 0 1vh 0 2v;
+    height: 240px;
+    width: 240px;
   }
   
   .profileImg {
-    width: 75vw;
-    height: 75vw;
-    margin-left: -4vw;
-    margin-top: -6vw;
+    width: 300px;
+    height: 300px;
+    margin-left: -18px;
+    margin-top: -24px;
   }
 
   .footer {
