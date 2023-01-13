@@ -3,7 +3,7 @@
     color: var(--font);
     font-size: var(--font-size);
     font-family: var(--font-family);
-    margin-bottom: 1.5vh;
+    margin-bottom: 20px;
 }
 
 .link {
@@ -12,4 +12,10 @@
 
 .link:hover {
     color: var(--link-hover);
+}
+
+@media (max-width: 600px) {
+    .card {
+        font-size: 18px;
+    }
 }
