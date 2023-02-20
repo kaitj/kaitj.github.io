@@ -10,6 +10,8 @@ export const Pubs = () => {
             <div className="row">
                 <h3 className={pubstyles.pubHeadings}>2022</h3>
                 <ul className={pubstyles.pubList}>
+                    <li className={pubstyles.pubItems}>Taha, A., Gilmore, G., Abbass, M., <strong><u>Kai, J.</u></strong>, Kuehn, T., Demarco, J., Gupta, G., Zajner, C., Cao, D., Chevalier, R., Ahmed, A., Hadi, A., Karat, B., Stanley, O.W., Park, P., Ferko, K.M., Hemachandra, D., Vassallo, R., Jach, M., Thurairajah, A., Wong, S., Ogunsanya, F., Tenorio, M.C., Khan, A.R., Lau, J.C. (2022). Magnetic resonance imaging datasets with anatomical fiducials for quality control and registration. <em>biorxiv</em>. doi: <a className={pubstyles.pubLinks} href="https://doi.org/10.1101/2022.11.21.516173" target="_blank" rel="noreferrer">10.1101/2022.11.21.516173</a></li>
+
                     <li className={pubstyles.pubItems}>Nichols, E.S., Correa S., Van Dyken, P., <strong><u>Kai, J.</u></strong>, Kuehn, T., de Ribaupierre, S., Duerden, E.G., Khan, A.R. (2022). An automated BIDS-App for brain segmentation of human fetal functional MRI data. <em>biorxiv</em>. doi: <a className={pubstyles.pubLinks} href="https://doi.org/10.1101/2022.09.02.506391" target="_blank" rel="noreferrer">10.1101/2022.09.02.506391</a></li>
 
                     <li className={pubstyles.pubItems}>Gui, C., <strong><u>Kai, J.</u></strong>, Khan, A.R., Lau, J.C., Megyesi, J.F. (2022). Detection of local growth patterns in longitudinally imaged low-grade gliomas. <em>biorxiv</em>. doi: <a className={pubstyles.pubLinks} href="https://doi.org/10.1101/2022.04.24.488099" target="_blank" rel="noreferrer">10.1101/2022.04.24.488099</a></li>
