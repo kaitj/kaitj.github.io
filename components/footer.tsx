@@ -1,7 +1,7 @@
 import styles from '../styles/home.module.css'
 import socials from '../styles/socials.module.css'
 
-import { Social } from '../components/socials'
+import { SocialFooter } from '../components/socials'
 
 export const HomeFooter = () => {
     let year: number = new Date().getFullYear();
@@ -19,7 +19,7 @@ export const Footer = () => {
     return (
         <footer className={styles.footer}>
             <div className={["row", socials.socialRow].join(' ')}>
-                <Social />
+                <SocialFooter />
             </div>
             <div className="row">
                 &copy; {year} Jason Kai
