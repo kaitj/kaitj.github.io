@@ -25,7 +25,7 @@ const Projects: NextPage = () => {
 
                 <div className="col-8">
                     <p>
-                        Below are some selected projects. For a full list, please check out my <a href="https://github.com/kaitj" target="_blank">GitHub</a>.
+                        Below are some selected projects I have contributed to. For a full list, please check out my <a href="https://github.com/kaitj" target="_blank">GitHub</a>.
                     </p>
                     <br></br>
                     
