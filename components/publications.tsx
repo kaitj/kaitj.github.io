@@ -10,8 +10,9 @@ export const Pubs = () => {
             <div className="row">
                 <h3 className={pubstyles.pubHeadings}>2023</h3>
                 <ul className={pubstyles.pubList}>
-                <li className={pubstyles.pubItems}><strong><u>Kai, J.</u></strong>, Mackinley, M., Khan, A.R., Palaniyappan, L. (2023). Aberrant frontal lobe "U"-shaped association fibers in first-episode schizophrenia: A 7-Tesla diffusion imaging study <em>Neuroimage: Clinical</em>. doi: <a className={pubstyles.pubLinks} href="https://doi.org/10.1016/j.nicl.2023.103367" target="_blank" rel="noreferrer">10.1016/j.nicl.2023.103367</a></li>
+                    <li className={pubstyles.pubItems}><strong><u>Kai, J.</u></strong>, Mackinley, M., Khan, A.R., Palaniyappan, L. (2023). Aberrant frontal lobe <q>U</q>-shaped association fibers in first-episode schizophrenia: A 7-Tesla diffusion imaging study. <em>Neuroimage: Clinical</em>. doi: <a className={pubstyles.pubLinks} href="https://doi.org/10.1016/j.nicl.2023.103367" target="_blank" rel="noreferrer">10.1016/j.nicl.2023.103367</a></li>
                 </ul>
+                
                 <h3 className={pubstyles.pubHeadings}>2022</h3>
                 <ul className={pubstyles.pubList}>
                     <li className={pubstyles.pubItems}>Taha, A., Gilmore, G., Abbass, M., <strong><u>Kai, J.</u></strong>, Kuehn, T., Demarco, J., Gupta, G., Zajner, C., Cao, D., Chevalier, R., Ahmed, A., Hadi, A., Karat, B., Stanley, O.W., Park, P., Ferko, K.M., Hemachandra, D., Vassallo, R., Jach, M., Thurairajah, A., Wong, S., Ogunsanya, F., Tenorio, M.C., Khan, A.R., Lau, J.C. (2022). Magnetic resonance imaging datasets with anatomical fiducials for quality control and registration. <em>biorxiv</em>. doi: <a className={pubstyles.pubLinks} href="https://doi.org/10.1101/2022.11.21.516173" target="_blank" rel="noreferrer">10.1101/2022.11.21.516173</a></li>
