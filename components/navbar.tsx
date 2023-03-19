@@ -5,7 +5,7 @@ export const NavBar = () => {
         <nav className="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
             <div className="container-fluid">
                 {/* Brand Logo */}
-                <h1 className="navbar-brand">Jason Kai</h1>
+                <Link href='/'><h1 className="navbar-brand">Jason Kai</h1></Link>
 
                 {/* Hamburger */}
                 <button
@@ -22,7 +22,6 @@ export const NavBar = () => {
 
                 <div className="collapse navbar-collapse justify-content-end" id='navbarNav'>
                     <ul className="navbar-nav">
-                        <li className="nav-item"><Link href='/'><a className="nav-link">home</a></Link></li>
                         <li className="nav-item"><Link href='/about'><a className="nav-link">about</a></Link></li>
                         <li className="nav-item"><Link href='/projects'><a className="nav-link">projects</a></Link></li>
                         <li className="nav-item"><Link href='/publications'><a className="nav-link">publications</a></Link></li>
