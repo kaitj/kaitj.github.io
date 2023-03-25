@@ -12,13 +12,13 @@ export const Pubs = () => {
             <h2>Publications &amp; preprints</h2>
 
             {pubYears.map((year) => (
-                <div className="row">
+                <div key={year} className="row">
                     <h3 className={pubStyles.pubHeadings}>{year}</h3>
                     <ul className={pubStyles.pubList}>
                         {pubData
                         .filter((pubData) => pubData.year === year)
                         .map((pubData) => (
-                            <li className={pubStyles.pubItems}>{pubData.authors.join(", ")} ({pubData.year}). {pubData.title}. <em>{pubData.journal}</em>. doi: <a className={pubStyles.pubLinks} href={`https://doi.org/${pubData.doi}`} target="_blank" rel="noreferrer">{pubData.doi}</a>.</li>
+                            <li key={pubData.doi} className={pubStyles.pubItems}>{pubData.authors.join(", ")} ({pubData.year}). {pubData.title}. <em>{pubData.journal}</em>. doi: <a className={pubStyles.pubLinks} href={`https://doi.org/${pubData.doi}`} target="_blank" rel="noreferrer">{pubData.doi}</a>.</li>
                         ))}
                     </ul>
                 </div>
