@@ -8,7 +8,7 @@ export const Projs = () => {
     return (
         <div className="row">
             {projData.map((proj) => 
-                <div className="col-lg-4 col-md-6 col-sm-12">
+                <div key={proj.name} className="col-lg-4 col-md-6 col-sm-12">
                     <Card className={projStyles.card}>
                         <Card.Img variant="top" src={proj.image} height="140px"></Card.Img>
                         <Card.Body>
