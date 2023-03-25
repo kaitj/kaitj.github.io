@@ -1,9 +1,9 @@
 interface ProjectProps {
-    name: String;
-    image: String;
-    description: String;
-    website: String;
-    github: String;
+    name: string;
+    image: string;
+    description: string;
+    website: string;
+    github: string;
 }
 
 export default ProjectProps

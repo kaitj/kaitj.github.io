@@ -3,7 +3,7 @@ interface PubProps {
     authors: string[];
     title: string;
     journal: string;
-    doi: string 
+    doi: string;
 }
 
 export default PubProps
