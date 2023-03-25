@@ -1,5 +1,5 @@
 interface PubProps {
-    year: Number;
+    year: number;
     authors: string[];
     title: string;
     journal: string;
