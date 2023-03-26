@@ -4,6 +4,10 @@
     color: var(--font-secondary);
 }
 
+.socialHome:hover {
+    color: var(--link-hover);
+}
+
 .socialIcon {
     font-size: 20px;
     margin: 6px 12px 0 12px;
