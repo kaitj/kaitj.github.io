@@ -5,8 +5,8 @@ const pubData: pubProps[] = [
         year: 2023,
         authors: ["Nichols, E.S.", "Correa S.", "Van Dyken, P.", "Kai, J", "Kuehn, T.", "de Ribaupierre, S.", "Duerden, E.G.", "Khan, A.R."],
         title: "An automated BIDS-App for brain segmentation of human fetal functional MRI data",
-        journal: "biorxiv",
-        doi: "10.1101/2022.09.02.506391"
+        journal: "Neuroinformatics",
+        doi: "10.1007/s12021-023-09629-3"
     },
     {
         year: 2023,
