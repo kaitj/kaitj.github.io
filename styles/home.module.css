@@ -8,7 +8,7 @@
 
 .main {
   padding-top: 12vh;
-  min-height: 84.5vh;
+  min-height: 100vh;
   flex: 1;
   display: flex;
   flex-direction: column;
@@ -69,10 +69,6 @@ li.navItem {
 @media (max-width: 600px) {
   .container {
     font-size: var(--font-size-mobile);
-  }
-
-  .main {
-    min-height: 84vh;
   }
 
   .profileBorder { 
