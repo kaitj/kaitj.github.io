@@ -1,7 +1,6 @@
 .container {
   background-image: radial-gradient(var(--bg-dark), rgb(0, 0, 0));
   color: var(--font);
-  padding: var(--container-padding);
   font-size: var(--font-size);
   font-family: var(--font-family);
   justify-content: center;
@@ -69,7 +68,6 @@ li.navItem {
 
 @media (max-width: 600px) {
   .container {
-    padding: var(--container-padding-mobile);
     font-size: var(--font-size-mobile);
   }
 

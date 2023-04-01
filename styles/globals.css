@@ -13,7 +13,7 @@
   --link-hover: rgba(130, 130, 130, 1);
 
   /* Font settings */
-  --font-size: 20px;
+  --font-size: 24px;
   --font-size-mobile: 14px;
   --font-family: 'Roboto';
 }
@@ -26,28 +26,27 @@ body {
 }
 
 /* Navbar */
-.navbar-brand {
-  font-family: 'Frank Ruhl Libre', serif;
-  font-size: 48px !important;
-  padding-left: 24px;
+.navbar {
+  background-color: var(--bg-dark);
 }
 
-.navbar-brand:hover {
-  cursor: pointer;
+.navbar-brand {
+  color: var(--font) !important;
+  font-family: 'Frank Ruhl Libre', serif;
+  font-size: 48px !important;
+  padding-left: 48px;
 }
 
 .navbar-toggler {
   border-color: rgba(0, 0, 0, 0) !important;
 }
+
 .navbar-toggler:focus {
   box-shadow: 0 0 0 0 !important; 
 }
 
-.nav-item {
-  padding: 10px 20px;
-}
-
 a.nav-link {
+  padding: 10px 20px !important;
   text-transform: uppercase;
   text-align: center;
   color: var(--font-secondary);
