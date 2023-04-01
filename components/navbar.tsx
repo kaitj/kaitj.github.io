@@ -1,33 +1,28 @@
-import Link from 'next/link'
+import Container from 'react-bootstrap/Container'
+import Nav from 'react-bootstrap/Nav'
+import Navbar from 'react-bootstrap/Navbar'
 
-export const NavBar = () => {
+import navData from '../data/navigation'
+
+export const NavBar = () =>  {
     return (
-        <nav className="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
-            <div className="container-fluid">
-                {/* Brand Logo */}
-                <Link href='/'><h1 className="navbar-brand">Jason Kai</h1></Link>
-
+        <Navbar expand="lg" variant="dark">
+            <Container fluid>
+                {/* Logo */}
+                <Navbar.Brand className="navbar-brand" href="/">Jason Kai</Navbar.Brand>
                 {/* Hamburger */}
-                <button
-                    className="navbar-toggler"
-                    type="button"
-                    data-bs-toggle="collapse"
-                    data-bs-target="#navbarNav"
-                    aria-controls="navbarNav"
-                    aria-expanded="false"
-                    aria-label="Toggle navigation"
-                >
-                    <span className="navbar-toggler-icon"></span>
-                </button>
-
-                <div className="collapse navbar-collapse justify-content-end" id='navbarNav'>
-                    <ul className="navbar-nav">
-                        <li className="nav-item"><Link href='/about'><a className="nav-link">about</a></Link></li>
-                        <li className="nav-item"><Link href='/projects'><a className="nav-link">projects</a></Link></li>
-                        <li className="nav-item"><Link href='/publications'><a className="nav-link">publications</a></Link></li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
-    );
-};
+                <Navbar.Toggle aria-controls="basic-navbar-nav"/>
+                <Navbar.Collapse id="basic-navbar-nav"  className='justify-content-end'>
+                    {/* Nav Menu */}
+                    <Nav>
+                        {navData.map((nav) => 
+                            <Nav.Link href={nav.url} key={nav.name}>
+                                {nav.name}
+                            </Nav.Link>
+                        )}
+                    </Nav>
+                </Navbar.Collapse>
+            </Container>
+        </Navbar>
+    )
+}

@@ -2,14 +2,17 @@ import type { NextPage } from 'next'
 import Head from 'next/head'
 import Image from 'next/image'
 import Link from 'next/link'
+import Row from 'react-bootstrap/Row'
+
+// CSS
 import styles from '../styles/home.module.css'
 import socials from '../styles/socials.module.css'
 
-import { Social } from '../components/socials'
 // Components
+import { Social } from '../components/socials'
 import { HomeFooter } from '../components/footer'
-
 import profileImg from '../public/profile.jpeg'
+import navData from '../data/navigation'
 
 const Home: NextPage = () => {
   return (
@@ -23,21 +26,21 @@ const Home: NextPage = () => {
 
       <main className={styles.main}>
 
-        <div className="row">
+        <Row>
           <div className={styles.profileBorder}>
             <div className={styles.profileImg}>
               <Image src={profileImg} alt="Profile picture" />
             </div>
           </div>
-        </div>
+        </Row>
 
-        <div className="row">
+        <Row>
           <h1 className={styles.profileName}>Jason Kai</h1>
-        </div>
+        </Row>
 
-        <div className="row">
+        <Row>
           <h3 className={styles.profileTitle}>Research Software Engineer</h3>
-        </div>
+        </Row>
 
         {/* Social icons */}
         <div className={socials.socialRow}>
@@ -45,13 +48,18 @@ const Home: NextPage = () => {
         </div>
 
         {/* Homepage navigation */}
-        <div className="row">
+        <Row>
           <ul className={styles.navList}>
-            <li className={styles.navItem}><Link href='/about'><a className="nav-link">about</a></Link></li>
-            <li className={styles.navItem}><Link href="/projects"><a className="nav-link">projects</a></Link></li>
-            <li className={styles.navItem}><Link href="/publications"><a className="nav-link">publications</a></Link></li>
+            {navData.map((nav) => 
+              <li className={styles.navItem} key={nav.name}>
+                <Link href={nav.url}>
+                  <a className="nav-link">{nav.name}</a>
+                </Link>
+              </li>
+            )}
           </ul>
-        </div>
+            
+        </Row>
       </main>
 
       <HomeFooter />
