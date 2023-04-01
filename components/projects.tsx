@@ -9,7 +9,7 @@ export const Projs = () => {
     return (
         <Row xs={1} md={2} lg={3} xl={3}>
             {projData.map((proj) =>
-                <Col>
+                <Col key={proj.name}>
                     <Card className={projStyles.card}>
                         <Card.Img variant="top" src={proj.image} height="160px"/>
                         <Card.Body>

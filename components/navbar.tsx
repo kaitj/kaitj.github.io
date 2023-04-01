@@ -16,7 +16,9 @@ export const NavBar = () =>  {
                     {/* Nav Menu */}
                     <Nav>
                         {navData.map((nav) => 
-                            <Nav.Link href={nav.url}>{nav.name}</Nav.Link>
+                            <Nav.Link href={nav.url} key={nav.name}>
+                                {nav.name}
+                            </Nav.Link>
                         )}
                     </Nav>
                 </Navbar.Collapse>
