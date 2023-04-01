@@ -1,5 +1,6 @@
 import type { NextPage } from 'next'
 import Head from 'next/head'
+import Container from 'react-bootstrap/Container'
 
 import styles from '../styles/home.module.css'
 
@@ -21,12 +22,9 @@ const Publications: NextPage = () => {
             <NavBar />
 
             <main className={styles.main}>
-                <div className="col-2"></div>
-
-                <div className="col-8"><Pubs />
-                </div>
-
-                <div className="col-2"></div>
+                <Container>
+                    <Pubs />
+                </Container>
             </main>
 
             <Footer />

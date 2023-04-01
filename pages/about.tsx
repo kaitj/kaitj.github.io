@@ -1,5 +1,6 @@
 import type { NextPage } from 'next'
 import Head from 'next/head'
+import Container from 'react-bootstrap/Container'
 import styles from '../styles/home.module.css'
 
 // Components
@@ -21,13 +22,10 @@ const About: NextPage = () => {
 
 
       <main className={styles.main}>
-        <div className='col-2'></div>
-
-        <div className='col-8'>
+        <Container>
           <Profile />
-        </div>
+        </Container>
 
-        <div className='col-2'></div>
       </main>
 
       <Footer />

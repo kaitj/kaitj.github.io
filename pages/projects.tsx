@@ -1,5 +1,6 @@
 import type { NextPage } from 'next'
 import Head from 'next/head'
+import Container from 'react-bootstrap/Container'
 
 import styles from '../styles/home.module.css'
 
@@ -21,18 +22,14 @@ const Projects: NextPage = () => {
             <NavBar />
 
             <main className={styles.main}>
-                <div className="col-2"></div>
-
-                <div className="col-8">
+                <Container>
                     <p>
                         Below are some selected projects I have contributed to. For a full list, please check out my <a href="https://github.com/kaitj" target="_blank">GitHub</a>.
                     </p>
-                    <br></br>
+                    <br/>
                     
                     <Projs />
-                </div>
-
-                <div className="col-2"></div>
+                </Container>
             </main>
 
             <Footer />
