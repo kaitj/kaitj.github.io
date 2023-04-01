@@ -1,27 +1,28 @@
 import Card from 'react-bootstrap/Card';
+import Col from 'react-bootstrap/Col';
+import Row from 'react-bootstrap/Row';
 
 import projStyles from '../styles/projects.module.css'
 import projData from '../data/projects'
 
-
 export const Projs = () => {
     return (
-        <div className="row">
-            {projData.map((proj) => 
-                <div key={proj.name} className="col-lg-4 col-md-6 col-sm-12">
+        <Row xs={1} md={2} lg={3} xl={3}>
+            {projData.map((proj) =>
+                <Col>
                     <Card className={projStyles.card}>
-                        <Card.Img variant="top" src={proj.image} height="140px"></Card.Img>
+                        <Card.Img variant="top" src={proj.image} height="160px"/>
                         <Card.Body>
                             <Card.Title as="h4">{proj.name}</Card.Title>
-                            <br></br>
+                            <br/>
                             <Card.Text>{proj.description}</Card.Text>
-                            <br></br>
+                            <br/>
                             <Card.Link className={projStyles.link} href={proj.website} target="_blank">Website</Card.Link>
-                            <Card.Link className={projStyles.link} href={proj.github} target="_blank">Github</Card.Link>
+                            <Card.Link className={projStyles.link} href={proj.github} target="_blank">GitHub</Card.Link>
                         </Card.Body>
                     </Card>
-                </div>
+                </Col>
             )}
-        </div>
-    );
-};
+        </Row>
+    )
+}
