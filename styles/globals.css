@@ -13,7 +13,7 @@
   --link-hover: rgba(130, 130, 130, 1);
 
   /* Font settings */
-  --font-size: 24px;
+  --font-size: 20px;
   --font-size-mobile: 14px;
   --font-family: 'Roboto';
 }
@@ -50,7 +50,7 @@ a.nav-link {
   text-transform: uppercase;
   text-align: center;
   color: var(--font-secondary);
-  font-size: var(--font-size);
+  font-size: 24px;
 }
 
 a.nav-link:hover {
