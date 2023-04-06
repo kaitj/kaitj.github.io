@@ -1,6 +1,4 @@
-import Card from 'react-bootstrap/Card';
-import Col from 'react-bootstrap/Col';
-import Row from 'react-bootstrap/Row';
+import { Card, Col, Row } from 'react-bootstrap';
 
 import projStyles from '../styles/projects.module.css'
 import projData from '../data/projects'

@@ -16,10 +16,11 @@ export const Pubs = () => {
                     <h3 className={pubStyles.pubHeadings}>{year}</h3>
                     <ul className={pubStyles.pubList}>
                         {pubData
-                        .filter((pubData) => pubData.year === year)
-                        .map((pubData) => (
-                            <li key={pubData.doi} className={pubStyles.pubItems}>{pubData.authors.join(", ")} ({pubData.year}). {pubData.title}. <em>{pubData.journal}</em>. doi: <a className={pubStyles.pubLinks} href={`https://doi.org/${pubData.doi}`} target="_blank" rel="noreferrer">{pubData.doi}</a>.</li>
-                        ))}
+                            .filter((pubData) => pubData.year === year)
+                            .map((pubData) => (
+                                <li key={pubData.doi} className={pubStyles.pubItems}>{pubData.authors.join(", ")} ({pubData.year}). {pubData.title}. <em>{pubData.journal}</em>. doi: <a className={pubStyles.pubLinks} href={`https://doi.org/${pubData.doi}`} target="_blank" rel="noreferrer">{pubData.doi}</a>.</li>
+                            ))
+                        }
                     </ul>
                 </div>
             ))}
