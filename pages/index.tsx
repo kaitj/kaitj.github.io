@@ -1,18 +1,18 @@
-import type { NextPage } from 'next'
-import Head from 'next/head'
-import Image from 'next/image'
-import Link from 'next/link'
-import Row from 'react-bootstrap/Row'
+import type { NextPage } from "next";
+import Head from "next/head";
+import Image from "next/image";
+import Link from "next/link";
+import Row from "react-bootstrap/Row";
 
 // CSS
-import styles from '../styles/home.module.css'
-import socials from '../styles/socials.module.css'
+import styles from "../styles/home.module.css";
+import socials from "../styles/socials.module.css";
 
 // Components
-import { Social } from '../components/socials'
-import { HomeFooter } from '../components/footer'
-import profileImg from '../public/profile.jpeg'
-import navData from '../data/navigation'
+import { HomeFooter } from "../components/footer";
+import { Social } from "../components/socials";
+import navData from "../data/navigation";
+import profileImg from "../public/profile.jpeg";
 
 const Home: NextPage = () => {
   return (
@@ -21,11 +21,9 @@ const Home: NextPage = () => {
         <title>Jason Kai</title>
         <meta name="description" content="Portfolio website" />
         <meta name="author" content="Jason Kai" />
-
       </Head>
 
       <main className={styles.main}>
-
         <Row>
           <div className={styles.profileBorder}>
             <div className={styles.profileImg}>
@@ -50,21 +48,20 @@ const Home: NextPage = () => {
         {/* Homepage navigation */}
         <Row>
           <ul className={styles.navList}>
-            {navData.map((nav) => 
+            {navData.map((nav) => (
               <li className={styles.navItem} key={nav.name}>
                 <Link href={nav.url}>
                   <a className="nav-link">{nav.name}</a>
                 </Link>
               </li>
-            )}
+            ))}
           </ul>
-            
         </Row>
       </main>
 
       <HomeFooter />
     </div>
-  )
-}
+  );
+};
 
-export default Home
+export default Home;
