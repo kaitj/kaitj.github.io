@@ -4,6 +4,21 @@ const pubData: pubProps[] = [
   {
     year: 2023,
     authors: [
+      "Xiao, Y.",
+      "Gilmore, G.",
+      "Kai, J.",
+      "Lau J.C.",
+      "Peters, T.",
+      "Khan, A.R.",
+    ],
+    title:
+      "A population-averaged structural connectomic brain atlas dataset from 422 HCP-Aging subjects",
+    journal: "Data in Brief",
+    doi: "10.1016/j.dib.2023.109513",
+  },
+  {
+    year: 2023,
+    authors: [
       "Taha, A.",
       "Gilmore, G.",
       "Abbass, M.",
