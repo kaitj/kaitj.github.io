@@ -37,7 +37,7 @@ const Home: NextPage = () => {
         </Row>
 
         <Row>
-          <h3 className={styles.profileTitle}>Research Software Engineer</h3>
+          <h3 className={styles.profileTitle}>Research Software Developer</h3>
         </Row>
 
         {/* Social icons */}
