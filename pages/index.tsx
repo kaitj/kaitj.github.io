@@ -24,39 +24,41 @@ const Home: NextPage = () => {
       </Head>
 
       <main className={styles.main}>
-        <Row>
-          <div className={styles.profileBorder}>
-            <div className={styles.profileImg}>
-              <Image src={profileImg} alt="Profile picture" />
+        <div className="text-center">
+          <Row>
+            <div className={styles.profileBorder}>
+              <div className={styles.profileImg}>
+                <Image src={profileImg} alt="Profile picture" />
+              </div>
             </div>
+          </Row>
+
+          <Row>
+            <h1 className={styles.profileName}>Jason Kai</h1>
+          </Row>
+
+          <Row>
+            <h3 className={styles.profileTitle}>Research Software Developer</h3>
+          </Row>
+
+          {/* Social icons */}
+          <div className={socials.socialRow}>
+            <Social />
           </div>
-        </Row>
 
-        <Row>
-          <h1 className={styles.profileName}>Jason Kai</h1>
-        </Row>
-
-        <Row>
-          <h3 className={styles.profileTitle}>Research Software Developer</h3>
-        </Row>
-
-        {/* Social icons */}
-        <div className={socials.socialRow}>
-          <Social />
+          {/* Homepage navigation */}
+          <Row>
+            <ul className={styles.navList}>
+              {navData.map((nav) => (
+                <li className={styles.navItem} key={nav.name}>
+                  <Link href={nav.url}>
+                    <a className="nav-link">{nav.name}</a>
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </Row>
         </div>
-
-        {/* Homepage navigation */}
-        <Row>
-          <ul className={styles.navList}>
-            {navData.map((nav) => (
-              <li className={styles.navItem} key={nav.name}>
-                <Link href={nav.url}>
-                  <a className="nav-link">{nav.name}</a>
-                </Link>
-              </li>
-            ))}
-          </ul>
-        </Row>
       </main>
 
       <HomeFooter />
