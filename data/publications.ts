@@ -63,7 +63,7 @@ const pubData: pubProps[] = [
     year: 2022,
     authors: ["Gui, C.", "Kai, J.", "Khan, A.R.", "Lau, J.C.", "Megyesi, J.F."],
     title:
-      "Detection of local grwoth patterns in longitudinally imaged low-grade gliomas",
+      "Detection of local growth patterns in longitudinally imaged low-grade gliomas",
     journal: "biorxiv",
     doi: "10.1011/2022.04.24.488099",
   },

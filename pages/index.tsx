@@ -1,6 +1,6 @@
 import type { NextPage } from "next";
 import Head from "next/head";
-import Image from "next/image";
+import Image from "next/legacy/image";
 import Link from "next/link";
 import Row from "react-bootstrap/Row";
 
@@ -51,8 +51,8 @@ const Home: NextPage = () => {
             <ul className={styles.navList}>
               {navData.map((nav) => (
                 <li className={styles.navItem} key={nav.name}>
-                  <Link href={nav.url}>
-                    <a className="nav-link">{nav.name}</a>
+                  <Link className="nav-link" href={nav.url}>
+                    {nav.name}
                   </Link>
                 </li>
               ))}
