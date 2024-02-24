@@ -16,7 +16,7 @@ const projData: ProjectProps[] = [
       "https://user-images.githubusercontent.com/11492701/122223457-2c0bb580-ce81-11eb-8138-ee2c66302d39.png",
     description: "Package to build reproducible neuroimaging workflows",
     website: "https://snakebids.readthedocs.io/en/stable",
-    github: "https://github.com/akhanf/snakebids",
+    github: "https://github.com/khanlab/snakebids",
   },
   {
     name: "OpenBB",
