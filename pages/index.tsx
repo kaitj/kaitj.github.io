@@ -24,41 +24,41 @@ const Home: NextPage = () => {
       </Head>
 
       <main className={styles.main}>
-        <div className="text-center">
-          <Row>
-            <div className={styles.profileBorder}>
-              <div className={styles.profileImg}>
-                <Image src={profileImg} alt="Profile picture" />
-              </div>
+        <Row>
+          <div className={styles.profileBorder}>
+            <div className={styles.profileImg}>
+              <Image src={profileImg} alt="Profile picture" />
             </div>
-          </Row>
-
-          <Row>
-            <h1 className={styles.profileName}>Jason Kai</h1>
-          </Row>
-
-          <Row>
-            <h3 className={styles.profileTitle}>Research Software Developer</h3>
-          </Row>
-
-          {/* Social icons */}
-          <div className={socials.socialRow}>
-            <Social />
           </div>
+        </Row>
 
-          {/* Homepage navigation */}
-          <Row>
-            <ul className={styles.navList}>
-              {navData.map((nav) => (
-                <li className={styles.navItem} key={nav.name}>
-                  <Link className="nav-link" href={nav.url}>
-                    {nav.name}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </Row>
+        <Row>
+          <h1 className={styles.profileName}>Jason Kai</h1>
+        </Row>
+
+        <Row>
+          <h3 className={styles.profileTitle}>
+            Post Doctoral Fellow @ Child Mind Institute
+          </h3>
+        </Row>
+
+        {/* Social icons */}
+        <div className={socials.socialRow}>
+          <Social />
         </div>
+
+        {/* Homepage navigation */}
+        <Row>
+          <ul className={styles.navList}>
+            {navData.map((nav) => (
+              <li className={styles.navItem} key={nav.name}>
+                <Link className="nav-link" href={nav.url}>
+                  {nav.name}
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </Row>
       </main>
 
       <HomeFooter />

@@ -3,12 +3,12 @@ export const Profile = () => {
     <div className="row">
       <h2>About</h2>
       <p>
-        I&apos;m a software developer who enjoys working in cross-functional
-        teams and has a passion for leveraging diverse technologies to drive
-        meaningful advancements in the field of medical research. In my current
-        role, I develop reproducible data processing pipelines, build web
-        applications, and automate workflows to streamline the software
-        development and delivery processes. Check out my{" "}
+        I&apos;m a researcher and software developer who enjoys working in
+        cross-functional teams and has a passion for leveraging diverse
+        technologies to drive meaningful advancements in the field of medical
+        research. In my current role, I develop reproducible data processing
+        pipelines, build web applications, and automate workflows to streamline
+        the software development and delivery processes. Check out my{" "}
         <a href="https://github.com/kaitj" target="_blank" rel="noreferrer">
           Github
         </a>{" "}
@@ -39,7 +39,7 @@ export const Profile = () => {
         </a>{" "}
         to schedule a meeting. Alternatively, feel free connect with me by{" "}
         <a
-          href="mailto:tkai@uwo.ca"
+          href="mailto:jason.kai@childmind.org"
           target="_blank"
           rel="noreferrer"
           title="Email"
