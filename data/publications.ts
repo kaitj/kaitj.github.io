@@ -2,6 +2,22 @@ import pubProps from "../interfaces/publications";
 
 const pubData: pubProps[] = [
   {
+    year:2024,
+    authors: [
+      "Ogunsanya, F.",
+      "Taha, A.",
+      "Gilmore, G.",
+      "Kai, J.",
+      "Kuehn, T.",
+      "Thurairajah, A.",
+      "Tenorio, M.C.",
+      "Khan, A.R.",
+      "Lau, J.C.",
+    ],
+    title: "MRI-degad: toward accurate conversion of gadolinium-enhanced T1w MRIs to non-contrast-enhanced scans using CNNs",
+    journal: "International Jouranl of Computer Assisted Radiology and Surgery",
+    doi: "10.1007/s11548-024-03186-z",
+  },
     year: 2023,
     authors: [
       "Xiao, Y.",
