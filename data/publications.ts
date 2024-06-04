@@ -18,6 +18,7 @@ const pubData: pubProps[] = [
     journal: "International Jouranl of Computer Assisted Radiology and Surgery",
     doi: "10.1007/s11548-024-03186-z",
   },
+  {
     year: 2023,
     authors: [
       "Xiao, Y.",
