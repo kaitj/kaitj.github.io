@@ -1,3 +1,3 @@
 ## kaitj.github.io
 
-Personal website built with TypeScript.
+Personal website built.
