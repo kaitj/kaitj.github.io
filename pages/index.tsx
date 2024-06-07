@@ -12,7 +12,7 @@ import socials from "../styles/socials.module.css";
 import { HomeFooter } from "../components/footer";
 import { Social } from "../components/socials";
 import navData from "../data/navigation";
-import profileImg from "../public/profile.jpeg";
+import profileImg from "../public/headshot.jpg";
 
 const Home: NextPage = () => {
   return (
