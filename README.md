@@ -1,3 +1,3 @@
-## kaitj.github.io
+# kaitj.github.io
 
 Personal website
