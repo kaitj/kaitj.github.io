@@ -2,7 +2,7 @@ import pubProps from "../interfaces/publications";
 
 const pubData: pubProps[] = [
   {
-    year:2024,
+    year: 2024,
     authors: [
       "Ogunsanya, F.",
       "Taha, A.",
