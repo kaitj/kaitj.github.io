@@ -15,7 +15,7 @@ const pubData: pubProps[] = [
       "Lau, J.C.",
     ],
     title: "MRI-degad: toward accurate conversion of gadolinium-enhanced T1w MRIs to non-contrast-enhanced scans using CNNs",
-    journal: "International Jouranl of Computer Assisted Radiology and Surgery",
+    journal: "International Journal of Computer Assisted Radiology and Surgery",
     doi: "10.1007/s11548-024-03186-z",
   },
   {
