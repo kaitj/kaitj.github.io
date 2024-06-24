@@ -6,7 +6,7 @@ const projData: ProjectProps[] = [
     image:
       "https://github.com/afids/afids-validator/blob/master/afidsvalidator/static/lib/afidsvalidator-react/public/afids_banner.png?raw=true",
     description:
-      "Web application of validator for anatomical fiducial placements",
+      "Web application for validation of anatomical fiducials",
     website: "https://validator.afids.io",
     github: "https://github.com/afids/afids-validator",
   },
