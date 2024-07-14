@@ -1,3 +1,3 @@
 # kaitj.github.io
 
-Personal website
+Personal website in Typescript
