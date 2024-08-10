@@ -30,15 +30,12 @@ jobs:
         with:
           node-version: ${{ matrix.node-version }}
 
-
-      - run: cd frontend
-
-      - run: npm install
-
-      - run: npm run build
-
-      - run: touch ./out/.nojekyll
-
+      - run: |
+          cd frontend && \
+          npm install && \
+          npm run build && \
+          touch ./out/.nojekyll
+          
       - name: Deploy
         uses: JamesIves/github-pages-deploy-action@v4
         with:
