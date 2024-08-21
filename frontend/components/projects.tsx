@@ -1,7 +1,7 @@
 import { Card, Col, Row } from 'react-bootstrap';
 
-import projStyles from '../styles/projects.module.css'
-import projData from '../data/projects'
+import projData from '../data/projects';
+import projStyles from '../styles/projects.module.css';
 
 export const Projs = () => {
     return (

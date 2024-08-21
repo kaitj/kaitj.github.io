@@ -5,11 +5,11 @@ import Container from 'react-bootstrap/Container'
 import styles from '../styles/home.module.css'
 
 // Components
-import { NavBar } from '../components/navbar'
 import { Footer } from '../components/footer'
-import { Projs } from '../components/projects'
+import { NavBar } from '../components/navbar'
+import { Pubs } from '../components/publications'
 
-const Projects: NextPage = () => {
+const Publications: NextPage = () => {
     return (
         <div className={styles.container}>
             <Head>
@@ -23,12 +23,7 @@ const Projects: NextPage = () => {
 
             <main className={styles.main}>
                 <Container>
-                    <p>
-                        Below are some selected projects I have contributed to. For a full list, please check out my <a href="https://github.com/kaitj" target="_blank">GitHub</a>.
-                    </p>
-                    <br/>
-                    
-                    <Projs />
+                    <Pubs />
                 </Container>
             </main>
 
@@ -37,4 +32,4 @@ const Projects: NextPage = () => {
     )
 }
 
-export default Projects
+export default Publications
