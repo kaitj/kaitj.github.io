@@ -1,10 +1,13 @@
-import pubData from "../data/publications";
+import pubData from "../data/publications.json";
+import pubProps from "../interfaces/publications";
 import pubStyles from "../styles/publications.module.css";
+
+const pubs: pubProps[] = pubData
 
 export const Pubs = () => {
   // Get unique years and sort in descending order
   const pubYears = Array.from(
-    new Set(pubData.map((publication) => publication.year))
+    new Set(pubs.map((publication) => publication.year))
   ).sort((a, b) => b - a);
 
   return (
@@ -15,19 +18,19 @@ export const Pubs = () => {
         <div key={year} className="row">
           <h3 className={pubStyles.pubHeadings}>{year}</h3>
           <ul className={pubStyles.pubList}>
-            {pubData
-              .filter((pubData) => pubData.year === year)
-              .map((pubData) => (
-                <li key={pubData.doi} className={pubStyles.pubItems}>
-                  {pubData.authors.join(", ")} ({pubData.year}). {pubData.title}
-                  . <em>{pubData.journal}</em>. doi:{" "}
+            {pubs
+              .filter((pubs) => pubs.year === year)
+              .map((pubs) => (
+                <li key={pubs.doi} className={pubStyles.pubItems}>
+                  {pubs.authors.join(", ")} ({pubs.year}). {pubs.title}
+                  . <em>{pubs.journal}</em>. doi:{" "}
                   <a
                     className={pubStyles.pubLinks}
-                    href={`https://doi.org/${pubData.doi}`}
+                    href={`https://doi.org/${pubs.doi}`}
                     target="_blank"
                     rel="noreferrer"
                   >
-                    {pubData.doi}
+                    {pubs.doi}
                   </a>
                   .
                 </li>
