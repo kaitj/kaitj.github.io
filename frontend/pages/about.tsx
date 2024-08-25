@@ -4,9 +4,9 @@ import Container from 'react-bootstrap/Container'
 import styles from '../styles/home.module.css'
 
 // Components
+import { Footer } from '../components/footer'
 import { NavBar } from '../components/navbar'
 import { Profile } from '../components/profile'
-import { Footer } from '../components/footer'
 
 const About: NextPage = () => {
   return (

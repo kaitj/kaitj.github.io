@@ -1,7 +1,7 @@
-import styles from '../styles/home.module.css'
-import socials from '../styles/socials.module.css'
+import styles from '../styles/home.module.css';
+import socials from '../styles/socials.module.css';
 
-import { SocialFooter } from '../components/socials'
+import { SocialFooter } from './socials';
 
 export const HomeFooter = () => {
     let year: number = new Date().getFullYear();
