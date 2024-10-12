@@ -22,7 +22,7 @@ export const Pubs = () => {
               .filter((pubs) => pubs.year === year)
               .map((pubs) => (
                 <li key={pubs.doi} className={pubStyles.pubItems}>
-                  {pubs.authors.join(", ")} ({pubs.year} ).
+                  {pubs.authors.join(", ")} ({pubs.year}).&nbsp;
                   <strong>{pubs.title}</strong>
                   . <em>{pubs.journal}</em>. doi:{" "}
                   <a
