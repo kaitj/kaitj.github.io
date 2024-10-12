@@ -3,11 +3,7 @@
 	import { AppBar, LightSwitch, TabAnchor, TabGroup } from '@skeletonlabs/skeleton';
 </script>
 
-<AppBar 
-	background="bg-inherit"
-	shadow="shadow-2xl" 
-	slotTrail="!space-x-2" 
->
+<AppBar background="bg-inherit" shadow="shadow-2xl" slotTrail="!space-x-2">
 	<svelte:fragment slot="lead">
 		<!-- Logo -->
 		<!-- Add a logo here -->
