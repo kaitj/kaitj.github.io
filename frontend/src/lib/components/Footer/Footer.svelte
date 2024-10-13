@@ -3,6 +3,7 @@
 	import { Calendar, Github, Linkedin, Mail } from 'lucide-svelte';
 </script>
 
+<hr />
 <AppBar
 	background="bg-transparent"
 	gridColumns="grid-cols-1"
