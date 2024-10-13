@@ -19,11 +19,13 @@
 				flex="flex-1 lg:flex-none"
 				rounded=""
 				border=""
-				class="items-center w-full"
+				class="items-center w-full text-lg"
 			>
 				<TabAnchor href="/" selected={$page.url.pathname === '/'}>Home</TabAnchor>
 				<TabAnchor href="#" selected={$page.url.pathname === '#'}>Projects</TabAnchor>
-				<TabAnchor href="#" selected={$page.url.pathname === '#'}>Publications</TabAnchor>
+				<TabAnchor href="/publications" selected={$page.url.pathname === '/publications'}
+					>Publications</TabAnchor
+				>
 			</TabGroup>
 		</nav>
 	</svelte:fragment>

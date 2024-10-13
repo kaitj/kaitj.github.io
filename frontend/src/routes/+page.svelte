@@ -4,9 +4,13 @@
 
 <div class="container h-screen mx-auto flex justify-center items-center">
 	<div class="flex flex-col items-center justify-center text-center px-4">
-		<Avatar src="/images/headshot.jpg" border="border-4 border-surface-300-600-token" width="w-48"/>
-		<h3 class="mt-4">Post Doctoral Fellow @ Child Mind Institute</h3>
-		<div class="text-justify mt-4 space-y-4">
+		<Avatar
+			src="/images/headshot.jpg"
+			border="border-4 border-surface-300-600-token"
+			width="w-48"
+		/>
+		<h3 class="h3 mt-4">Post Doctoral Fellow @ Child Mind Institute</h3>
+		<div class="text-lg text-justify mt-4 space-y-4">
 			<p>
 				I&apos;m a researcher and software developer with a passion for leveraging diverse
 				technologies to drive advancements in medical research. In my current role, I develop and
