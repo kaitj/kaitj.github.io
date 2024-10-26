@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="55mm"
+   height="25mm"
+   viewBox="0 0 55 25"
+   version="1.1"
+   id="svg1"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs1" />
+  <g
+     id="layer1">
+    <g
+       id="g1"
+       transform="translate(-22.336857,-15.597218)"
+       style="fill:#000000">
+      <text
+         xml:space="preserve"
+         style="font-size:11.2889px;line-height:1.25;font-family:Arial;-inkscape-font-specification:Arial;letter-spacing:0px;word-spacing:0px;fill:#000000;stroke-width:0.264583"
+         x="25.534513"
+         y="35.082657"
+         id="text1"
+         transform="rotate(-8.0909028)"><tspan
+           id="tspan1"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11.2889px;font-family:Whisper;-inkscape-font-specification:'Whisper, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#000000;stroke-width:0.264583"
+           x="25.534513"
+           y="35.082657">Jason Kai</tspan></text>
+      <path
+         style="fill:#000000;stroke-width:1;stroke-opacity:0.900478;paint-order:stroke fill markers"
+         id="path1"
+         d="m 25.793731,37.685472 c 1.601407,-0.697379 2.637841,-1.171827 4.518076,-1.777035 5.95295,-1.916128 10.629696,-3.017287 16.918995,-4.417584 9.22188,-2.053227 16.500575,-3.376239 25.871736,-5.179106 0,0 0.777446,-0.587032 0.777446,-0.587032 v 0 c -11.252213,2.027232 -14.436788,2.538336 -25.267282,4.714753 -5.610817,1.127509 -10.457222,2.091082 -15.882514,3.58303 -1.958332,0.538538 -2.518809,0.787614 -4.038129,1.393793 z" />
+    </g>
+  </g>
+</svg>
