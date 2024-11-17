@@ -6,7 +6,7 @@ readme = "README.md"
 requires-python = ">=3.12"
 dependencies = [
   "biopython>=1.84",
-  "polars>=1.5.0",
+  "polars>=1.13.1",
   "python-dateutil>=2.9.0.post0",
 ]
 
@@ -15,11 +15,7 @@ requires = ["hatchling"]
 build-backend = "hatchling.build"
 
 [tool.uv]
-dev-dependencies = [
-  "ruff>=0.6.1",
-  "mypy>=1.11.1",
-  "pre-commit>=3.8.0"
-]
+dev-dependencies = ["ruff>=0.7.4", "mypy>=1.13.0", "pre-commit>=4.0.1"]
 
 [tool.mypy]
 ignore_missing_imports = true
@@ -35,11 +31,11 @@ target-version = "py312"
 [tool.ruff.lint]
 select = ["ANN", "D", "E", "F", "I"]
 ignore = [
-  "ANN002",  # args should not be annotated.
-  "ANN003",  # kwargs should not be annotated.
-  "ANN101",  # self should not be annotated.
-  "ANN102",  # cls should not be annotated.
-  "D107"  # undocumented-public-init (e.g. __init__)
+  "ANN002", # args should not be annotated.
+  "ANN003", # kwargs should not be annotated.
+  "ANN101", # self should not be annotated.
+  "ANN102", # cls should not be annotated.
+  "D107",   # undocumented-public-init (e.g. __init__)
 ]
 fixable = ["ALL"]
 
