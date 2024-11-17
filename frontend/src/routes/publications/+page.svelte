@@ -1,4 +1,5 @@
 <script lang="ts">
+	import Loader from '$lib/components/Loader/Loader.svelte';
 	import { TableOfContents, tocCrawler } from '@skeletonlabs/skeleton';
 	import { onMount } from 'svelte';
 
@@ -15,7 +16,7 @@
 	let pubYears: number[] = [];
 	const URL_JSON_PUBS = 'publications.json';
 
-	let pubLoading = true; // Flag to track publication loading state
+	let loading = true; // Flag to track publication loading state
 	onMount(async () => {
 		try {
 			const response = await fetch(URL_JSON_PUBS);
@@ -28,15 +29,13 @@
 			console.error('Error loading publications:', error);
 		} finally {
 			console.log('Finished loading publications.');
-			pubLoading = false;
+			loading = false;
 		}
 	});
 </script>
 
-{#if pubLoading}
-	<div class="flex justify-center items-center mt-8">
-		<div class="placeholder-circle w-12 variant-soft-primary animate-pulse" />
-	</div>
+{#if loading}
+	<Loader />
 {:else}
 	<div class="container h-full mx-auto mt-8">
 		<div class="space-y-5 px-4">
