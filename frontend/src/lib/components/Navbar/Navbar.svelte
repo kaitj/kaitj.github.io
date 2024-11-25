@@ -25,7 +25,7 @@
 	</svelte:fragment>
 	
 	<svelte:fragment slot="trail">
-		<LightSwitch />
+		<LightSwitch class="mr-4"/>
 		<nav class="list-nav">
 			<TabGroup
 				justify="justify-center"
