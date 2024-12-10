@@ -1,5 +1,17 @@
 [
 	{
+		"name": "NMIND",
+		"image": "/images/projects/nmind.svg",
+		"description": "this Neuroimaging Method Is Not Duplicated",
+		"website": "https://www.nmind.org",
+		"repo": "https://github.com/nmind",
+		"tools": [
+			"Svelte",
+			"Tailwind",
+			"TypeScript"
+		]
+	},
+	{
 		"name": "NiftyOne",
 		"image": null,
 		"description": "Large-scale visualization and quality control for neuroimaging datasets",
