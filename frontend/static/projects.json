@@ -5,11 +5,7 @@
 		"description": "this Neuroimaging Method Is Not Duplicated",
 		"website": "https://www.nmind.org",
 		"repo": "https://github.com/nmind",
-		"tools": [
-			"Svelte",
-			"Tailwind",
-			"TypeScript"
-		]
+		"tools": ["Svelte", "Tailwind", "TypeScript"]
 	},
 	{
 		"name": "NiftyOne",
@@ -17,10 +13,7 @@
 		"description": "Large-scale visualization and quality control for neuroimaging datasets",
 		"website": null,
 		"repo": "https://github.com/childmindresearch/niftyone",
-		"tools": [
-			"Docker",
-			"Python"
-		]
+		"tools": ["Docker", "Python"]
 	},
 	{
 		"name": "AFIDs Validator",
@@ -28,12 +21,7 @@
 		"description": "Web application for validation of anatomical fiducials",
 		"website": "https://validator.afids.io",
 		"repo": "https://github.com/afids/afids-validator",
-		"tools": [
-			"Docker",
-			"Python",
-			"React",
-			"TypeScript"
-		]
+		"tools": ["Docker", "Python", "React", "TypeScript"]
 	},
 	{
 		"name": "Snakebids",
@@ -41,9 +29,7 @@
 		"description": "Workflow engine to build reproducible neuroimaging workflows",
 		"website": "https://snakebids.readthedocs.io/en/stable",
 		"repo": "https://github.com/khanlab/snakebids",
-		"tools": [
-			"Python"
-		]
+		"tools": ["Python"]
 	},
 	{
 		"name": "Khanlab",
@@ -51,13 +37,7 @@
 		"description": "Website for Khan Computational Imaging Lab",
 		"repo": "https://github.com/khanlab/khanlab.github.io",
 		"website": "https://www.khanlab.ca",
-		"tools": [
-			"HTML",
-			"CSS",
-			"Markdown",
-			"Liquid",
-			"Python"
-		]
+		"tools": ["HTML", "CSS", "Markdown", "Liquid", "Python"]
 	},
 	{
 		"name": "OpenBB",
@@ -65,9 +45,6 @@
 		"description": "Open-source investment research software platform",
 		"repo": "https://github.com/OpenBB-finance/OpenBBTerminal",
 		"website": "https://www.openbb.co",
-		"tools": [
-			"Docker",
-			"Python"
-		]
+		"tools": ["Docker", "Python"]
 	}
 ]

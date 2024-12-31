@@ -7,7 +7,9 @@
 
 	// Function to update logoSrc based on the current theme
 	function updateLogo() {
-		logoSrc = document.documentElement.classList.contains('dark') ? '/images/logo-light.png' : '/images/logo-dark.png';
+		logoSrc = document.documentElement.classList.contains('dark')
+			? '/images/logo-light.png'
+			: '/images/logo-dark.png';
 	}
 
 	// Observe changes to the class attribute on the html element
@@ -23,9 +25,9 @@
 	<svelte:fragment slot="lead">
 		<img src={logoSrc} alt="Logo" id="logo" class="h-auto w-48" />
 	</svelte:fragment>
-	
+
 	<svelte:fragment slot="trail">
-		<LightSwitch class="mr-4"/>
+		<LightSwitch class="mr-4" />
 		<nav class="list-nav">
 			<TabGroup
 				justify="justify-center"
