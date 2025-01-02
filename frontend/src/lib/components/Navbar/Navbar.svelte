@@ -19,6 +19,12 @@
 		updateLogo(); // Set initial logo
 		return () => observer.disconnect(); // Clean up observer on unmount
 	});
+
+	const tabs = [
+		{ href: '/', label: 'Home' },
+		{ href: '/projects', label: 'Projects' },
+		{ href: '/publications', label: 'Publications' }
+	];
 </script>
 
 <AppBar background="bg-inherit" shadow="shadow-2xl" slotTrail="!space-x-2">
@@ -38,13 +44,11 @@
 				border=""
 				class="items-center w-full text-lg"
 			>
-				<TabAnchor href="/" selected={$page.url.pathname === '/'}>Home</TabAnchor>
-				<TabAnchor href="/projects" selected={$page.url.pathname === '/projects'}
-					>Projects</TabAnchor
-				>
-				<TabAnchor href="/publications" selected={$page.url.pathname === '/publications'}
-					>Publications</TabAnchor
-				>
+				{#each tabs as tab}
+					<TabAnchor href={tab.href} selected={$page.url.pathname === tab.href}
+						>{tab.label}</TabAnchor
+					>
+				{/each}
 			</TabGroup>
 		</nav>
 	</svelte:fragment>

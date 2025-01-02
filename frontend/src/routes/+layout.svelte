@@ -2,7 +2,7 @@
 	import Footer from '$lib/components/Footer/Footer.svelte';
 	import Navbar from '$lib/components/Navbar/Navbar.svelte';
 	import '../app.postcss';
-// Floating UI for Popups
+	// Floating UI for Popups
 	import { arrow, autoUpdate, computePosition, flip, offset, shift } from '@floating-ui/dom';
 	import { storePopup } from '@skeletonlabs/skeleton';
 	storePopup.set({ computePosition, autoUpdate, flip, shift, offset, arrow });
