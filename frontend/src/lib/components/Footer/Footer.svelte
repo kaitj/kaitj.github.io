@@ -1,6 +1,13 @@
 <script lang="ts">
 	import { AppBar, TabAnchor, TabGroup } from '@skeletonlabs/skeleton';
-	import { Calendar, Github, Linkedin, Mail } from 'lucide-svelte';
+	import { CalendarIcon, GithubIcon, LinkedinIcon, MailIcon } from 'svelte-feather-icons';
+	
+	const tabs = [
+		{ href: 'mailto:jason.kai@childmind.org', icon: MailIcon, },
+		{ href: 'https://github.com/kaitj', icon: GithubIcon },
+		{ href: 'https://linkedin.com/in/jasonkai', icon: LinkedinIcon },
+		{ href: 'https://cal.com/jasonkai/coffee-chat?duration=30', icon: CalendarIcon },
+	]
 </script>
 
 <hr />
@@ -18,11 +25,10 @@
 		border=""
 		class="items-center w-full"
 	>
-		<TabAnchor target="_blank" href="mailto:jason.kai@childmind.org"><Mail /></TabAnchor>
-		<TabAnchor target="_blank" href="https://github.com/kaitj"><Github /></TabAnchor>
-		<TabAnchor target="_blank" href="https://linkedin.com/in/jasonkai"><Linkedin /></TabAnchor>
-		<TabAnchor target="_blank" href="https://cal.com/jasonkai/coffee-chat?duration=30"
-			><Calendar /></TabAnchor
-		>
+		{#each tabs as tab}
+			<TabAnchor target="_blank" href={tab.href} rel="noopener noreferrer">
+				<svelte:component this={tab.icon} />
+			</TabAnchor>
+		{/each}
 	</TabGroup>
 </AppBar>
