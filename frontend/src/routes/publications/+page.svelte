@@ -19,13 +19,15 @@
 	let loading = true; // Flag to track publication loading state
 	onMount(async () => {
 		try {
-			const response = await fetch(URL_JSON_PUBS);
-			const data = await response.json();
+			const response: Response = await fetch(URL_JSON_PUBS);
+			const data: Publication[] = await response.json();
 
 			// Set pubs and pubYears after fetching data
 			pubs = data;
-			pubYears = Array.from(new Set(data.map((pub) => pub.year))).sort((a, b) => b - a);
-		} catch (error) {
+			pubYears = Array.from(new Set(data.map((pub: Publication) => pub.year))).sort(
+				(a: number, b: number) => b - a
+			);
+		} catch (error: unknown) {
 			console.error('Error loading publications:', error);
 		} finally {
 			console.log('Finished loading publications.');
