@@ -1,13 +1,13 @@
 <script lang="ts">
 	import { AppBar, TabAnchor, TabGroup } from '@skeletonlabs/skeleton';
 	import { CalendarIcon, GithubIcon, LinkedinIcon, MailIcon } from 'svelte-feather-icons';
-	
+
 	const tabs = [
-		{ href: 'mailto:jason.kai@childmind.org', icon: MailIcon, },
+		{ href: 'mailto:jason.kai@childmind.org', icon: MailIcon },
 		{ href: 'https://github.com/kaitj', icon: GithubIcon },
 		{ href: 'https://linkedin.com/in/jasonkai', icon: LinkedinIcon },
-		{ href: 'https://cal.com/jasonkai/coffee-chat?duration=30', icon: CalendarIcon },
-	]
+		{ href: 'https://cal.com/jasonkai/coffee-chat?duration=30', icon: CalendarIcon }
+	];
 </script>
 
 <hr />
