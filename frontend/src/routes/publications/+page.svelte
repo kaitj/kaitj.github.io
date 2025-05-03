@@ -14,12 +14,12 @@
 
 	let pubs: Publication[] = [];
 	let pubYears: number[] = [];
-	const URL_JSON_PUBS = 'publications.json';
+	const urlJsonPubs = 'publications.json';
 
 	let loading = true; // Flag to track publication loading state
 	onMount(async () => {
 		try {
-			const response: Response = await fetch(URL_JSON_PUBS);
+			const response: Response = await fetch(urlJsonPubs);
 			const data: Publication[] = await response.json();
 
 			// Set pubs and pubYears after fetching data
