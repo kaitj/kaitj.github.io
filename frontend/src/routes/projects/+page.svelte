@@ -7,7 +7,7 @@
 		image: string;
 		description: string;
 		website: string;
-		github: string;
+		repo: string;
 		tools: string[];
 	}
 
@@ -64,8 +64,8 @@
 							<h3 class="h3 mt-4">{project.name}</h3>
 							<p class="mt-2">{project.description}</p>
 							<row class="space-x-1 absolute bottom-0">
-								{#if project.github !== null}
-									<a href={project.github} target="_blank" class="underline">Repository</a>
+								{#if project.repo !== null}
+									<a href={project.repo} target="_blank" class="underline">Repository</a>
 								{/if}
 								{#if project.website !== null}
 									<a href={project.website} target="_blank" class="underline">Website</a>
