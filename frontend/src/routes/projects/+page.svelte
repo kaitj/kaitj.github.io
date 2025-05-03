@@ -56,7 +56,7 @@
 							{#if project.image !== null}
 								<img src={project.image} alt="" class="object-fit h-full w-full" />
 							{:else}
-								<div class="h-full w-full object-cover" />
+								<div class="h-full w-full object-cover"></div>
 							{/if}
 						</div>
 						<!-- Card contents -->
