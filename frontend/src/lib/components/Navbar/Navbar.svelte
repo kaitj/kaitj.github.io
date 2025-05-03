@@ -1,29 +1,13 @@
 <script lang="ts">
 	import { page } from '$app/stores';
-	import { AppBar, LightSwitch, TabAnchor, TabGroup } from '@skeletonlabs/skeleton';
-	import { onMount } from 'svelte';
+	import { AppBar, TabAnchor, TabGroup } from '@skeletonlabs/skeleton';
 
-	let logoSrc = '/images/logo-light.png'; // Default logo source
-
-	// Function to update logoSrc based on the current theme
-	function updateLogo() {
-		logoSrc = document.documentElement.classList.contains('dark')
-			? '/images/logo-light.png'
-			: '/images/logo-dark.png';
-	}
-
-	// Observe changes to the class attribute on the html element
-	onMount(() => {
-		const observer = new MutationObserver(updateLogo);
-		observer.observe(document.documentElement, { attributes: true, attributeFilter: ['class'] });
-		updateLogo(); // Set initial logo
-		return () => observer.disconnect(); // Clean up observer on unmount
-	});
+	const logoSrc = '/images/logo-light.png';
 
 	const tabs = [
-		{ href: '/', label: 'Home' },
-		{ href: '/projects', label: 'Projects' },
-		{ href: '/publications', label: 'Publications' }
+		{ label: 'Home', href: '/' },
+		{ label: 'Projects', href: '/projects' },
+		{ label: 'Publications', href: '/publications' }
 	];
 </script>
 
@@ -33,7 +17,6 @@
 	</svelte:fragment>
 
 	<svelte:fragment slot="trail">
-		<LightSwitch class="mr-4" />
 		<nav class="list-nav">
 			<TabGroup
 				justify="justify-center"
@@ -44,9 +27,9 @@
 				border=""
 				class="items-center w-full text-lg"
 			>
-				{#each tabs as tab}
-					<TabAnchor href={tab.href} selected={$page.url.pathname === tab.href}
-						>{tab.label}</TabAnchor
+				{#each tabs as {label, href}}
+					<TabAnchor href={href} selected={$page.url.pathname === href}
+						>{label}</TabAnchor
 					>
 				{/each}
 			</TabGroup>
