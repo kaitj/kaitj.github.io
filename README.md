@@ -1,3 +1,3 @@
 # kaitj.github.io
 
-Personal website in Typescript
+Personal website using Svelte+Tailwind
