@@ -1,0 +1,27 @@
+@import 'tailwindcss';
+
+@import '@skeletonlabs/skeleton';
+@import '@skeletonlabs/skeleton/optional/presets';
+@import '@skeletonlabs/skeleton/themes/wintry';
+
+@source '../node_modules/@skeletonlabs/skeleton-svelte/dist';
+
+[data-theme='wintry'] body {
+	background-image:
+		radial-gradient(
+			circle at center top,
+			color-mix(in oklab, var(--color-primary-500) 30%, transparent) 0px,
+			transparent 60%
+		),
+		radial-gradient(
+			at 55% 10%,
+			color-mix(in oklab, var(--color-success-500) 18%, transparent) 0px,
+			transparent 90%
+		),
+		radial-gradient(
+			at 90% 60%,
+			color-mix(in oklab, var(--color-error-500) 3%, transparent) 0px,
+			transparent 90%
+		);
+	background-attachment: fixed;
+}

@@ -1,5 +1,5 @@
 <script lang="ts">
-	import Loader from '$lib/components/Loader/Loader.svelte';
+	import Loader from '$lib/components/Loader.svelte';
 	import { onMount } from 'svelte';
 
 	interface Project {
@@ -36,8 +36,8 @@
 {#if loading}
 	<Loader />
 {:else}
-	<div class="container h-screen mx-auto flex justify-center items-center">
-		<div class="space-y-4">
+	<div class="container mx-auto my-8 flex h-full items-center justify-center">
+		<div class="space-y-4 px-4">
 			<div>
 				<h1 class="h1">Projects</h1>
 				<p class="mt-4">
@@ -48,38 +48,51 @@
 					>.
 				</p>
 			</div>
-			<section class="grid grid-cols-2 md:grid-cols-3 gap-4">
+			<section class="grid grid-cols-2 gap-4 lg:grid-cols-3">
 				{#each projects as project}
-					<div class="card flex flex-col h-full bg-primary-200">
+					<div
+						class="card preset-filled-surface-100-900 border-surface-200-800 block max-w-md overflow-hidden border-[1px]"
+					>
 						<!-- Card image -->
-						<div class="card-header h-32 w-full">
-							{#if project.image !== null}
-								<img src={project.image} alt="" class="object-fit h-full w-full" />
-							{:else}
-								<div class="h-full w-full object-cover"></div>
-							{/if}
-						</div>
+						<header>
+							<div class="aspect-[21/9] w-full">
+								{#if project.image}
+									<img src={project.image} alt="" class="object-fit h-full w-full" />
+								{:else}
+									<div class="h-full w-full bg-inherit"></div>
+								{/if}
+							</div>
+						</header>
+						<hr/>
 						<!-- Card contents -->
-						<div class="card-body relative min-h-[200px] px-4">
-							<h3 class="h3 mt-4">{project.name}</h3>
-							<p class="mt-2">{project.description}</p>
-							<row class="space-x-1 absolute bottom-0">
-								{#if project.repo !== null}
-									<a href={project.repo} target="_blank" class="underline">Repository</a>
-								{/if}
-								{#if project.website !== null}
-									<a href={project.website} target="_blank" class="underline">Website</a>
-								{/if}
-							</row>
-						</div>
+						<article>
+							<div class="px-4">
+								<h3 class="h3 mt-4">{project.name}</h3>
+								<div class="my-2">
+									<span class="space-x-4">
+										{#if project.repo}
+											<a href={project.repo} target="_blank" class="underline">Repository</a>
+										{/if}
+										{#if project.website}
+											<a href={project.website} target="_blank" class="underline">Website</a>
+										{/if}
+									</span>
+								</div>
+								<br/>
+								<p class="mt-2">{project.description}</p>
+							</div>
+						</article>
+						<br/>
 						<!-- Card tools -->
-						<div class="card-footer mt-2 space-y-2 min-h-10">
-							<hr />
-							{#each project.tools as tool}
-								<span class="badge variant-ghost-secondary mx-1">{tool}</span>
-							{/each}
-						</div>
-						<div></div>
+						<footer>
+							<div class="mt-2 min-h-10">
+								<div class="flex flex-wrap gap-2 px-4 pb-2">
+									{#each project.tools as tool}
+										<span class="chip preset-filled-primary-500">{tool}</span>
+									{/each}
+								</div>
+							</div>
+						</footer>
 					</div>
 				{/each}
 			</section>

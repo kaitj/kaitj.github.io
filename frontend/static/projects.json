@@ -10,7 +10,7 @@
 	{
 		"name": "NiftyOne",
 		"image": null,
-		"description": "Large-scale visualization and quality control for neuroimaging datasets",
+		"description": "QC platform for neuroimaging datasets",
 		"website": null,
 		"repo": "https://github.com/childmindresearch/niftyone",
 		"tools": ["Docker", "Python"]
@@ -18,7 +18,7 @@
 	{
 		"name": "AFIDs Validator",
 		"image": "/images/projects/afids.svg",
-		"description": "Web application for validation of anatomical fiducials",
+		"description": "Validation application for anatomical fiducials",
 		"website": "https://validator.afids.io",
 		"repo": "https://github.com/afids/afids-validator",
 		"tools": ["Docker", "Python", "React", "TypeScript"]
@@ -26,7 +26,7 @@
 	{
 		"name": "Snakebids",
 		"image": "/images/projects/snakebids.svg",
-		"description": "Workflow engine to build reproducible neuroimaging workflows",
+		"description": "Building reproducible neuroimaging workflows",
 		"website": "https://snakebids.readthedocs.io/en/stable",
 		"repo": "https://github.com/khanlab/snakebids",
 		"tools": ["Python"]
@@ -34,15 +34,15 @@
 	{
 		"name": "Khanlab",
 		"image": "/images/projects/khanlab.svg",
-		"description": "Website for Khan Computational Imaging Lab",
+		"description": "Khan Computational Imaging Lab website",
 		"repo": "https://github.com/khanlab/khanlab.github.io",
 		"website": "https://www.khanlab.ca",
-		"tools": ["HTML", "CSS", "Markdown", "Liquid", "Python"]
+		"tools": ["Liquid", "CSS", "Markdown", "Python"]
 	},
 	{
 		"name": "OpenBB",
 		"image": "/images/projects/openbb.svg",
-		"description": "Open-source investment research software platform",
+		"description": "Open-source investment research platform",
 		"repo": "https://github.com/OpenBB-finance/OpenBBTerminal",
 		"website": "https://www.openbb.co",
 		"tools": ["Docker", "Python"]
