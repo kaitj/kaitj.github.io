@@ -48,7 +48,7 @@
 					>.
 				</p>
 			</div>
-			<section class="grid grid-cols-2 gap-4 lg:grid-cols-3">
+			<section class="gap-4 grid sm:grid-cols-2 lg:grid-cols-3">
 				{#each projects as project}
 					<div
 						class="card preset-filled-surface-100-900 border-surface-200-800 block max-w-md overflow-hidden border-[1px]"

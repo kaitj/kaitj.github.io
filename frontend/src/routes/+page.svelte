@@ -2,7 +2,7 @@
 	import { Avatar } from '@skeletonlabs/skeleton-svelte';
 </script>
 
-<div class="container mx-auto flex h-screen items-center justify-center">
+<div class="container mx-auto my-8 flex h-full items-center justify-center">
 	<div class="flex flex-col items-center justify-center px-4 text-center">
 		<Avatar
 			name="Jason Kai"

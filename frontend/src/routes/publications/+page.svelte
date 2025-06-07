@@ -73,7 +73,7 @@
 	<div class="container mx-auto my-8 h-full">
 		<div class="space-y-5 px-4">
 			<h1 class="h1">Publications</h1>
-			<div class="grid grid-cols-5 gap-4">
+			<div class="grid md:grid-cols-5 gap-4">
 				<div class="col-span-4">
 					{#each pubYears as year}
 						<div class="row">
@@ -102,7 +102,7 @@
 					{/each}
 				</div>
 				<!-- ToC -->
-				<div class="col-span-1">
+				<div class="col-span-1 hidden md:block">
 					<nav class="card text-md sticky top-10 space-y-2 bg-inherit p-4 text-right">
 						<div class="text-lg"><strong>Year</strong></div>
 						<ul class="space-y-2">
