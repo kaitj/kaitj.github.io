@@ -2,8 +2,8 @@
 	import { Avatar } from '@skeletonlabs/skeleton-svelte';
 </script>
 
-<div class="container mx-auto my-8 flex h-full items-center justify-center">
-	<div class="flex flex-col items-center justify-center px-4 text-center">
+<div class="container px-4">
+	<div class="flex flex-col items-center text-center">
 		<Avatar
 			name="Jason Kai"
 			src="/images/headshot.jpg"
@@ -11,7 +11,7 @@
 			size="w-48"
 		/>
 		<h3 class="h3 mt-4">Post Doctoral Fellow @ Child Mind Institute</h3>
-		<div class="mt-4 space-y-4 text-justify text-lg">
+		<div class="mt-4 md:space-y-4 space-y-6 text-justify text-lg">
 			<p>
 				I&apos;m a researcher and software developer with a passion for leveraging diverse
 				technologies to drive advancements in medical research. In my current role, I develop and
