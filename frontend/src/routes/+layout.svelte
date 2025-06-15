@@ -15,7 +15,7 @@
 		<Navbar />
 	</header>
 
-	<main class="flex-grow">
+	<main class="flex flex-grow items-center justify-center">
 		{@render children()}
 	</main>
 
