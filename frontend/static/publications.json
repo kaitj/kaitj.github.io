@@ -1,5 +1,28 @@
 [
   {
+    "pmid": "40766634",
+    "pmcid": "PMC12324196",
+    "doi": "10.1101/2025.07.24.666435",
+    "title": "Styx: A multi-language API Generator for Command-Line Tools",
+    "authors": [
+      "Rupprecht F",
+      "Kai J",
+      "Shrestha B",
+      "Giavasis S",
+      "Xu T",
+      "Glatard T",
+      "Milham MP",
+      "Kiar G"
+    ],
+    "year": 2025,
+    "month": 7,
+    "day": 30,
+    "journal": "bioRxiv",
+    "volume": "",
+    "issue": "",
+    "pages": ""
+  },
+  {
     "pmid": "38822981",
     "pmcid": "",
     "doi": "10.1007/s11548-024-03186-z",
