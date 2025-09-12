@@ -73,7 +73,7 @@
 	<div class="container mx-auto my-8 h-full">
 		<div class="space-y-5 px-4">
 			<h1 class="h1">Publications</h1>
-			<div class="grid md:grid-cols-5 gap-4">
+			<div class="grid gap-4 md:grid-cols-5">
 				<div class="col-span-4">
 					{#each pubYears as year}
 						<div class="row">
@@ -82,7 +82,24 @@
 								{#each pubs.filter((pub) => pub.year === year) as pub}
 									<div class="mt-4 flex gap-2">
 										<span class="flex w-14 flex-none items-center justify-center">
-											<span class="badge bg-primary-500 text-lg">🖺</span>
+											<span class="badge text-lg">
+												<svg
+													xmlns="http://www.w3.org/2000/svg"
+													width="100%"
+													height="auto"
+													viewBox="0 0 24 24"
+													fill="none"
+													stroke="#94cbfc"
+													stroke-width="1"
+													stroke-linecap="round"
+													stroke-linejoin="round"
+												>
+													<path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"
+													></path><path d="M14 2v4a2 2 0 0 0 2 2h4"></path>
+													<path d="M10 9H8"></path><path d="M16 13H8"></path><path d="M16 17H8"
+													></path>
+												</svg>
+											</span>
 										</span>
 										<span class="flex-auto">
 											<dt class="text-xl"><strong>{pub.title}</strong></dt>
