@@ -25,7 +25,7 @@
 	},
 	{
 		"name": "Snakebids",
-		"image": "/src/lib/assets//images/projects/snakebids.svg",
+		"image": "/src/lib/assets/images/projects/snakebids.svg",
 		"description": "Building reproducible neuroimaging workflows",
 		"website": "https://snakebids.readthedocs.io/en/stable",
 		"repo": "https://github.com/khanlab/snakebids",
@@ -33,7 +33,7 @@
 	},
 	{
 		"name": "Khanlab",
-		"image": "/src/lib/assets//images/projects/khanlab.svg",
+		"image": "/src/lib/assets/images/projects/khanlab.svg",
 		"description": "Khan Computational Imaging Lab website",
 		"repo": "https://github.com/khanlab/khanlab.github.io",
 		"website": "https://www.khanlab.ca",
@@ -41,7 +41,7 @@
 	},
 	{
 		"name": "OpenBB",
-		"image": "/src/lib/assets//images/projects/openbb.svg",
+		"image": "/src/lib/assets/images/projects/openbb.svg",
 		"description": "Open-source investment research platform",
 		"repo": "https://github.com/OpenBB-finance/OpenBBTerminal",
 		"website": "https://www.openbb.co",
