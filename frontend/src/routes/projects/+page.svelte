@@ -48,7 +48,7 @@
 					>.
 				</p>
 			</div>
-			<section class="gap-4 grid sm:grid-cols-2 lg:grid-cols-3">
+			<section class="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
 				{#each projects as project}
 					<div
 						class="card preset-filled-surface-100-900 border-surface-200-800 block max-w-md overflow-hidden border-[1px]"
@@ -63,7 +63,7 @@
 								{/if}
 							</div>
 						</header>
-						<hr/>
+						<hr />
 						<!-- Card contents -->
 						<article>
 							<div class="px-4">
@@ -78,11 +78,11 @@
 										{/if}
 									</span>
 								</div>
-								<br/>
+								<br />
 								<p class="mt-2">{project.description}</p>
 							</div>
 						</article>
-						<br/>
+						<br />
 						<!-- Card tools -->
 						<footer>
 							<div class="mt-2 min-h-10">

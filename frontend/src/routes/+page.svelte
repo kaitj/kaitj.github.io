@@ -1,17 +1,17 @@
 <script lang="ts">
-	import { Avatar } from '@skeletonlabs/skeleton-svelte';
+	import headshot from '$lib/assets/images/headshot.jpg?enhanced';
 </script>
 
 <div class="container px-4">
-	<div class="flex flex-col items-center text-center">
-		<Avatar
-			name="Jason Kai"
-			src="/images/headshot.jpg"
-			border="border-4 border-surface-300-600-token"
-			size="w-48"
+	<div class="flex flex-col items-center pt-4 text-center md:pt-0">
+		<enhanced:img
+			src={headshot}
+			alt="Headshot"
+			id="headshot"
+			class="border-surface-300-600-token w-48 rounded-full border-4"
 		/>
 		<h3 class="h3 mt-4">Post Doctoral Fellow @ Child Mind Institute</h3>
-		<div class="mt-4 md:space-y-4 space-y-6 text-justify text-lg">
+		<div class="mt-4 space-y-6 text-justify text-lg md:space-y-4">
 			<p>
 				I&apos;m a researcher and software developer with a passion for leveraging diverse
 				technologies to drive advancements in medical research. In my current role, I develop and
