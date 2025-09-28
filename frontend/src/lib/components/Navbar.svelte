@@ -15,7 +15,7 @@
 <div class="block md:hidden">
 	<AppBar background="bg-inherit" shadow="shadow-2xl">
 		{#snippet headline()}
-			<enhanced:img src={logoSrc} alt="Logo" id="logo" class="mx-auto w-40 pb-2" />
+			<enhanced:img src={logoSrc} alt="Logo" id="logo" class="mx-auto min-w-40 pb-2" />
 			<Navigation.Bar
 				background="bg-inherit"
 				height="h-12"

@@ -8,7 +8,8 @@
 			src={headshot}
 			alt="Headshot"
 			id="headshot"
-			class="border-surface-300-600-token w-48 rounded-full border-4"
+			loading="lazy"
+			class="border-surface-300-600-token minw min-w-48 rounded-full border-4"
 		/>
 		<h3 class="h3 mt-4">Post Doctoral Fellow @ Child Mind Institute</h3>
 		<div class="mt-4 space-y-6 text-justify text-lg md:space-y-4">

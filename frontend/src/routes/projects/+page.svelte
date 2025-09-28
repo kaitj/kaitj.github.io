@@ -1,28 +1,40 @@
 <script lang="ts">
 	import Loader from '$lib/components/Loader.svelte';
+	import { findImageByProjectName, loadAllProjectImages } from '$lib/utils/imageImports';
 	import { onMount } from 'svelte';
 
 	interface Project {
 		name: string;
-		image: string;
 		description: string;
 		website: string;
 		repo: string;
 		tools: string[];
 	}
 
-	let projects: Project[] = [];
+	interface ProjectWithImage extends Project {
+		imageUrl: string | null;
+	}
+
+	let projects: ProjectWithImage[] = [];
 	const URL_JSON_PROJECTS = 'projects.json';
 
 	let loading = true; // Flag to track loading state
 	onMount(async () => {
 		try {
+			// Load all images first
+			const imageMap = await loadAllProjectImages();
+			// Load project data
 			const response = await fetch(URL_JSON_PROJECTS);
-			const data = await response.json();
+			const projectData: Project[] = await response.json();
 
-			projects = data;
-			projects.forEach((project) => {
-				project.tools = project.tools.sort((a, b) => a.localeCompare(b));
+			projects = projectData.map((project) => {
+				const imageUrl = findImageByProjectName(imageMap, project.name);
+
+				return {
+					...project,
+					imageUrl,
+					tools: project.tools.sort((a, b) => a.localeCompare(b))
+				};
 			});
 		} catch (error) {
 			console.error('Error loading projects:', error);
@@ -56,8 +68,8 @@
 						<!-- Card image -->
 						<header>
 							<div class="aspect-[21/9] w-full">
-								{#if project.image}
-									<img src={project.image} alt="" class="object-fit h-full w-full" />
+								{#if project.imageUrl}
+									<img src={project.imageUrl} alt="" class="object-fit h-full w-full" />
 								{:else}
 									<div class="h-full w-full bg-inherit"></div>
 								{/if}
