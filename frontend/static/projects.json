@@ -1,7 +1,6 @@
 [
 	{
 		"name": "NMIND",
-		"image": "/src/lib/assets/images/projects/nmind.svg",
 		"description": "this Neuroimaging Method Is Not Duplicated",
 		"website": "https://www.nmind.org",
 		"repo": "https://github.com/nmind",
@@ -9,7 +8,6 @@
 	},
 	{
 		"name": "NiftyOne",
-		"image": null,
 		"description": "QC platform for neuroimaging datasets",
 		"website": null,
 		"repo": "https://github.com/childmindresearch/niftyone",
@@ -17,7 +15,6 @@
 	},
 	{
 		"name": "AFIDs-Validator",
-		"image": "/src/lib/assets/images/projects/afids-validator.svg",
 		"description": "Validation application for anatomical fiducials",
 		"website": "https://validator.afids.io",
 		"repo": "https://github.com/afids/afids-validator",
@@ -25,7 +22,6 @@
 	},
 	{
 		"name": "Snakebids",
-		"image": "/src/lib/assets/images/projects/snakebids.svg",
 		"description": "Building reproducible neuroimaging workflows",
 		"website": "https://snakebids.readthedocs.io/en/stable",
 		"repo": "https://github.com/khanlab/snakebids",
@@ -33,7 +29,6 @@
 	},
 	{
 		"name": "Khanlab",
-		"image": "/src/lib/assets/images/projects/khanlab.svg",
 		"description": "Khan Computational Imaging Lab website",
 		"repo": "https://github.com/khanlab/khanlab.github.io",
 		"website": "https://www.khanlab.ca",
@@ -41,7 +36,6 @@
 	},
 	{
 		"name": "OpenBB",
-		"image": "/src/lib/assets/images/projects/openbb.svg",
 		"description": "Open-source investment research platform",
 		"repo": "https://github.com/OpenBB-finance/OpenBBTerminal",
 		"website": "https://www.openbb.co",
