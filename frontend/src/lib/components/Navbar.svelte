@@ -2,7 +2,7 @@
 	import { page } from '$app/state';
 	import { AppBar, Navigation } from '@skeletonlabs/skeleton-svelte';
 
-	const logoSrc = '/images/logo.png';
+	import logoSrc from '$lib/assets/images/logo.png?enhanced';
 
 	const tabs = [
 		{ label: 'home', href: '/' },
@@ -15,7 +15,7 @@
 <div class="block md:hidden">
 	<AppBar background="bg-inherit" shadow="shadow-2xl">
 		{#snippet headline()}
-			<img src={logoSrc} alt="Logo" id="logo" class="h-auto w-40 mx-auto pb-2"/>
+			<enhanced:img src={logoSrc} alt="Logo" id="logo" class="mx-auto w-40 pb-2" />
 			<Navigation.Bar
 				background="bg-inherit"
 				height="h-12"
@@ -40,9 +40,9 @@
 
 <!-- Tablet+ layout -->
 <div class="hidden md:block">
-<AppBar background="bg-inherit" shadow="shadow-2xl" trailSpaceX="!space-x-2">
+	<AppBar background="bg-inherit" shadow="shadow-2xl" trailSpaceX="!space-x-2">
 		{#snippet lead()}
-			<img src={logoSrc} alt="Logo" id="logo" class="h-auto w-40" />
+			<enhanced:img src={logoSrc} alt="Logo" id="logo" class="w-40" />
 		{/snippet}
 
 		{#snippet trail()}

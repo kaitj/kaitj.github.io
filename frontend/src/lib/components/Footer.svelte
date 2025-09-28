@@ -20,7 +20,11 @@
 >
 	<Navigation.Bar background="bg-inherit" height="h-8" tilesJustify="items-center">
 		{#each tabs as { href, icon }}
-			<Navigation.Tile {href} target="_blank" classes="hover:bg-transparent hover:text-primary-500 justify-center">
+			<Navigation.Tile
+				{href}
+				target="_blank"
+				classes="hover:bg-transparent hover:text-primary-500 justify-center"
+			>
 				<svelte:component this={icon} />
 			</Navigation.Tile>
 		{/each}
