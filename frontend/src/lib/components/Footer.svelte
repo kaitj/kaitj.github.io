@@ -3,7 +3,7 @@
 	import { AppBar, Navigation } from '@skeletonlabs/skeleton-svelte';
 
 	const tabs = [
-		{ href: 'mailto:jason.kai@childmind.org', icon: MailIcon },
+		{ href: 'mailto:jasonkai7@gmail.com', icon: MailIcon },
 		{ href: 'https://github.com/kaitj', icon: GithubIcon },
 		{ href: 'https://linkedin.com/in/jasonkai', icon: LinkedinIcon },
 		{ href: 'https://cal.com/jasonkai/coffee-chat?duration=30', icon: CalendarIcon }
