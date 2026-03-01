@@ -9,26 +9,23 @@ jobs:
   query:
     runs-on: ubuntu-latest
     steps:
-        - name: Checkout main branch
-          uses: actions/checkout@v6 
+      - name: Checkout main branch
+        uses: actions/checkout@v6
 
-        - name: Setup uv
-          uses: astral-sh/setup-uv@v7
-          with:
-            enable-cache: true
+      - name: Setup uv
+        uses: astral-sh/setup-uv@v7
+        with:
+          enable-cache: true
 
-        - name: Query pubmed
-          run: |
-            pushd backend > /dev/null
-            uv run --frozen src/get_publications/run.py \
-              ../frontend/static/publications.json
-        
-        # Only runs if there is a commit
-        - name: Create PR 
-          uses: peter-evans/create-pull-request@v8
-          with:
-            token: ${{ secrets.GITHUB_TOKEN }}
-            commit-message: "[BOT] Update publications"
-            title: "[BOT] Update publications"
-            body: New publications found - check before merging
-            branch: bot/update_publications
+      - name: Query pubmed
+        run: uv run .github/scripts/get_publications.py static/publications.json
+
+      # Only runs if there is a commit
+      - name: Create PR
+        uses: peter-evans/create-pull-request@v8
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          commit-message: "[BOT] Update publications"
+          title: "[BOT] Update publications"
+          body: New publications found - check before merging
+          branch: bot/update_publications
