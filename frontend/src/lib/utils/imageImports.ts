@@ -6,22 +6,22 @@
  */
 export async function loadAllProjectImages(): Promise<Record<string, string>> {
 	const imageModules = import.meta.glob('/src/lib/assets/images/projects/*.svg');
-	
+
 	const imageMap: Record<string, string> = {};
-	
+
 	// Process each image module
 	for (const [path, moduleLoader] of Object.entries(imageModules)) {
 		try {
-			const module = await moduleLoader() as { default: string };
+			const module = (await moduleLoader()) as { default: string };
 			const filename = path.split('/').pop()?.replace('.svg', '') || '';
 			const normalizedName = normalizeImageName(filename);
-			
+
 			imageMap[normalizedName] = module.default;
 		} catch (error) {
 			console.warn(`Failed to load image: ${path}`, error);
 		}
 	}
-	
+
 	return imageMap;
 }
 
@@ -42,14 +42,17 @@ function normalizeImageName(name: string): string {
 /**
  * Find image URL by project name with fuzzy matching
  */
-export function findImageByProjectName(imageMap: Record<string, string>, projectName: string): string | null {
+export function findImageByProjectName(
+	imageMap: Record<string, string>,
+	projectName: string
+): string | null {
 	const normalizedProjectName = normalizeImageName(projectName);
-	
+
 	// Try exact match first
 	if (imageMap[normalizedProjectName]) {
 		return imageMap[normalizedProjectName];
 	}
-	
+
 	// Try partial matches
 	const availableImages = Object.keys(imageMap);
 	for (const imageName of availableImages) {
@@ -57,9 +60,9 @@ export function findImageByProjectName(imageMap: Record<string, string>, project
 			return imageMap[imageName];
 		}
 	}
-	
+
 	// Try matching individual words
-	const projectWords = normalizedProjectName.split('-').filter(word => word.length > 2);
+	const projectWords = normalizedProjectName.split('-').filter((word) => word.length > 2);
 	for (const imageName of availableImages) {
 		for (const word of projectWords) {
 			if (imageName.includes(word)) {
@@ -67,7 +70,7 @@ export function findImageByProjectName(imageMap: Record<string, string>, project
 			}
 		}
 	}
-	
+
 	// No match found
 	return null;
 }
