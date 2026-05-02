@@ -1,6 +1,9 @@
 <script lang="ts">
 	import Loader from '$lib/components/Loader.svelte';
+	import { Badge } from '$lib/components/ui/badge/index.js';
+	import * as Card from '$lib/components/ui/card/index.js';
 	import { findImageByProjectName, loadAllProjectImages } from '$lib/utils/imageImports';
+	import { ExternalLink, Globe } from '@lucide/svelte';
 	import { onMount } from 'svelte';
 
 	interface Project {
@@ -16,30 +19,23 @@
 	}
 
 	let projects: ProjectWithImage[] = [];
-	const URL_JSON_PROJECTS = 'projects.json';
+	let loading = true;
 
-	let loading = true; // Flag to track loading state
 	onMount(async () => {
 		try {
-			// Load all images first
-			const imageMap = await loadAllProjectImages();
-			// Load project data
-			const response = await fetch(URL_JSON_PROJECTS);
+			const [imageMap, response] = await Promise.all([
+				loadAllProjectImages(),
+				fetch('projects.json')
+			]);
 			const projectData: Project[] = await response.json();
-
-			projects = projectData.map((project) => {
-				const imageUrl = findImageByProjectName(imageMap, project.name);
-
-				return {
-					...project,
-					imageUrl,
-					tools: project.tools.sort((a, b) => a.localeCompare(b))
-				};
-			});
+			projects = projectData.map((project) => ({
+				...project,
+				imageUrl: findImageByProjectName(imageMap, project.name),
+				tools: project.tools.sort((a, b) => a.localeCompare(b))
+			}));
 		} catch (error) {
 			console.error('Error loading projects:', error);
 		} finally {
-			console.log('Finished loading projects');
 			loading = false;
 		}
 	});
@@ -48,66 +44,74 @@
 {#if loading}
 	<Loader />
 {:else}
-	<div class="container mx-auto my-8 flex h-full items-center justify-center">
-		<div class="space-y-4 px-4">
-			<div>
-				<h1 class="h1">Projects</h1>
-				<p class="mt-4">
-					Below are some projects I have been involved in - for a complete list, check out my <a
-						href="https://github.com/kaitj"
-						target="_blank"
-						class="underline">Github</a
-					>.
-				</p>
-			</div>
-			<section class="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-				{#each projects as project}
-					<div
-						class="card preset-filled-surface-100-900 border-surface-200-800 block max-w-md overflow-hidden border-[1px]"
-					>
-						<!-- Card image -->
-						<header>
-							<div class="aspect-[21/9] w-full">
-								{#if project.imageUrl}
-									<img src={project.imageUrl} alt="" class="object-fit h-full w-full" />
-								{:else}
-									<div class="h-full w-full bg-inherit"></div>
-								{/if}
-							</div>
-						</header>
-						<hr />
-						<!-- Card contents -->
-						<article>
-							<div class="px-4">
-								<h3 class="h3 mt-4">{project.name}</h3>
-								<div class="my-2">
-									<span class="space-x-4">
-										{#if project.repo}
-											<a href={project.repo} target="_blank" class="underline">Repository</a>
-										{/if}
-										{#if project.website}
-											<a href={project.website} target="_blank" class="underline">Website</a>
-										{/if}
-									</span>
-								</div>
-								<br />
-								<p class="mt-2">{project.description}</p>
-							</div>
-						</article>
-						<br />
-						<!-- Card tools -->
-						<footer>
-							<div class="mt-2 min-h-10">
-								<div class="flex flex-wrap gap-2 px-4 pb-2">
-									{#each project.tools as tool}
-										<span class="chip preset-filled-primary-500">{tool}</span>
-									{/each}
-								</div>
-							</div>
-						</footer>
-					</div>
-				{/each}
-			</section>
+	<div class="container mx-auto w-full max-w-5xl px-4 py-8">
+		<div class="mb-8">
+			<h1 class="text-3xl font-bold md:text-4xl">Projects</h1>
+			<p class="text-muted-foreground mt-2 text-base md:text-lg">
+				A selection of projects I've contributed to. For a complete list, visit my <a
+					href="https://github.com/kaitj"
+					target="_blank"
+					rel="noreferrer"
+					class="text-foreground hover:text-primary font-medium underline underline-offset-4"
+					>GitHub</a
+				>.
+			</p>
 		</div>
+
+		<section class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+			{#each projects as project}
+				<Card.Root class="pt-0 transition-shadow duration-200 hover:shadow-lg">
+					<div class="bg-muted/50 aspect-[16/9] w-full overflow-hidden">
+						{#if project.imageUrl}
+							<img src={project.imageUrl} alt="" class="h-full w-full object-contain p-4" />
+						{:else}
+							<div class="flex h-full w-full items-center justify-center">
+								<span class="text-muted-foreground/20 text-6xl font-bold select-none">
+									{project.name[0]}
+								</span>
+							</div>
+						{/if}
+					</div>
+
+					<Card.Header class="gap-1 pb-2">
+						<Card.Title class="text-lg">{project.name}</Card.Title>
+						<div class="flex items-center gap-3">
+							{#if project.repo}
+								<a
+									href={project.repo}
+									target="_blank"
+									rel="noreferrer"
+									class="text-muted-foreground hover:text-foreground inline-flex items-center gap-1 text-sm transition-colors"
+								>
+									<ExternalLink class="size-3.5" />
+									Repository
+								</a>
+							{/if}
+							{#if project.website}
+								<a
+									href={project.website}
+									target="_blank"
+									rel="noreferrer"
+									class="text-muted-foreground hover:text-foreground inline-flex items-center gap-1 text-sm transition-colors"
+								>
+									<Globe class="size-3.5" />
+									Website
+								</a>
+							{/if}
+						</div>
+					</Card.Header>
+
+					<Card.Content>
+						<p class="text-muted-foreground text-base leading-relaxed">{project.description}</p>
+					</Card.Content>
+
+					<Card.Footer class="flex-wrap gap-2">
+						{#each project.tools as tool}
+							<Badge variant="secondary">{tool}</Badge>
+						{/each}
+					</Card.Footer>
+				</Card.Root>
+			{/each}
+		</section>
 	</div>
 {/if}

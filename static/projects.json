@@ -1,44 +1,82 @@
 [
 	{
+		"name": "Neuromaps-PRIME",
+		"description": "Toolbox facilitating comparative analysis of brain organization",
+		"repo": "https://github.com/childmindresearch/neuromaps-prime",
+		"tools": [
+			"Python"
+		]
+	},
+	{
+		"name": "bids2table",
+		"description": "Fast indexing of neuroiaging datasets locally or in the cloud",
+		"website": null,
+		"repo": "https://github.com/childmindresearch/bids2table",
+		"tools": [
+			"Python"
+		]
+	},
+	{
 		"name": "NMIND",
 		"description": "this Neuroimaging Method Is Not Duplicated",
 		"website": "https://www.nmind.org",
 		"repo": "https://github.com/nmind",
-		"tools": ["Svelte", "Tailwind", "TypeScript"]
+		"tools": [
+			"Svelte",
+			"Tailwind",
+			"TypeScript"
+		]
 	},
 	{
 		"name": "NiftyOne",
 		"description": "QC platform for neuroimaging datasets",
 		"website": null,
 		"repo": "https://github.com/childmindresearch/niftyone",
-		"tools": ["Docker", "Python"]
+		"tools": [
+			"Docker",
+			"Python"
+		]
 	},
 	{
 		"name": "AFIDs-Validator",
 		"description": "Validation application for anatomical fiducials",
-		"website": "https://validator.afids.io",
 		"repo": "https://github.com/afids/afids-validator",
-		"tools": ["Docker", "Python", "React", "TypeScript"]
+		"tools": [
+			"Docker",
+			"Python",
+			"React",
+			"TypeScript"
+		]
 	},
 	{
 		"name": "Snakebids",
 		"description": "Building reproducible neuroimaging workflows",
 		"website": "https://snakebids.readthedocs.io/en/stable",
 		"repo": "https://github.com/khanlab/snakebids",
-		"tools": ["Python"]
+		"tools": [
+			"Python"
+		]
 	},
 	{
 		"name": "Khanlab",
 		"description": "Khan Computational Imaging Lab website",
 		"repo": "https://github.com/khanlab/khanlab.github.io",
 		"website": "https://www.khanlab.ca",
-		"tools": ["Liquid", "CSS", "Markdown", "Python"]
+		"tools": [
+			"Liquid",
+			"CSS",
+			"Markdown",
+			"Python"
+		]
 	},
 	{
 		"name": "OpenBB",
 		"description": "Open-source investment research platform",
 		"repo": "https://github.com/OpenBB-finance/OpenBBTerminal",
 		"website": "https://www.openbb.co",
-		"tools": ["Docker", "Python"]
+		"tools": [
+			"Docker",
+			"Python"
+		]
 	}
 ]

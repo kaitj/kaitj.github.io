@@ -5,7 +5,7 @@
  * Returns a map of normalized names -> processed image URL
  */
 export async function loadAllProjectImages(): Promise<Record<string, string>> {
-	const imageModules = import.meta.glob('/src/lib/assets/images/projects/*.svg');
+	const imageModules = import.meta.glob('/src/lib/assets/images/projects/*');
 
 	const imageMap: Record<string, string> = {};
 
