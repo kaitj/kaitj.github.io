@@ -9,7 +9,7 @@
 	},
 	{
 		"name": "bids2table",
-		"description": "Fast indexing of neuroiaging datasets locally or in the cloud",
+		"description": "Fast indexing of neuroimaging datasets locally or in the cloud",
 		"website": null,
 		"repo": "https://github.com/childmindresearch/bids2table",
 		"tools": [
