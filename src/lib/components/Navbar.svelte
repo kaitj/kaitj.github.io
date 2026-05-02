@@ -1,69 +1,74 @@
 <script lang="ts">
+	import { onNavigate } from '$app/navigation';
 	import { page } from '$app/state';
-	import { AppBar, Navigation } from '@skeletonlabs/skeleton-svelte';
-
 	import logoSrc from '$lib/assets/images/logo.png?enhanced';
+	import { Menu, X } from '@lucide/svelte';
 
 	const tabs = [
-		{ label: 'home', href: '/' },
-		{ label: 'projects', href: '/projects' },
-		{ label: 'publications', href: '/publications' }
+		{ label: 'Home', href: '/' },
+		{ label: 'Projects', href: '/projects' },
+		{ label: 'Publications', href: '/publications' }
 	];
+
+	let menuOpen = $state(false);
+	let headerEl = $state<HTMLElement | undefined>(undefined);
+
+	onNavigate(() => {
+		menuOpen = false;
+	});
+
+	$effect(() => {
+		if (!headerEl) return;
+		const observer = new ResizeObserver(() => {
+			document.documentElement.style.setProperty('--navbar-height', `${headerEl!.offsetHeight}px`);
+		});
+		observer.observe(headerEl);
+		return () => observer.disconnect();
+	});
+
+	function linkClass(href: string, block = false) {
+		const active = page.url.pathname === href;
+		return [
+			block ? 'block' : '',
+			'rounded-md px-4 py-2 transition-colors',
+			active
+				? 'bg-primary text-primary-foreground'
+				: 'text-muted-foreground hover:bg-accent hover:text-foreground'
+		]
+			.filter(Boolean)
+			.join(' ');
+	}
 </script>
 
-<!-- Mobile layout -->
-<div class="block md:hidden">
-	<AppBar background="bg-inherit" shadow="shadow-2xl">
-		{#snippet headline()}
-			<enhanced:img src={logoSrc} alt="Logo" id="logo" class="mx-auto min-w-40 pb-2" />
-			<Navigation.Bar
-				background="bg-inherit"
-				height="h-12"
-				tilesJustify="justify-center"
-				classes="text-md"
-			>
-				{#each tabs as { label, href }}
-					<Navigation.Tile
-						{href}
-						selected={page.url.pathname === href}
-						active="bg-primary-500"
-						hover="hover:bg-secondary-950"
-						classes="justify-center w-full"
-					>
-						{label.charAt(0).toUpperCase() + label.slice(1)}
-					</Navigation.Tile>
-				{/each}
-			</Navigation.Bar>
-		{/snippet}
-	</AppBar>
-</div>
+<header class="shadow-2xl" bind:this={headerEl}>
+	<div class="relative flex items-center justify-center px-4 py-2 md:justify-between">
+		<enhanced:img src={logoSrc} alt="Logo" id="logo" class="h-16 w-auto md:h-20" />
 
-<!-- Tablet+ layout -->
-<div class="hidden md:block">
-	<AppBar background="bg-inherit" shadow="shadow-2xl" trailSpaceX="!space-x-2">
-		{#snippet lead()}
-			<enhanced:img src={logoSrc} alt="Logo" id="logo" class="w-40" />
-		{/snippet}
+		<button
+			class="text-muted-foreground hover:bg-accent hover:text-foreground absolute right-4 rounded-md p-2 transition-colors md:hidden"
+			onclick={() => (menuOpen = !menuOpen)}
+			aria-label="Toggle menu"
+			aria-expanded={menuOpen}
+		>
+			{#if menuOpen}
+				<X class="size-5" />
+			{:else}
+				<Menu class="size-5" />
+			{/if}
+		</button>
 
-		{#snippet trail()}
-			<Navigation.Bar
-				background="bg-inherit"
-				height="h-12"
-				tilesJustify="justify-center"
-				classes="text-lg"
-			>
-				{#each tabs as { label, href }}
-					<Navigation.Tile
-						{href}
-						selected={page.url.pathname === href}
-						active="bg-primary-500"
-						hover="hover:bg-secondary-950"
-						classes="justify-center w-full"
-					>
-						{label.charAt(0).toUpperCase() + label.slice(1)}
-					</Navigation.Tile>
-				{/each}
-			</Navigation.Bar>
-		{/snippet}
-	</AppBar>
-</div>
+		<nav class="hidden gap-1 text-lg md:flex">
+			{#each tabs as { label, href }}
+				<a {href} class={linkClass(href)}>{label}</a>
+			{/each}
+		</nav>
+	</div>
+
+	{#if menuOpen}
+		<nav class="border-border border-t px-4 pb-3 text-center md:hidden">
+			{#each tabs as { label, href }}
+				<a {href} class={linkClass(href, true)}>{label}</a>
+			{/each}
+		</nav>
+	{/if}
+</header>

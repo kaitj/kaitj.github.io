@@ -11,57 +11,21 @@
 		doi: string;
 	}
 
-	interface PageHeadings {
-		text: string;
-		slug: string;
-		depth: number;
-	}
-
 	let pubs: Publication[] = [];
 	let pubYears: number[] = [];
-	let headings: PageHeadings[] = [];
-
-	const urlJsonPubs = 'publications.json';
-	let loading = true; // Flag to track publication loading state
-
-	function setIndentationClass(depth: number) {
-		switch (depth) {
-			case 6:
-				return 'pl-12';
-			case 5:
-				return 'pl-10';
-			case 4:
-				return 'pl-8';
-			case 3:
-				return 'pl-6';
-			case 2:
-				return 'pl-4';
-			case 1:
-				return 'pl-2';
-			default:
-				return 'pl-0';
-		}
-	}
+	let pubYearsAsc: number[] = [];
+	let loading = true;
 
 	onMount(async () => {
 		try {
-			const response: Response = await fetch(urlJsonPubs);
+			const response: Response = await fetch('publications.json');
 			const data: Publication[] = await response.json();
-
-			// Set pubs and pubYears after fetching data
 			pubs = data;
-			pubYears = Array.from(new Set(data.map((pub: Publication) => pub.year))).sort(
-				(a: number, b: number) => b - a
-			);
-			headings = pubYears.map((year) => ({
-				text: `${year}`,
-				slug: `pub-${year}`,
-				depth: 1
-			}));
+			pubYears = [...new Set(data.map((p) => p.year))].sort((a, b) => b - a);
+			pubYearsAsc = [...pubYears].reverse();
 		} catch (error: unknown) {
 			console.error('Error loading publications:', error);
 		} finally {
-			console.log('Finished loading publications.');
 			loading = false;
 		}
 	});
@@ -70,73 +34,64 @@
 {#if loading}
 	<Loader />
 {:else}
-	<div class="container mx-auto my-8 h-full">
-		<div class="space-y-5 px-4">
-			<h1 class="h1">Publications</h1>
-			<div class="grid gap-4 md:grid-cols-5">
-				<div class="col-span-4">
-					{#each pubYears as year}
-						<div class="row">
-							<h2 class="mt-8 text-2xl" id="pub-{year}"><strong>{year}</strong></h2>
-							<dl class="list-dl mt-2">
-								{#each pubs.filter((pub) => pub.year === year) as pub}
-									<div class="mt-4 flex gap-2">
-										<span class="flex w-14 flex-none items-center justify-center">
-											<span class="badge text-lg">
-												<svg
-													xmlns="http://www.w3.org/2000/svg"
-													width="100%"
-													height="auto"
-													viewBox="0 0 24 24"
-													fill="none"
-													stroke="#94cbfc"
-													stroke-width="1"
-													stroke-linecap="round"
-													stroke-linejoin="round"
-												>
-													<path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"
-													></path><path d="M14 2v4a2 2 0 0 0 2 2h4"></path>
-													<path d="M10 9H8"></path><path d="M16 13H8"></path><path d="M16 17H8"
-													></path>
-												</svg>
-											</span>
-										</span>
-										<span class="flex-auto">
-											<dt class="text-xl"><strong>{pub.title}</strong></dt>
-											<dd class="text-lg">
-												{pub.authors.join(', ')}. <em>{pub.journal}</em>.
-												<br />
-												doi:
-												<a href={`https://doi.org/${pub.doi}`} target="_blank" class="underline"
-													>{pub.doi}</a
-												>
-											</dd>
-										</span>
-									</div>
-								{/each}
-							</dl>
-						</div>
+	<div>
+		<div class="container mx-auto mt-8 mb-4 max-w-3xl px-4">
+			<h1 class="text-3xl font-bold md:text-4xl">Publications</h1>
+		</div>
+
+		<div
+			class="border-border bg-background/90 sticky z-10 border-b backdrop-blur-sm"
+			style="top: var(--navbar-height, 4.5rem)"
+		>
+			<div class="container mx-auto max-w-3xl px-4 py-2">
+				<div class="flex flex-wrap gap-2">
+					{#each pubYearsAsc as year}
+						<a
+							href="#pub-{year}"
+							class="border-border text-muted-foreground hover:bg-accent hover:text-foreground rounded-full border px-3 py-1.5 text-sm font-medium transition-colors"
+						>
+							{year}
+						</a>
 					{/each}
 				</div>
-				<!-- ToC -->
-				<div class="col-span-1 hidden md:block">
-					<nav class="card text-md sticky top-10 space-y-2 bg-inherit p-4 text-right">
-						<div class="text-lg"><strong>Year</strong></div>
-						<ul class="space-y-2">
-							{#each headings as heading}
-								<li>
-									<a
-										href={`#${heading.slug}`}
-										class="anchor block"
-										class:list={setIndentationClass(heading.depth)}
-									>
-										{heading.text}
-									</a>
-								</li>
-							{/each}
-						</ul>
-					</nav>
-				</div>
+			</div>
+		</div>
+
+		<div class="container mx-auto mb-8 max-w-3xl px-4">
+			<div class="relative mt-6 pl-6 md:mt-10 md:pl-8">
+				<div class="bg-border absolute top-0 left-3 h-full w-px"></div>
+
+				{#each pubYears as year}
+					<section id="pub-{year}" class="scroll-mt-36 md:scroll-mt-44">
+						<div class="relative mb-6 flex items-center">
+							<div
+								class="bg-primary ring-background absolute left-3 z-9 size-3 -translate-x-1/2 rounded-full ring-4"
+							></div>
+							<span class="ml-6 text-xl font-bold md:ml-8 md:text-2xl">{year}</span>
+						</div>
+
+						{#each pubs.filter((pub) => pub.year === year) as pub}
+							<div class="relative mb-10">
+								<div
+									class="border-border bg-background absolute top-2 left-3 size-2 -translate-x-1/2 rounded-full border-2"
+								></div>
+								<div class="ml-6 md:ml-8">
+									<p class="text-lg leading-snug font-semibold">{pub.title}</p>
+									<p class="text-muted-foreground mt-1 text-base">
+										{pub.authors.join(', ')}. <em>{pub.journal}</em>.
+									</p>
+									<p class="text-muted-foreground mt-1 text-sm">
+										doi: <a
+											href={`https://doi.org/${pub.doi}`}
+											target="_blank"
+											class="hover:text-foreground underline transition-colors">{pub.doi}</a
+										>
+									</p>
+								</div>
+							</div>
+						{/each}
+					</section>
+				{/each}
 			</div>
 		</div>
 	</div>
