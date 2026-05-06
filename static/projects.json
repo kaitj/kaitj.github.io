@@ -1,7 +1,7 @@
 [
 	{
 		"name": "Neuromaps-PRIME",
-		"description": "Toolbox facilitating comparative analysis of brain organization",
+		"description": "Python library for spatial normalization and cross-dataset analysis of brain maps",
 		"repo": "https://github.com/childmindresearch/neuromaps-prime",
 		"tools": [
 			"Python"
@@ -9,7 +9,7 @@
 	},
 	{
 		"name": "bids2table",
-		"description": "Fast indexing of neuroimaging datasets locally or in the cloud",
+		"description": "High-performance dataset indexer supporting local and cloud (S3, GCS) storage backends",
 		"website": null,
 		"repo": "https://github.com/childmindresearch/bids2table",
 		"tools": [
@@ -18,7 +18,7 @@
 	},
 	{
 		"name": "NMIND",
-		"description": "this Neuroimaging Method Is Not Duplicated",
+		"description": "Catalogue and checklist for scientific software, surfacing existing tools and establishes best practices to minimize duplicate efforts",
 		"website": "https://www.nmind.org",
 		"repo": "https://github.com/nmind",
 		"tools": [
@@ -29,7 +29,7 @@
 	},
 	{
 		"name": "NiftyOne",
-		"description": "QC platform for neuroimaging datasets",
+		"description": "Interactive quality control platform for large medical imaging datasets",
 		"website": null,
 		"repo": "https://github.com/childmindresearch/niftyone",
 		"tools": [
@@ -39,7 +39,7 @@
 	},
 	{
 		"name": "AFIDs-Validator",
-		"description": "Validation application for anatomical fiducials",
+		"description": "Full-stack platform for automated validation and quality assurance of 3D coordinate data",
 		"repo": "https://github.com/afids/afids-validator",
 		"tools": [
 			"Docker",
@@ -50,7 +50,7 @@
 	},
 	{
 		"name": "Snakebids",
-		"description": "Building reproducible neuroimaging workflows",
+		"description": "Snakemake extension for building reproducible, containerized data pipelines with declarative config",
 		"website": "https://snakebids.readthedocs.io/en/stable",
 		"repo": "https://github.com/khanlab/snakebids",
 		"tools": [
@@ -59,7 +59,7 @@
 	},
 	{
 		"name": "Khanlab",
-		"description": "Khan Computational Imaging Lab website",
+		"description": "Lab website with automated publication ingestion",
 		"repo": "https://github.com/khanlab/khanlab.github.io",
 		"website": "https://www.khanlab.ca",
 		"tools": [

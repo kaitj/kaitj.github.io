@@ -7,7 +7,7 @@
 	const tabs = [
 		{ label: 'Home', href: '/' },
 		{ label: 'Projects', href: '/projects' },
-		{ label: 'Publications', href: '/publications' }
+		{ label: 'Research', href: '/research' }
 	];
 
 	let menuOpen = $state(false);

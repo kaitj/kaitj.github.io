@@ -36,7 +36,7 @@
 {:else}
 	<div>
 		<div class="container mx-auto mt-8 mb-4 max-w-3xl px-4">
-			<h1 class="text-3xl font-bold md:text-4xl">Publications</h1>
+			<h1 class="text-3xl font-bold md:text-4xl">Research</h1>
 		</div>
 
 		<div
