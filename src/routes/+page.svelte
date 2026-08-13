@@ -1,6 +1,5 @@
 <script lang="ts">
 	import headshot from '$lib/assets/images/headshot.jpg?enhanced';
-	import { Badge } from '$lib/components/ui/badge';
 </script>
 
 <div class="container mx-auto max-w-4xl px-4 py-8 md:py-16">
@@ -12,9 +11,14 @@
 				loading="lazy"
 				class="ring-border min-w-48 rounded-full ring-4 md:min-w-56"
 			/>
-			<Badge variant="secondary" class="mt-4 text-sm md:text-base">
-				Post Doctoral Fellow · Child Mind Institute
-			</Badge>
+			<div class="mt-4 flex w-fit max-w-64 flex-col items-center rounded-lg bg-secondary px-3 py-2 text-center">
+    <span class="text-sm font-medium leading-snug">
+        Senior Scientific Software Developer
+    </span>
+    <span class="text-xs leading-snug text-muted-foreground">
+        Child Mind Institute
+    </span>
+</div>
 		</div>
 
 		<div class="space-y-4 text-base md:text-xl">
