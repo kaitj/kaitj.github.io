@@ -11,34 +11,32 @@
 				loading="lazy"
 				class="ring-border min-w-48 rounded-full ring-4 md:min-w-56"
 			/>
-			<div class="mt-4 flex w-fit max-w-64 flex-col items-center rounded-lg bg-secondary px-3 py-2 text-center">
-    <span class="text-sm font-medium leading-snug">
-        Senior Scientific Software Developer
-    </span>
-    <span class="text-xs leading-snug text-muted-foreground">
-        Child Mind Institute
-    </span>
-</div>
+			<div
+				class="bg-secondary mt-4 flex w-fit max-w-64 flex-col items-center rounded-lg px-3 py-2 text-center"
+			>
+				<span class="text-sm leading-snug font-medium"> Senior Scientific Software Developer </span>
+				<span class="text-muted-foreground text-xs leading-snug"> Child Mind Institute </span>
+			</div>
 		</div>
 
 		<div class="space-y-4 text-base md:text-xl">
-			<p>      	
-				I am a software developer who builds robust systems and tooling, driving reliable, 
-				scalable infrastructure that teams depend on. At Child Mind Institute, I design and 
-				maintain reproducible data infrastructure, lead open-source projects, and co-organize 
-				hackathons to foster collaboration across the scientific and engineering community. 
+			<p>
+				I am a software developer who builds robust systems and tooling, driving reliable, scalable
+				infrastructure that teams depend on. At Child Mind Institute, I design and maintain
+				reproducible data infrastructure, lead open-source projects, and co-organize hackathons to
+				foster collaboration across the scientific and engineering community.
 			</p>
 			<p>
-				My background spans full-stack development, containerized pipeline orchestration, and                                                                                                                                
-      		    machine learning systems. I earned my PhD in the <a
+				My background spans full-stack development, containerized pipeline orchestration, and
+				machine learning systems. I earned my PhD in the <a
 					href="https://khanlab.ca"
 					target="_blank"
 					rel="noreferrer"
 					class="hover:text-primary font-medium underline underline-offset-4"
 					>Khan Computational Imaging Lab</a
-				> (University of Western Ontario), where I built large-scale data processing pipelines and
-				applied machine learning to high-dimensional datasets. Prior to that, I completed a 
-				Bachelor&apos;s of Engineering from McMaster University.
+				> (University of Western Ontario), where I built large-scale data processing pipelines and applied
+				machine learning to high-dimensional datasets. Prior to that, I completed a Bachelor&apos;s of
+				Engineering from McMaster University.
 			</p>
 		</div>
 	</div>
