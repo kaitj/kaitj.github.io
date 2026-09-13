@@ -27,7 +27,9 @@
 	</div>
 
 	<main class="flex flex-grow items-center justify-center">
-		{@render children()}
+		<div class="w-full min-w-0">
+			{@render children()}
+		</div>
 	</main>
 
 	<Footer />

@@ -1,6 +1,8 @@
 test-results
 node_modules
 notes.md
+CLAUDE.md
+.notes/
 
 # Output
 .output

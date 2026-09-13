@@ -21,22 +21,21 @@
 
 		<div class="space-y-4 text-base md:text-xl">
 			<p>
-				I am a software developer who builds robust systems and tooling, driving reliable, scalable
-				infrastructure that teams depend on. At Child Mind Institute, I design and maintain
-				reproducible data infrastructure, lead open-source projects, and co-organize hackathons to
-				foster collaboration across the scientific and engineering community.
+				I'm a Senior Scientific Software Developer at Child Mind Institute, where I architect
+				scalable data pipelines for large-scale multi-domain analysis and manage the infrastructure
+				behind them, from HPC clusters to self-hosted CI/CD and deployments. I'm also an active
+				supporter of open-source software, contributing to and maintaining tooling.
 			</p>
 			<p>
-				My background spans full-stack development, containerized pipeline orchestration, and
-				machine learning systems. I earned my PhD in the <a
+				I earned my PhD in Medical Biophysics, studying the brain, at the <a
 					href="https://khanlab.ca"
 					target="_blank"
 					rel="noreferrer"
 					class="hover:text-primary font-medium underline underline-offset-4"
 					>Khan Computational Imaging Lab</a
-				> (University of Western Ontario), where I built large-scale data processing pipelines and applied
-				machine learning to high-dimensional datasets. Prior to that, I completed a Bachelor&apos;s of
-				Engineering from McMaster University.
+				> (University of Western Ontario), building processing pipelines and applying machine learning
+				to high-dimensional datasets, and hold a Bachelor of Engineering in Electrical & Biomedical Engineering
+				from McMaster University.
 			</p>
 		</div>
 	</div>

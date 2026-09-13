@@ -18,7 +18,7 @@ jobs:
           enable-cache: true
 
       - name: Query pubmed
-        run: uv run .github/scripts/get_publications.py static/publications.json
+        run: uv run .github/scripts/get_publications.py src/lib/data/publications.json
 
       # Only runs if there is a commit
       - name: Create PR
