@@ -44,10 +44,16 @@
 		<enhanced:img src={logoSrc} alt="Logo" id="logo" class="h-16 w-auto md:h-20" />
 
 		<button
-			class="text-muted-foreground hover:bg-accent hover:text-foreground absolute right-4 rounded-md p-2 transition-colors md:hidden"
+			class={cn(
+				'absolute right-4 rounded-md p-2 transition-colors md:hidden',
+				menuOpen
+					? 'bg-accent text-foreground'
+					: 'text-muted-foreground hover:bg-accent hover:text-foreground'
+			)}
 			onclick={() => (menuOpen = !menuOpen)}
 			aria-label="Toggle menu"
 			aria-expanded={menuOpen}
+			aria-controls="mobile-nav"
 		>
 			{#if menuOpen}
 				<X class="size-5" />
@@ -64,7 +70,7 @@
 	</div>
 
 	{#if menuOpen}
-		<nav class="border-border border-t px-4 pb-3 text-center md:hidden">
+		<nav id="mobile-nav" class="border-border border-t px-4 pb-3 text-center md:hidden">
 			{#each tabs as { label, href }}
 				<a {href} class={linkClass(href, true)}>{label}</a>
 			{/each}
