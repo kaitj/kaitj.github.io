@@ -2,6 +2,7 @@
 	import { onNavigate } from '$app/navigation';
 	import { page } from '$app/state';
 	import logoSrc from '$lib/assets/images/logo.png?enhanced';
+	import { cn } from '$lib/utils';
 	import { Menu, X } from '@lucide/svelte';
 
 	const tabs = [
@@ -28,15 +29,13 @@
 
 	function linkClass(href: string, block = false) {
 		const active = page.url.pathname === href;
-		return [
-			block ? 'block' : '',
+		return cn(
+			block && 'block',
 			'rounded-md px-4 py-2 transition-colors',
 			active
 				? 'bg-primary text-primary-foreground'
 				: 'text-muted-foreground hover:bg-accent hover:text-foreground'
-		]
-			.filter(Boolean)
-			.join(' ');
+		);
 	}
 </script>
 
