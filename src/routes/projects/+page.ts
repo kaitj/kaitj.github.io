@@ -20,7 +20,13 @@ const images = Object.fromEntries(
 			query: '?url',
 			import: 'default'
 		})
-	).map(([path, url]) => [path.split('/').pop()!.replace(/\.svg$/, ''), url])
+	).map(([path, url]) => [
+		path
+			.split('/')
+			.pop()!
+			.replace(/\.svg$/, ''),
+		url
+	])
 );
 
 export const load: PageLoad = () => ({
