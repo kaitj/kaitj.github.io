@@ -24,13 +24,13 @@
 		"description": "Interactive quality control platform for large medical imaging datasets",
 		"website": null,
 		"repo": "https://github.com/childmindresearch/niftyone",
-		"tools": ["Docker", "Python"]
+		"tools": ["Python"]
 	},
 	{
 		"name": "AFIDs-Validator",
 		"description": "Full-stack platform for automated validation and quality assurance of 3D coordinate data",
 		"repo": "https://github.com/afids/afids-validator",
-		"tools": ["Docker", "Python", "React", "TypeScript"]
+		"tools": ["Python", "React", "TypeScript"]
 	},
 	{
 		"name": "Snakebids",
@@ -51,6 +51,6 @@
 		"description": "Open-source investment research platform",
 		"repo": "https://github.com/OpenBB-finance/OpenBBTerminal",
 		"website": "https://www.openbb.co",
-		"tools": ["Docker", "Python"]
+		"tools": ["Python"]
 	}
 ]

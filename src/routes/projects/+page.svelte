@@ -23,7 +23,7 @@
 
 	<section class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
 		{#each data.projects as project}
-			<Card.Root class="pt-0 transition-shadow duration-200 hover:shadow-lg">
+			<Card.Root class="h-full pt-0 transition-shadow duration-200 hover:shadow-lg">
 				<div class="bg-muted/50 aspect-[16/9] w-full overflow-hidden">
 					{#if project.image}
 						<img
@@ -43,8 +43,8 @@
 				</div>
 
 				<Card.Header class="gap-1 pb-2">
-					<Card.Title class="text-lg">{project.name}</Card.Title>
-					<div class="flex items-center gap-3">
+					<Card.Title class="line-clamp-1 text-lg">{project.name}</Card.Title>
+					<div class="flex h-5 flex-nowrap items-center gap-3">
 						{#if project.repo}
 							<a
 								href={project.repo}
@@ -71,7 +71,9 @@
 				</Card.Header>
 
 				<Card.Content>
-					<p class="text-muted-foreground text-base leading-relaxed">{project.description}</p>
+					<p class="text-muted-foreground line-clamp-3 min-h-[4.875rem] text-base leading-relaxed">
+						{project.description}
+					</p>
 				</Card.Content>
 
 				<Card.Footer class="flex-wrap gap-2">
