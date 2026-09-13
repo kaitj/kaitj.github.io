@@ -11,10 +11,9 @@
 		const sections = document.querySelectorAll<HTMLElement>('section[id^="pub-"]');
 		const observer = new IntersectionObserver(
 			(entries) => {
-				for (const entry of entries) {
-					if (entry.isIntersecting) {
-						activeYear = Number(entry.target.id.replace('pub-', ''));
-					}
+				const visible = entries.find((entry) => entry.isIntersecting);
+				if (visible) {
+					activeYear = Number(visible.target.id.replace('pub-', ''));
 				}
 			},
 			{ rootMargin: '-45% 0px -50% 0px' }
@@ -24,7 +23,7 @@
 	});
 </script>
 
-<div class="w-full min-w-0">
+<div>
 	<div class="container mx-auto mt-8 mb-4 max-w-3xl px-4">
 		<h1 class="text-3xl font-bold md:text-4xl">Research</h1>
 	</div>

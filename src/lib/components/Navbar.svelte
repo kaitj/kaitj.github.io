@@ -40,8 +40,10 @@
 </script>
 
 <header class="shadow-2xl" bind:this={headerEl}>
-	<div class="relative flex items-center justify-center px-4 py-2 md:justify-between">
-		<enhanced:img src={logoSrc} alt="Logo" id="logo" class="h-16 w-auto md:h-20" />
+	<div
+		class="relative flex items-center justify-center px-4 py-[var(--navbar-py)] md:justify-between"
+	>
+		<enhanced:img src={logoSrc} alt="Logo" id="logo" class="h-[var(--navbar-logo-h)] w-auto" />
 
 		<button
 			class={cn(

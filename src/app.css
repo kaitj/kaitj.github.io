@@ -127,12 +127,17 @@
 	html {
 		@apply font-sans;
 	}
+	/* Navbar.svelte's logo height and header padding read these same variables, so this
+	   default can't drift out of sync with them. It only covers the closed-menu height;
+	   Navbar's ResizeObserver overrides it at runtime, notably when the mobile menu opens. */
 	:root {
-		--navbar-height: 5rem;
+		--navbar-logo-h: 4rem;
+		--navbar-py: 0.5rem;
+		--navbar-height: calc(var(--navbar-logo-h) + var(--navbar-py) * 2);
 	}
 	@media (min-width: 768px) {
 		:root {
-			--navbar-height: 6rem;
+			--navbar-logo-h: 5rem;
 		}
 	}
 }
