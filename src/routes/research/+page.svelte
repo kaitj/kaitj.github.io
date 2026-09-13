@@ -1,10 +1,30 @@
 <script lang="ts">
+	import { cn } from '$lib/utils';
 	import type { PageProps } from './$types';
 
 	let { data }: PageProps = $props();
+
+	let activeYear = $state<number | null>(null);
+
+	$effect(() => {
+		activeYear = data.groups[0]?.year ?? null;
+		const sections = document.querySelectorAll<HTMLElement>('section[id^="pub-"]');
+		const observer = new IntersectionObserver(
+			(entries) => {
+				for (const entry of entries) {
+					if (entry.isIntersecting) {
+						activeYear = Number(entry.target.id.replace('pub-', ''));
+					}
+				}
+			},
+			{ rootMargin: '-45% 0px -50% 0px' }
+		);
+		sections.forEach((section) => observer.observe(section));
+		return () => observer.disconnect();
+	});
 </script>
 
-<div>
+<div class="w-full min-w-0">
 	<div class="container mx-auto mt-8 mb-4 max-w-3xl px-4">
 		<h1 class="text-3xl font-bold md:text-4xl">Research</h1>
 	</div>
@@ -14,11 +34,18 @@
 		style="top: var(--navbar-height)"
 	>
 		<div class="container mx-auto max-w-3xl px-4 py-2">
-			<div class="flex flex-wrap gap-2">
+			<div
+				class="flex [scrollbar-width:none] flex-nowrap gap-2 overflow-x-auto [&::-webkit-scrollbar]:hidden"
+			>
 				{#each data.groups.toReversed() as { year }}
 					<a
 						href="#pub-{year}"
-						class="border-border text-muted-foreground hover:bg-accent hover:text-foreground rounded-full border px-3 py-1.5 text-sm font-medium transition-colors"
+						class={cn(
+							'shrink-0 rounded-full border px-3 py-1.5 text-sm font-medium transition-colors',
+							activeYear === year
+								? 'bg-primary text-primary-foreground border-primary'
+								: 'border-border text-muted-foreground hover:bg-accent hover:text-foreground'
+						)}
 					>
 						{year}
 					</a>
