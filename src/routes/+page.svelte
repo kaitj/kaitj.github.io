@@ -1,6 +1,25 @@
 <script lang="ts">
 	import headshot from '$lib/assets/images/headshot.jpg?enhanced';
+	import ogImage from '$lib/assets/images/headshot.jpg?url';
+
+	const title = 'Jason Kai — Senior Scientific Software Developer';
+	const description =
+		'Personal site of Jason Kai, who builds scalable data pipelines, infrastructure, and open-source software.';
+	const url = 'https://jasonkai.com/';
 </script>
+
+<svelte:head>
+	<title>{title}</title>
+	<meta name="description" content={description} />
+	<link rel="canonical" href={url} />
+	<meta property="og:title" content={title} />
+	<meta property="og:description" content={description} />
+	<meta property="og:url" content={url} />
+	<meta property="og:image" content={`https://jasonkai.com${ogImage}`} />
+	<meta name="twitter:title" content={title} />
+	<meta name="twitter:description" content={description} />
+	<meta name="twitter:image" content={`https://jasonkai.com${ogImage}`} />
+</svelte:head>
 
 <div class="container mx-auto max-w-4xl px-4 py-8 md:py-16">
 	<div class="flex flex-col items-center gap-8 md:flex-row md:items-start md:gap-12">

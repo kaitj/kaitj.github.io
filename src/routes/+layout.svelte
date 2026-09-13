@@ -18,7 +18,9 @@
 </script>
 
 <svelte:head>
-	<title>Jason Kai</title>
+	<meta property="og:site_name" content="Jason Kai" />
+	<meta property="og:type" content="website" />
+	<meta name="twitter:card" content="summary" />
 </svelte:head>
 
 <div class="flex min-h-screen flex-col">
