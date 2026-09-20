@@ -6,6 +6,9 @@
 
 	let { data }: PageProps = $props();
 
+	// data.groups is newest-first for the main feed; the pill nav reads left-to-right chronologically.
+	const pillYears = $derived(data.groups.map(({ year }) => year).toReversed());
+
 	let activeYear = $state<number | null>(null);
 
 	$effect(() => {
@@ -44,7 +47,7 @@
 			<div
 				class="flex [scrollbar-width:none] flex-nowrap gap-2 overflow-x-auto [&::-webkit-scrollbar]:hidden"
 			>
-				{#each data.groups.toReversed() as { year }}
+				{#each pillYears as year}
 					<a
 						href="#pub-{year}"
 						class={cn(
