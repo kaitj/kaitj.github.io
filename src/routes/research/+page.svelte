@@ -1,4 +1,5 @@
 <script lang="ts">
+	import ExternalAnchor from '$lib/components/ExternalAnchor.svelte';
 	import SeoHead from '$lib/components/SeoHead.svelte';
 	import { cn } from '$lib/utils';
 	import type { PageProps } from './$types';
@@ -84,10 +85,10 @@
 									{pub.authors.join(', ')}. <em>{pub.journal}</em>.
 								</p>
 								<p class="text-muted-foreground mt-1 text-sm">
-									doi: <a
+									doi: <ExternalAnchor
 										href={`https://doi.org/${pub.doi}`}
-										target="_blank"
-										class="hover:text-foreground underline transition-colors">{pub.doi}</a
+										class="hover:text-foreground underline transition-colors"
+										>{pub.doi}</ExternalAnchor
 									>
 								</p>
 							</div>

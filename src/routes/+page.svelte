@@ -1,4 +1,5 @@
 <script lang="ts">
+	import ExternalAnchor from '$lib/components/ExternalAnchor.svelte';
 	import SeoHead from '$lib/components/SeoHead.svelte';
 	import headshot from '$lib/assets/images/headshot.jpg?enhanced';
 	import ogImage from '$lib/assets/images/headshot.jpg?url';
@@ -36,12 +37,10 @@
 				supporter of open-source software, contributing to and maintaining tooling.
 			</p>
 			<p>
-				I earned my PhD in Medical Biophysics, studying the brain, at the <a
+				I earned my PhD in Medical Biophysics, studying the brain, at the <ExternalAnchor
 					href="https://khanlab.ca"
-					target="_blank"
-					rel="noreferrer"
 					class="hover:text-primary font-medium underline underline-offset-4"
-					>Khan Computational Imaging Lab</a
+					>Khan Computational Imaging Lab</ExternalAnchor
 				> (University of Western Ontario), building processing pipelines and applying machine learning
 				to high-dimensional datasets, and hold a Bachelor of Engineering in Electrical & Biomedical Engineering
 				from McMaster University.
