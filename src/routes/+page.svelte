@@ -1,25 +1,16 @@
 <script lang="ts">
+	import ExternalAnchor from '$lib/components/ExternalAnchor.svelte';
+	import SeoHead from '$lib/components/SeoHead.svelte';
 	import headshot from '$lib/assets/images/headshot.jpg?enhanced';
 	import ogImage from '$lib/assets/images/headshot.jpg?url';
-
-	const title = 'Jason Kai — Senior Scientific Software Developer';
-	const description =
-		'Personal site of Jason Kai, who builds scalable data pipelines, infrastructure, and open-source software.';
-	const url = 'https://jasonkai.com/';
 </script>
 
-<svelte:head>
-	<title>{title}</title>
-	<meta name="description" content={description} />
-	<link rel="canonical" href={url} />
-	<meta property="og:title" content={title} />
-	<meta property="og:description" content={description} />
-	<meta property="og:url" content={url} />
-	<meta property="og:image" content={`https://jasonkai.com${ogImage}`} />
-	<meta name="twitter:title" content={title} />
-	<meta name="twitter:description" content={description} />
-	<meta name="twitter:image" content={`https://jasonkai.com${ogImage}`} />
-</svelte:head>
+<SeoHead
+	title="Jason Kai — Senior Scientific Software Developer"
+	description="Personal site of Jason Kai, who builds scalable data pipelines, infrastructure, and open-source software."
+	path="/"
+	image={ogImage}
+/>
 
 <div class="container mx-auto max-w-4xl px-4 py-8 md:py-16">
 	<div class="flex flex-col items-center gap-8 md:flex-row md:items-start md:gap-12">
@@ -46,12 +37,10 @@
 				supporter of open-source software, contributing to and maintaining tooling.
 			</p>
 			<p>
-				I earned my PhD in Medical Biophysics, studying the brain, at the <a
+				I earned my PhD in Medical Biophysics, studying the brain, at the <ExternalAnchor
 					href="https://khanlab.ca"
-					target="_blank"
-					rel="noreferrer"
 					class="hover:text-primary font-medium underline underline-offset-4"
-					>Khan Computational Imaging Lab</a
+					>Khan Computational Imaging Lab</ExternalAnchor
 				> (University of Western Ontario), building processing pipelines and applying machine learning
 				to high-dimensional datasets, and hold a Bachelor of Engineering in Electrical & Biomedical Engineering
 				from McMaster University.

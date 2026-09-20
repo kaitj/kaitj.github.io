@@ -1,37 +1,28 @@
 <script lang="ts">
+	import ExternalAnchor from '$lib/components/ExternalAnchor.svelte';
 	import { Badge } from '$lib/components/ui/badge/index.js';
 	import * as Card from '$lib/components/ui/card/index.js';
+	import SeoHead from '$lib/components/SeoHead.svelte';
 	import { ExternalLink, Globe } from '@lucide/svelte';
 	import type { PageProps } from './$types';
 
 	let { data }: PageProps = $props();
-
-	const title = 'Projects — Jason Kai';
-	const description = 'Open-source and research software projects Jason Kai has contributed to.';
-	const url = 'https://jasonkai.com/projects';
 </script>
 
-<svelte:head>
-	<title>{title}</title>
-	<meta name="description" content={description} />
-	<link rel="canonical" href={url} />
-	<meta property="og:title" content={title} />
-	<meta property="og:description" content={description} />
-	<meta property="og:url" content={url} />
-	<meta name="twitter:title" content={title} />
-	<meta name="twitter:description" content={description} />
-</svelte:head>
+<SeoHead
+	title="Projects — Jason Kai"
+	description="Open-source and research software projects Jason Kai has contributed to."
+	path="/projects"
+/>
 
 <div class="container mx-auto w-full max-w-5xl px-4 py-8">
 	<div class="mb-8">
 		<h1 class="text-3xl font-bold md:text-4xl">Projects</h1>
 		<p class="text-muted-foreground mt-2 text-base md:text-lg">
-			A selection of projects I've contributed to. For a complete list, visit my <a
+			A selection of projects I've contributed to. For a complete list, visit my <ExternalAnchor
 				href="https://github.com/kaitj"
-				target="_blank"
-				rel="noreferrer"
 				class="text-foreground hover:text-primary font-medium underline underline-offset-4"
-				>GitHub</a
+				>GitHub</ExternalAnchor
 			>.
 		</p>
 	</div>
@@ -61,26 +52,22 @@
 					<Card.Title class="line-clamp-1 text-lg">{project.name}</Card.Title>
 					<div class="flex h-5 flex-nowrap items-center gap-3">
 						{#if project.repo}
-							<a
+							<ExternalAnchor
 								href={project.repo}
-								target="_blank"
-								rel="noreferrer"
 								class="text-muted-foreground hover:text-foreground inline-flex items-center gap-1 text-sm transition-colors"
 							>
 								<ExternalLink class="size-3.5" />
 								Repository
-							</a>
+							</ExternalAnchor>
 						{/if}
 						{#if project.website}
-							<a
+							<ExternalAnchor
 								href={project.website}
-								target="_blank"
-								rel="noreferrer"
 								class="text-muted-foreground hover:text-foreground inline-flex items-center gap-1 text-sm transition-colors"
 							>
 								<Globe class="size-3.5" />
 								Website
-							</a>
+							</ExternalAnchor>
 						{/if}
 					</div>
 				</Card.Header>

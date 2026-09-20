@@ -1,8 +1,13 @@
 <script lang="ts">
+	import ExternalAnchor from '$lib/components/ExternalAnchor.svelte';
+	import SeoHead from '$lib/components/SeoHead.svelte';
 	import { cn } from '$lib/utils';
 	import type { PageProps } from './$types';
 
 	let { data }: PageProps = $props();
+
+	// data.groups is newest-first for the main feed; the pill nav reads left-to-right chronologically.
+	const pillYears = $derived(data.groups.map(({ year }) => year).toReversed());
 
 	let activeYear = $state<number | null>(null);
 
@@ -21,22 +26,13 @@
 		sections.forEach((section) => observer.observe(section));
 		return () => observer.disconnect();
 	});
-
-	const title = 'Research — Jason Kai';
-	const description = 'Peer-reviewed publications and preprints by Jason Kai.';
-	const url = 'https://jasonkai.com/research';
 </script>
 
-<svelte:head>
-	<title>{title}</title>
-	<meta name="description" content={description} />
-	<link rel="canonical" href={url} />
-	<meta property="og:title" content={title} />
-	<meta property="og:description" content={description} />
-	<meta property="og:url" content={url} />
-	<meta name="twitter:title" content={title} />
-	<meta name="twitter:description" content={description} />
-</svelte:head>
+<SeoHead
+	title="Research — Jason Kai"
+	description="Peer-reviewed publications and preprints by Jason Kai."
+	path="/research"
+/>
 
 <div>
 	<div class="container mx-auto mt-8 mb-4 max-w-3xl px-4">
@@ -51,7 +47,7 @@
 			<div
 				class="flex [scrollbar-width:none] flex-nowrap gap-2 overflow-x-auto [&::-webkit-scrollbar]:hidden"
 			>
-				{#each data.groups.toReversed() as { year }}
+				{#each pillYears as year}
 					<a
 						href="#pub-{year}"
 						class={cn(
@@ -92,10 +88,10 @@
 									{pub.authors.join(', ')}. <em>{pub.journal}</em>.
 								</p>
 								<p class="text-muted-foreground mt-1 text-sm">
-									doi: <a
+									doi: <ExternalAnchor
 										href={`https://doi.org/${pub.doi}`}
-										target="_blank"
-										class="hover:text-foreground underline transition-colors">{pub.doi}</a
+										class="hover:text-foreground underline transition-colors"
+										>{pub.doi}</ExternalAnchor
 									>
 								</p>
 							</div>
