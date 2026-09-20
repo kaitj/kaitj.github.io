@@ -4,6 +4,7 @@
 	const linkClass =
 		'inline-flex items-center justify-center rounded-md p-2 text-muted-foreground transition-colors hover:bg-accent hover:text-foreground';
 
+	// lucide has no GitHub/LinkedIn logos
 	const brandLinks = [
 		{
 			href: 'https://github.com/kaitj',
