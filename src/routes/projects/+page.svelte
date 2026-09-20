@@ -1,26 +1,18 @@
 <script lang="ts">
 	import { Badge } from '$lib/components/ui/badge/index.js';
 	import * as Card from '$lib/components/ui/card/index.js';
+	import SeoHead from '$lib/components/SeoHead.svelte';
 	import { ExternalLink, Globe } from '@lucide/svelte';
 	import type { PageProps } from './$types';
 
 	let { data }: PageProps = $props();
-
-	const title = 'Projects — Jason Kai';
-	const description = 'Open-source and research software projects Jason Kai has contributed to.';
-	const url = 'https://jasonkai.com/projects';
 </script>
 
-<svelte:head>
-	<title>{title}</title>
-	<meta name="description" content={description} />
-	<link rel="canonical" href={url} />
-	<meta property="og:title" content={title} />
-	<meta property="og:description" content={description} />
-	<meta property="og:url" content={url} />
-	<meta name="twitter:title" content={title} />
-	<meta name="twitter:description" content={description} />
-</svelte:head>
+<SeoHead
+	title="Projects — Jason Kai"
+	description="Open-source and research software projects Jason Kai has contributed to."
+	path="/projects"
+/>
 
 <div class="container mx-auto w-full max-w-5xl px-4 py-8">
 	<div class="mb-8">

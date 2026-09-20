@@ -1,4 +1,5 @@
 <script lang="ts">
+	import SeoHead from '$lib/components/SeoHead.svelte';
 	import { cn } from '$lib/utils';
 	import type { PageProps } from './$types';
 
@@ -21,22 +22,13 @@
 		sections.forEach((section) => observer.observe(section));
 		return () => observer.disconnect();
 	});
-
-	const title = 'Research — Jason Kai';
-	const description = 'Peer-reviewed publications and preprints by Jason Kai.';
-	const url = 'https://jasonkai.com/research';
 </script>
 
-<svelte:head>
-	<title>{title}</title>
-	<meta name="description" content={description} />
-	<link rel="canonical" href={url} />
-	<meta property="og:title" content={title} />
-	<meta property="og:description" content={description} />
-	<meta property="og:url" content={url} />
-	<meta name="twitter:title" content={title} />
-	<meta name="twitter:description" content={description} />
-</svelte:head>
+<SeoHead
+	title="Research — Jason Kai"
+	description="Peer-reviewed publications and preprints by Jason Kai."
+	path="/research"
+/>
 
 <div>
 	<div class="container mx-auto mt-8 mb-4 max-w-3xl px-4">
