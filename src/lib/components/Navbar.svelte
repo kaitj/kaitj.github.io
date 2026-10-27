@@ -1,8 +1,8 @@
 <script lang="ts">
 	import { onNavigate } from '$app/navigation';
 	import { page } from '$app/state';
-	import logoSrc from '$lib/assets/images/logo.png?enhanced';
-	import { cn } from '$lib/utils';
+	import logoSrc from '#lib/assets/images/logo.png?enhanced';
+	import { cn } from '#lib/utils.js';
 	import { Menu, X } from '@lucide/svelte';
 
 	const tabs = [

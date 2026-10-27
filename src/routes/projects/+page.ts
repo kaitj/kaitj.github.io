@@ -1,5 +1,5 @@
 import type { PageLoad } from './$types';
-import raw from '$lib/data/projects.json';
+import raw from '#lib/data/projects.json';
 
 interface Project {
 	name: string;
