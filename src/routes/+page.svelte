@@ -1,8 +1,8 @@
 <script lang="ts">
-	import ExternalAnchor from '$lib/components/ExternalAnchor.svelte';
-	import SeoHead from '$lib/components/SeoHead.svelte';
-	import headshot from '$lib/assets/images/headshot.jpg?enhanced';
-	import ogImage from '$lib/assets/images/headshot.jpg?url';
+	import ExternalAnchor from '#lib/components/ExternalAnchor.svelte';
+	import SeoHead from '#lib/components/SeoHead.svelte';
+	import headshot from '#lib/assets/images/headshot.jpg?enhanced';
+	import ogImage from '#lib/assets/images/headshot.jpg?url';
 </script>
 
 <SeoHead

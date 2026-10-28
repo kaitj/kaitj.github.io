@@ -1,8 +1,8 @@
 <script lang="ts">
-	import ExternalAnchor from '$lib/components/ExternalAnchor.svelte';
-	import { Badge } from '$lib/components/ui/badge/index.js';
-	import * as Card from '$lib/components/ui/card/index.js';
-	import SeoHead from '$lib/components/SeoHead.svelte';
+	import ExternalAnchor from '#lib/components/ExternalAnchor.svelte';
+	import { Badge } from '#lib/components/ui/badge/index.js';
+	import * as Card from '#lib/components/ui/card/index.js';
+	import SeoHead from '#lib/components/SeoHead.svelte';
 	import { ExternalLink, Globe } from '@lucide/svelte';
 	import type { PageProps } from './$types';
 

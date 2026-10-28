@@ -1,7 +1,7 @@
 <script lang="ts">
-	import ExternalAnchor from '$lib/components/ExternalAnchor.svelte';
-	import SeoHead from '$lib/components/SeoHead.svelte';
-	import { cn } from '$lib/utils';
+	import ExternalAnchor from '#lib/components/ExternalAnchor.svelte';
+	import SeoHead from '#lib/components/SeoHead.svelte';
+	import { cn } from '#lib/utils.js';
 	import type { PageProps } from './$types';
 
 	let { data }: PageProps = $props();
