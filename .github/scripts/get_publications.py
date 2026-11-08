@@ -24,7 +24,9 @@ SEARCH_CRITERIA = (
     ' "Robarts Research Institute"[AFFL] OR "Child Mind Institute"[AFFL])'
 )
 
-SKIP_PMIDS: frozenset[str] = frozenset()
+SKIP_PMIDS: frozenset[str] = frozenset(
+    {"42465432"}
+)
 ACCEPTABLE_FORMATS: frozenset[str] = frozenset(
     {"journal article", "comparative study", "editorial"}
 )
